@@ -7,7 +7,8 @@
 #include "ProjectWCharacter.generated.h"
 
 class UTextRenderComponent;
-
+class UBoxComponent;
+class AAttackEffect;
 /**
  * This class is the default character for ProjectW, and it is responsible for all
  * physical interaction between the player and the world.
@@ -29,7 +30,10 @@ class AProjectWCharacter : public APaperCharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* CameraBoom;
 
+
 	UTextRenderComponent* TextComponent;
+
+	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;
 protected:
 	// The animation to play while running around
@@ -43,14 +47,30 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
 		class UPaperFlipbook* AttackAnimation;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = SpawnEffects)
+		UBoxComponent* spawnBox;
+
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<AAttackEffect> attackEffects;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = health)
+		float health;
+	
 	/** Called to choose the correct animation to play based on the character's movement state */
 	void UpdateAnimation();
 
 	/** Called for side to side input */
 	void MoveRight(float Value);
 
+	void Attack();
+
+	void AttackEnd();
+
+	void DamagedEnd();
+
 	void UpdateCharacter();
 
+	void SpawnAttackEffects();
 	/** Handle touch inputs. */
 	void TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location);
 
@@ -64,8 +84,18 @@ protected:
 public:
 	AProjectWCharacter();
 
+	UFUNCTION() 
+	void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
 	/** Returns SideViewCameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetSideViewCameraComponent() const { return SideViewCameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+
+	bool isAttack = false;
+	bool isDamaged = false;
+
+	FVector spawnLocation = FVector();
+	FRotator spawnRotation = FRotator();
+	FActorSpawnParameters spawnInfo = FActorSpawnParameters();
 };

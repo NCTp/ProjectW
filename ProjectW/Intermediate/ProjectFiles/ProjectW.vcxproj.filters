@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ProjectW.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{14DBEC91-5796-480E-BB13-2588C97C0743}</UniqueIdentifier>
+      <UniqueIdentifier>{21A32A04-7E80-4035-945C-6E487039B6B7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ProjectW.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{36A5307B-8E18-4190-9A23-2C415EA2460F}</UniqueIdentifier>
+      <UniqueIdentifier>{A0CFA7FB-A4B6-4A66-9E0A-17E922FBA376}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,8 +30,26 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ProjectW">
-      <UniqueIdentifier>{01F83304-CEB8-4644-AC94-578B7CA3CA62}</UniqueIdentifier>
+      <UniqueIdentifier>{A56ABEB7-76D0-426D-9F1A-51AB823A35E1}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectW\AttackEffect.cpp">
+      <Filter>Source\ProjectW</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectW\AttackEffect.h">
+      <Filter>Source\ProjectW</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectW\BaseLevel.cpp">
+      <Filter>Source\ProjectW</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectW\BaseLevel.h">
+      <Filter>Source\ProjectW</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectW\Projectiles.cpp">
+      <Filter>Source\ProjectW</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectW\Projectiles.h">
+      <Filter>Source\ProjectW</Filter>
+    </ClInclude>
     <None Include="..\..\Source\ProjectW\ProjectW.Build.cs">
       <Filter>Source\ProjectW</Filter>
     </None>
