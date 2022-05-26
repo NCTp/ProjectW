@@ -29,9 +29,7 @@ AProjectWCharacter::AProjectWCharacter()
 	// Set the size of our collision capsule.
 	GetCapsuleComponent()->SetCapsuleHalfHeight(96.0f);
 	GetCapsuleComponent()->SetCapsuleRadius(40.0f);
-	
-	spawnBox = CreateDefaultSubobject<UBoxComponent>(TEXT("SpawnBox"));
-	spawnBox->SetupAttachment(RootComponent);
+
 	
 	
 	
@@ -58,7 +56,7 @@ AProjectWCharacter::AProjectWCharacter()
 	GetCharacterMovement()->bOrientRotationToMovement = false;
 
 	// Configure character movement
-	GetCharacterMovement()->GravityScale = 6.0f;
+	GetCharacterMovement()->GravityScale = 6.5f;
 	GetCharacterMovement()->AirControl = 1.0f;
 	GetCharacterMovement()->JumpZVelocity = 2500.f;
 	//GetCharacterMovement()->GroundFriction = 1.0f;

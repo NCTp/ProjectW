@@ -231,6 +231,10 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
+/I ..\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D
+/I ..\Plugins\2D\Paper2D\Source
+/I ..\Plugins\2D\Paper2D\Source\Paper2D\Classes
+/I ..\Plugins\2D\Paper2D\Source\Paper2D\Public
 /I C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW
 /I C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Source
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\AugmentedReality
@@ -247,10 +251,6 @@
 /I Runtime\CinematicCamera\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\LevelSequence
 /I Runtime\LevelSequence\Public
-/I ..\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D
-/I ..\Plugins\2D\Paper2D\Source
-/I ..\Plugins\2D\Paper2D\Source\Paper2D\Classes
-/I ..\Plugins\2D\Paper2D\Source\Paper2D\Public
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf

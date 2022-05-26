@@ -1,0 +1,1552 @@
+﻿Log file open, 05/23/22 11:31:00
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogInit: Display: Running engine for game: ProjectW
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 35 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.233279
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +9:00, Platform Override: ''
+LogInit: Display: Loading text-based GConfig....
+LogPluginManager: Mounting plugin MeshPainting
+LogPluginManager: Mounting plugin XGEController
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin EnvironmentQueryEditor
+LogPluginManager: Mounting plugin LiveLink
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin OodleData
+LogPluginManager: Mounting plugin OodleNetwork
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin CurveEditorTools
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin GeometryMode
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin MaterialAnalyzer
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin Niagara
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin ChaosClothEditor
+LogPluginManager: Mounting plugin ChaosEditor
+LogPluginManager: Mounting plugin ChaosCloth
+LogPluginManager: Mounting plugin ChaosSolverPlugin
+LogPluginManager: Mounting plugin ChaosNiagara
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin GeometryCollectionPlugin
+LogPluginManager: Mounting plugin GeometryProcessing
+LogPluginManager: Mounting plugin MotoSynth
+LogPluginManager: Mounting plugin OpenImageDenoise
+LogPluginManager: Mounting plugin PlanarCut
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin PythonScriptPlugin
+LogPluginManager: Mounting plugin SkeletalReduction
+LogPluginManager: Mounting plugin LuminPlatformFeatures
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin MagicLeapLightEstimation
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin MagicLeapPassableWorld
+LogPluginManager: Mounting plugin MLSDK
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin TemplateSequence
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin ActorLayerUtilities
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AssetTags
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin AudioSynesthesia
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin ChunkDownloader
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin GooglePAD
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OpenXR
+LogPluginManager: Mounting plugin OpenXREyeTracker
+LogPluginManager: Mounting plugin OpenXRHandTracking
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin ScreenshotTools
+LogPluginManager: Mounting plugin PostSplashScreen
+LogPluginManager: Mounting plugin PropertyAccessEditor
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin SoundFields
+LogPluginManager: Mounting plugin Synthesis
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogPluginManager: Mounting plugin Takes
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin PlasticSourceControl
+LogPluginManager: Mounting plugin PluginUtils
+LogPluginManager: Mounting plugin RiderSourceCodeAccess
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin TextureFormatOodle
+LogPluginManager: Mounting plugin PropertyAccessNode
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin PixWinPlugin
+LogPluginManager: Mounting plugin CameraShakePreviewer
+LogPluginManager: Mounting plugin GameplayCameras
+LogPluginManager: Mounting plugin ContentBrowserAssetDataSource
+LogPluginManager: Mounting plugin ContentBrowserClassDataSource
+LogPluginManager: Mounting plugin ContentBrowserFileDataSource
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin SteamVR
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+PixWinPlugin: PIX capture plugin failed to initialize! Check that the process is launched from PIX.
+LogOculusPluginWrapper: OculusPlugin initialized successfully
+LogHMD: Failed initializing OVRPlugin 1.59.0
+LogInit: Build: ++UE4+Release-4.27-CL-18319896
+LogInit: Engine Version: 4.27.2-18319896+++UE4+Release-4.27
+LogInit: Compatible Engine Version: 4.27.0-17155196+++UE4+Release-4.27
+LogInit: Net CL: 17155196
+LogInit: OS: Windows 10 (Release 2009) (), CPU: Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz, GPU: NVIDIA GeForce RTX 2070 SUPER
+LogInit: Compiled (64-bit): Nov 30 2021 07:12:08
+LogInit: Compiled with Visual C++: 19.24.28315.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.27
+LogInit: Command Line:  -EpicPortal -epicusername=nctp9999 -epicuserid=57b2135e4b1143d5bb3af7f406132400 -epiclocale=en -epicsandboxid=ue
+LogInit: Base Directory: C:/Program Files/Epic Games/UE_4.27/Engine/Binaries/Win64/
+LogInit: Allocator: TBB
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 29
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 4
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 40
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 37
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 3
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 14
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 45
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 13
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 3
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 15
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 47
+LogDevObjectVersion:   FortniteRelease (E7086368-6B23-4C58-8439-1B7016265E91): 1
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 10
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 10
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 41
+LogDevObjectVersion:   Dev-PhysicsMaterial-Chaos (B68FC16E-8B1B-42E2-B453-215C058844FE): 1
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogDevObjectVersion:   Dev-VirtualProduction (64F58936-FD1B-42BA-BA96-7289D5D0FA4E): 1
+LogDevObjectVersion:   Dev-MediaFramework (6F0ED827-A609-4895-9C91-998D90180EA4): 2
+LogInit: Presizing for max 25165824 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Engine.ini]
+LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Engine.ini]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Engine.ini]
+[2022.05.23-02.31.01:486][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Engine.ini]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Engine.ini]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Setting CVar [[gc.MultithreadedDestructionEnabled:1]]
+[2022.05.23-02.31.01:486][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Engine.ini]
+[2022.05.23-02.31.01:486][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Engine.ini]
+[2022.05.23-02.31.01:566][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2022.05.23-02.31.01:566][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2022.05.23-02.31.01:567][  0]LogInit: Selected Device Profile: [Windows]
+[2022.05.23-02.31.01:567][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2022.05.23-02.31.01:567][  0]LogHAL: Display: Platform has ~ 32 GB [34294743040 / 34359738368 / 32], which maps to Largest [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2022.05.23-02.31.01:567][  0]LogInit: Going up to parent DeviceProfile []
+[2022.05.23-02.31.01:567][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2022.05.23-02.31.01:567][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Scalability.ini]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2022.05.23-02.31.01:568][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2022.05.23-02.31.01:569][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2022.05.23-02.31.01:569][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2022.05.23-02.31.01:569][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2022.05.23-02.31.01:569][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Engine.ini]
+[2022.05.23-02.31.01:569][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Config/Windows/Editor.ini]
+[2022.05.23-02.31.01:569][  0]LogInit: Computer: DESKTOP-3F13A7O
+[2022.05.23-02.31.01:569][  0]LogInit: User: User
+[2022.05.23-02.31.01:569][  0]LogInit: CPU Page size=4096, Cores=6
+[2022.05.23-02.31.01:569][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2022.05.23-02.31.01:569][  0]LogMemory: Memory total: Physical=31.9GB (32GB approx)
+[2022.05.23-02.31.01:569][  0]LogMemory: Platform Memory Stats for Windows
+[2022.05.23-02.31.01:569][  0]LogMemory: Process Physical Memory: 145.11 MB used, 145.11 MB peak
+[2022.05.23-02.31.01:569][  0]LogMemory: Process Virtual Memory: 125.97 MB used, 125.97 MB peak
+[2022.05.23-02.31.01:569][  0]LogMemory: Physical Memory: 14157.35 MB used,  18548.66 MB free, 32706.02 MB total
+[2022.05.23-02.31.01:569][  0]LogMemory: Virtual Memory: 134197144.00 MB used,  20585.64 MB free, 134217728.00 MB total
+[2022.05.23-02.31.01:577][  0]LogWindows: WindowsPlatformFeatures enabled
+[2022.05.23-02.31.01:675][  0]LogInit: Physics initialised using underlying interface: PhysX
+[2022.05.23-02.31.01:676][  0]LogInit: Overriding language with editor language configuration option (en).
+[2022.05.23-02.31.01:676][  0]LogInit: Overriding language with editor locale configuration option (en).
+[2022.05.23-02.31.01:849][  0]LogInit: Setting process to per monitor DPI aware
+[2022.05.23-02.31.01:878][  0]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2022.05.23-02.31.01:899][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2022.05.23-02.31.01:899][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2022.05.23-02.31.02:066][  0]LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
+[2022.05.23-02.31.02:071][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2022.05.23-02.31.02:071][  0]LogD3D11RHI: D3D11 min allowed feature level: 11_0
+[2022.05.23-02.31.02:071][  0]LogD3D11RHI: D3D11 max allowed feature level: 11_0
+[2022.05.23-02.31.02:071][  0]LogD3D11RHI: D3D11 adapters:
+[2022.05.23-02.31.02:220][  0]LogD3D11RHI:    0. 'NVIDIA GeForce RTX 2070 SUPER' (Feature Level 11_0)
+[2022.05.23-02.31.02:220][  0]LogD3D11RHI:       8012/0/16353 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
+[2022.05.23-02.31.02:222][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2022.05.23-02.31.02:222][  0]LogD3D11RHI:       0/0/16353 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2022.05.23-02.31.02:222][  0]LogD3D11RHI: Chosen D3D11 Adapter:
+[2022.05.23-02.31.02:222][  0]LogD3D11RHI:     Description : NVIDIA GeForce RTX 2070 SUPER
+[2022.05.23-02.31.02:222][  0]LogD3D11RHI:     VendorId    : 10de
+[2022.05.23-02.31.02:222][  0]LogD3D11RHI:     DeviceId    : 1e84
+[2022.05.23-02.31.02:222][  0]LogD3D11RHI:     SubSysId    : 7377
+[2022.05.23-02.31.02:222][  0]LogD3D11RHI:     Revision    : 00a1
+[2022.05.23-02.31.02:222][  0]LogD3D11RHI:     DedicatedVideoMemory : 8401190912 bytes
+[2022.05.23-02.31.02:222][  0]LogD3D11RHI:     DedicatedSystemMemory : 0 bytes
+[2022.05.23-02.31.02:222][  0]LogD3D11RHI:     SharedSystemMemory : 17147371520 bytes
+[2022.05.23-02.31.02:222][  0]LogD3D11RHI:     AdapterLuid : 0 58749
+[2022.05.23-02.31.02:226][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2022.05.23-02.31.02:227][  0]LogD3D11RHI:     GPU DeviceId: 0x1e84 (for the marketing name, search the web for "GPU Device Id")
+[2022.05.23-02.31.02:227][  0]LogWindows: EnumDisplayDevices:
+[2022.05.23-02.31.02:227][  0]LogWindows:    0. 'NVIDIA GeForce RTX 2070 SUPER' (P:1 D:1)
+[2022.05.23-02.31.02:228][  0]LogWindows:    1. 'NVIDIA GeForce RTX 2070 SUPER' (P:0 D:1)
+[2022.05.23-02.31.02:228][  0]LogWindows:    2. 'NVIDIA GeForce RTX 2070 SUPER' (P:0 D:0)
+[2022.05.23-02.31.02:229][  0]LogWindows:    3. 'NVIDIA GeForce RTX 2070 SUPER' (P:0 D:0)
+[2022.05.23-02.31.02:230][  0]LogWindows: DebugString: FoundDriverCount:4 
+[2022.05.23-02.31.02:230][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce RTX 2070 SUPER
+[2022.05.23-02.31.02:230][  0]LogD3D11RHI:   Driver Version: 511.79 (internal:30.0.15.1179, unified:511.79)
+[2022.05.23-02.31.02:230][  0]LogD3D11RHI:      Driver Date: 2-10-2022
+[2022.05.23-02.31.02:230][  0]LogRHI: Texture pool is 5608 MB (70% of 8012 MB)
+[2022.05.23-02.31.02:230][  0]LogD3D11RHI: Creating D3DDevice using adapter:
+[2022.05.23-02.31.02:230][  0]LogD3D11RHI:     Description : NVIDIA GeForce RTX 2070 SUPER
+[2022.05.23-02.31.02:230][  0]LogD3D11RHI:     VendorId    : 10de
+[2022.05.23-02.31.02:230][  0]LogD3D11RHI:     DeviceId    : 1e84
+[2022.05.23-02.31.02:230][  0]LogD3D11RHI:     SubSysId    : 7377
+[2022.05.23-02.31.02:230][  0]LogD3D11RHI:     Revision    : 00a1
+[2022.05.23-02.31.02:230][  0]LogD3D11RHI:     DedicatedVideoMemory : 8401190912 bytes
+[2022.05.23-02.31.02:230][  0]LogD3D11RHI:     DedicatedSystemMemory : 0 bytes
+[2022.05.23-02.31.02:230][  0]LogD3D11RHI:     SharedSystemMemory : 17147371520 bytes
+[2022.05.23-02.31.02:230][  0]LogD3D11RHI:     AdapterLuid : 0 58749
+[2022.05.23-02.31.02:290][  0]LogD3D11RHI: RHI has support for 64 bit atomics
+[2022.05.23-02.31.02:290][  0]LogD3D11RHI: Async texture creation enabled
+[2022.05.23-02.31.02:290][  0]LogD3D11RHI: Array index from any shader is supported
+[2022.05.23-02.31.02:308][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
+[2022.05.23-02.31.02:387][  0]LogRHI: GeForceNow SDK initialized: 1
+[2022.05.23-02.31.02:720][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AllDesktop'
+[2022.05.23-02.31.02:743][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android'
+[2022.05.23-02.31.02:744][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTC'
+[2022.05.23-02.31.02:744][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXT'
+[2022.05.23-02.31.02:744][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2'
+[2022.05.23-02.31.02:744][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AndroidClient'
+[2022.05.23-02.31.02:744][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTCClient'
+[2022.05.23-02.31.02:744][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXTClient'
+[2022.05.23-02.31.02:744][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2Client'
+[2022.05.23-02.31.02:744][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_Multi'
+[2022.05.23-02.31.02:744][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_MultiClient'
+[2022.05.23-02.31.02:766][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOSClient'
+[2022.05.23-02.31.02:766][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOS'
+[2022.05.23-02.31.02:777][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Linux'
+[2022.05.23-02.31.02:782][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxNoEditor'
+[2022.05.23-02.31.02:788][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxClient'
+[2022.05.23-02.31.02:794][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxServer'
+[2022.05.23-02.31.02:806][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64NoEditor'
+[2022.05.23-02.31.02:811][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Client'
+[2022.05.23-02.31.02:817][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Server'
+[2022.05.23-02.31.02:848][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Lumin'
+[2022.05.23-02.31.02:848][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LuminClient'
+[2022.05.23-02.31.02:859][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacNoEditor'
+[2022.05.23-02.31.02:864][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Mac'
+[2022.05.23-02.31.02:869][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacClient'
+[2022.05.23-02.31.02:874][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacServer'
+[2022.05.23-02.31.02:886][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOSClient'
+[2022.05.23-02.31.02:886][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOS'
+[2022.05.23-02.31.02:898][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsNoEditor'
+[2022.05.23-02.31.02:904][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+[2022.05.23-02.31.02:909][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+[2022.05.23-02.31.02:915][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+[2022.05.23-02.31.02:915][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2022.05.23-02.31.02:926][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2022.05.23-02.31.02:973][  0]LogTextureFormatOodle: Display: Oodle Texture 2.9.0 init RDO Off
+[2022.05.23-02.31.03:017][  0]LogRendererCore: Ray tracing is disabled. Reason: r.RayTracing=0.
+[2022.05.23-02.31.03:017][  0]LogShaderCompilers: Guid format shader working directory is -18 characters bigger than the processId version (../../../../../../Users/User/Documents/GitHub/ProjectW/ProjectW/Intermediate/Shaders/WorkingDirectory/9540/).
+[2022.05.23-02.31.03:018][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/User/AppData/Local/Temp/UnrealShaderWorkingDir/8F61A4B24F3648A90A2567B33B90AC89/'.
+[2022.05.23-02.31.03:018][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2022.05.23-02.31.03:018][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2022.05.23-02.31.03:018][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2022.05.23-02.31.03:743][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2022.05.23-02.31.03:791][  0]LogDerivedDataCache: Loaded boot cache 0.05s 94MB C:/Users/User/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc.
+[2022.05.23-02.31.03:791][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/User/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc
+[2022.05.23-02.31.03:791][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/User/Documents/GitHub/ProjectW/ProjectW/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2022.05.23-02.31.03:791][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2022.05.23-02.31.03:791][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/User/Documents/GitHub/ProjectW/ProjectW/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2022.05.23-02.31.03:791][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2022.05.23-02.31.03:806][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2022.05.23-02.31.03:806][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2022.05.23-02.31.03:806][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2022.05.23-02.31.03:815][  0]LogDerivedDataCache: Speed tests for C:/Users/User/AppData/Local/UnrealEngine/Common/DerivedDataCache took 0.01 seconds
+[2022.05.23-02.31.03:816][  0]LogDerivedDataCache: Display: Performance to C:/Users/User/AppData/Local/UnrealEngine/Common/DerivedDataCache: Latency=0.05ms. RandomReadSpeed=288.23MBs, RandomWriteSpeed=196.60MBs. Assigned SpeedClass 'Local'
+[2022.05.23-02.31.03:816][  0]LogDerivedDataCache: Using Local data cache path C:/Users/User/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2022.05.23-02.31.03:816][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2022.05.23-02.31.03:816][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2022.05.23-02.31.03:859][  0]LogSlate: Using FreeType 2.10.0
+[2022.05.23-02.31.03:860][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2022.05.23-02.31.03:882][  0]LogAssetRegistry: FAssetRegistry took 0.0026 seconds to start up
+[2022.05.23-02.31.04:110][  0]LogInit: Selected Device Profile: [Windows]
+[2022.05.23-02.31.04:110][  0]LogInit: Active device profile: [000001ECB5AF8700][000001ECB4966EC0 49] Windows
+[2022.05.23-02.31.04:110][  0]LogInit: Profiles: [000001ECB5AF8700][000001ECB4966EC0 49] Windows, [000001ECB5AC3700][000001ECB496F040 49] WindowsNoEditor, [000001ECB5AFB300][000001ECB49731C0 49] WindowsServer, [000001ECB5AC0F00][000001ECB4977340 49] WindowsClient, [000001ECB5AFB500][000001ECB497B4C0 49] IOS, [000001ECB5A87F00][000001ECABB35640 49] iPadAir, [000001ECB5AC3B00][000001ECAB19D7C0 49] iPadAir2, [000001ECB5A34500][000001ECB146DA80 49] IPadPro, [000001ECB5A34600][000001ECABB39AC0 49] iPadAir3, [000001ECB5A84100][000001ECB14700C0 49] iPadAir4, [000001ECB5A36C00][000001ECB1478240 49] iPadMini2, [000001ECB5A86500][000001ECB4AB23C0 49] iPadMini3, [000001ECB5A37400][000001ECB5EF8540 49] iPadMini4, [000001ECB5A84F00][000001ECB5EFC6C0 49] iPadMini5, [000001ECB5A0FE00][000001ECB496A940 49] iPhone6, [000001ECB5A0FF00][000001ECB5F00980 49] iPodTouch6, [000001ECB5AFB900][000001ECB2518BC0 49] iPhone7, [000001ECB5AFA100][000001ECB2514C00 49] iPodTouch7, [000001ECB5A0C400][000001ECB2526D40 49] iPhone5S, [000001ECB5A37D00][000001ECB6306EC0 49] iPhone6Plus, [000001ECB5AFB400][000001ECB630B040 49] iPhone6S, [000001ECB5A36000][000001ECB630F1C0 49] iPhone6SPlus, [000001ECB5AF8900][000001ECB6313340 49] iPhone7Plus, [000001ECB5A34E00][000001ECB63174C0 49] iPhoneSE, [000001ECB5AF8200][000001ECB631B640 49] iPhone8, [000001ECB5A36400][000001ECB24C17C0 49] iPhone8Plus, [000001ECB5AF9E00][000001ECB24D9940 49] iPhoneX, [000001ECB5A37E00][000001ECB24E5AC0 49] iPhoneXS, [000001ECB5AF9600][000001ECB24E80C0 49] iPhoneXSMax, [000001ECB5A36500][000001ECB24EC240 49] iPhoneXR, [000001ECB5AFAA00][000001ECB24F43C0 49] iPhone11, [000001ECB5A37A00][000001ECB24F8540 49] iPhone11Pro, [000001ECB5AF8F00][000001ECB25006C0 49] iPhone11ProMax, [000001ECB5A36300][000001ECB2504840 49] iPhoneSE2, [000001ECB5AFA700][000001ECB25089C0 49] iPhone12Mini, [000001ECB5A34700][000001ECB250CB40 49] iPhone12, [000001ECB5AFB100][000001ECB6302C80 49] iPhone12Pro, [000001ECB5A37500][000001ECB144CDC0 49] iPhone12ProMax, [000001ECB5AF8800][000001ECB24FCF00 49] iPadPro105, [000001ECB5A35C00][000001ECB145D080 49] iPadPro129, [000001ECB5AF8300][000001ECB1461200 49] iPadPro97, [000001ECB5A35D00][000001ECB1465380 49] iPadPro2_129, [000001ECB5AF8C00][000001ECB5EF5500 49] iPad5, [000001ECB5A37000][000001ECB4AAF680 49] iPad6, [000001ECB5AFAC00][000001ECB4AAB800 49] iPad7, [000001ECB5A36E00][000001ECB4AA7980 49] iPad8, [000001ECB5AF9800][000001ECB4AA3B00 49] iPadPro11, [000001ECB5A35B00][000001ECAB198100 49] iPadPro2_11, [000001ECB5AF9500][000001ECB1474280 49] iPadPro3_129, [000001ECB5A36700][000001ECB1468400 49] iPadPro4_129, [000001ECB5AF8100][000001ECABB1E580 49] AppleTV, [000001ECB5A36B00][000001ECABB22700 49] AppleTV4K, [000001ECB5AF9B00][000001ECABB26880 49] TVOS, [000001ECB5A34900][000001ECABB2AA00 49] Mac, [000001ECB5AF9700][000001ECABB2EB80 49] MacClient, [000001ECB5A36F00][000001ECAB1A0D00 49] MacNoEditor, [000001ECB5AF8D00][000001ECB24F0E40 49] MacServer, [000001ECB5A34300][000001ECAB1A4F80 49] Linux, [000001ECB5AFAE00][000001ECAB1A90C0 49] LinuxAArch64, [000001ECB5A35500][000001ECAB1B1240 49] LinuxNoEditor, [000001ECB5AFA400][000001ECAB1B53C0 49] LinuxAArch64NoEditor, [000001ECB5A34200][000001ECAB1B9540 49] LinuxClient, [000001ECB5AFAD00][000001ECAB1BD6C0 49] LinuxAArch64Client, [000001ECB5A34C00][000001ECAB1C1840 49] LinuxServer, [000001ECB5AF8400][000001ECAB1C59C0 49] LinuxAArch64Server, [000001ECB5A35000][000001ECB5EB9B40 49] Android, [000001ECB5A87900][000001ECB5EBC140 49] Android_Low, [000001ECB5A0DB00][000001ECB5EC02C0 49] Android_Mid, [000001ECB5A87000][000001ECB5EC4440 49] Android_High, [000001ECB5A0E300][000001ECB5EC85C0 49] Android_Default, [000001ECB5A86000][000001ECB5ECC740 49] Android_Adreno4xx, [000001ECB5A0C100][000001ECB5ED08C0 49] Android_Adreno5xx_Low, [000001ECB5A84B00][000001ECB5ED4A40 49] Android_Adreno5xx, [000001ECB5A0D800][000001ECB5ED8BC0 49] Android_Adreno6xx, [000001ECB5A85100][000001ECB5EDCD40 49] Android_Adreno6xx_Vulkan, [000001ECB5A0C800][000001ECB5EE0EC0 49] Android_Mali_T6xx, [000001ECB5A87600][000001ECAB1AD000 49] Android_Mali_T7xx, [000001ECB5A0CD00][000001ECB5EE5140 49] Android_Mali_T8xx, [000001ECB5A87C00][000001ECB5EE9280 49] Android_Mali_G71, [000001ECB5A0D500][000001ECB5EED3C0 49] Android_Mali_G72, [000001ECB5A87E00][000001ECABA2B540 49] Android_Mali_G72_Vulkan, [000001ECB5A0FD00][000001ECABA2F6C0 49] Android_Mali_G76, [000001ECB5A87A00][000001ECABA33840 49] Android_Mali_G76_Vulkan, [000001ECB5A0F600][000001ECABA379C0 49] Android_Mali_G77, [000001ECB5A86200][000001ECABA3BB40 49] Android_Mali_G77_Vulkan, [000001ECB5A0D200][000001ECABA3E140 49] Android_Mali_G78, [000001ECB5A84A00][000001ECABA422C0 49] Android_Mali_G78_Vulkan, [000001ECB5A0F000][000001ECABA46440 49] Android_Mali_G710, [000001ECB5A85400][000001ECABA4A5C0 49] Android_Mali_G710_Vulkan, [000001ECB5A0C700][000001ECABA4E740 49] Android_Vulkan_SM5, [000001ECB5A85800][000001ECABA528C0 49] Android_PowerVR_G6xxx, [000001ECB5A0CE00][000001ECABA56A40 49] Android_PowerVR_GT7xxx, [000001ECB5A84200][000001ECABA5ABC0 49] Android_PowerVR_GE8xxx, [000001ECB5A0C600][000001ECABA5ED40 49] Android_PowerVR_GM9xxx, [000001ECB5A86600][000001ECABA62EC0 49] Android_PowerVR_GM9xxx_Vulkan, [000001ECB5A34F00][000001ECABA67040 49] Android_TegraK1, [000001ECB5A86A00][000001ECB5EF1180 49] Android_Unknown_Vulkan, [000001ECB5A34D00][000001ECABA6B2C0 49] Lumin, [000001ECB5A85200][000001ECABA6F400 49] Lumin_Desktop, [000001ECB5A34B00][000001ECABA73540 49] HoloLens, 
+[2022.05.23-02.31.04:244][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2022.05.23-02.31.04:244][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2022.05.23-02.31.04:244][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2022.05.23-02.31.04:245][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2022.05.23-02.31.04:245][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2022.05.23-02.31.04:269][  0]LogNetVersion: ProjectW 1.0.0, NetCL: 17155196, EngineNetVer: 17, GameNetVer: 0 (Checksum: 3711624230)
+[2022.05.23-02.31.04:745][  0]LogTexture: Default maximum texture size for cubemaps generated from long-lat sources has been changed from 512 to unlimited. In order to preserve old behaiour for '/Engine/MapTemplates/Sky/DaylightAmbientCubemap.DaylightAmbientCubemap', its maximum texture size has been explicitly set to 512.
+[2022.05.23-02.31.04:797][  0]LogHMD: PokeAHoleMaterial loaded successfully
+[2022.05.23-02.31.04:803][  0]LogUObjectArray: 17178 objects as part of root set at end of initial load.
+[2022.05.23-02.31.04:803][  0]LogUObjectAllocator: 4302048 out of 0 bytes used by permanent object pool.
+[2022.05.23-02.31.04:803][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2022.05.23-02.31.05:190][  0]LogNiagaraDebuggerClient: Niagara Debugger Client Initialized | Session: 10A698C241299ACB3BB3938AF373F3FE | Instance: 7FAB770444F3D4B1ECE8BEB3E5C3A181 (DESKTOP-3F13A7O-9540).
+[2022.05.23-02.31.05:236][  0]LogPython: Using Python 3.7.7
+[2022.05.23-02.31.05:870][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2022.05.23-02.31.05:878][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2022.05.23-02.31.06:388][  0]LogOpenImageDenoise: OIDN starting up
+[2022.05.23-02.31.06:451][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2022.05.23-02.31.06:480][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2022.05.23-02.31.06:480][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2022.05.23-02.31.06:630][  0]SourceControl: Source control is disabled
+[2022.05.23-02.31.06:630][  0]SourceControl: Source control is disabled
+[2022.05.23-02.31.06:635][  0]SourceControl: Source control is disabled
+[2022.05.23-02.31.06:639][  0]SourceControl: Source control is disabled
+[2022.05.23-02.31.06:653][  0]SourceControl: Source control is disabled
+[2022.05.23-02.31.06:658][  0]LogUProjectInfo: Found projects:
+[2022.05.23-02.31.06:686][  0]LogCollectionManager: Loaded 0 collections in 0.001564 seconds
+[2022.05.23-02.31.06:717][  0]LogFileCache: Scanning file cache for directory 'C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Saved/Collections/' took 0.00s
+[2022.05.23-02.31.06:717][  0]LogFileCache: Scanning file cache for directory 'C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Content/Developers/User/Collections/' took 0.00s
+[2022.05.23-02.31.06:717][  0]LogFileCache: Scanning file cache for directory 'C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Content/Collections/' took 0.00s
+[2022.05.23-02.31.06:717][  0]LogOcInput: OculusInput pre-init called
+[2022.05.23-02.31.06:975][  0]LogEngine: Initializing Engine...
+[2022.05.23-02.31.06:978][  0]LogHMD: Failed to enumerate extensions. Please check that you have a valid OpenXR runtime installed.
+[2022.05.23-02.31.06:978][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2022.05.23-02.31.06:978][  0]LogMagicLeap: Warning: VR disabled because ZI is not enabled.  To enable, in the editor, Edit -> Project Settings -> Plugins -> Magic Leap Plugin -> Enable Zero Iteration
+[2022.05.23-02.31.06:979][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2022.05.23-02.31.07:102][  0]LogInit: Initializing FReadOnlyCVARCache
+[2022.05.23-02.31.07:110][  0]LogAIModule: Creating AISystem for world Untitled
+[2022.05.23-02.31.07:111][  0]LogAudio: Display: Initializing Audio Device Manager...
+[2022.05.23-02.31.07:115][  0]LogAudio: Display: Loading Default Audio Settings Objects...
+[2022.05.23-02.31.07:116][  0]LogAudio: Display: No default SoundConcurrencyObject specified (or failed to load).
+[2022.05.23-02.31.07:116][  0]LogAudio: Display: Audio Device Manager Initialized
+[2022.05.23-02.31.07:116][  0]LogAudio: Display: Creating Audio Device:                 Id: 1, Scope: Shared, Realtime: True
+[2022.05.23-02.31.07:116][  0]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.05.23-02.31.07:117][  0]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.05.23-02.31.07:117][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.05.23-02.31.07:117][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.05.23-02.31.07:117][  0]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.05.23-02.31.07:117][  0]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.05.23-02.31.07:117][  0]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.05.23-02.31.07:117][  0]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.05.23-02.31.07:117][  0]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.05.23-02.31.07:117][  0]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.05.23-02.31.07:117][  0]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.05.23-02.31.07:117][  0]LogAudioMixer: Display: Initializing audio mixer.
+[2022.05.23-02.31.07:146][  0]LogAudioMixer: Display: 0: FrontLeft
+[2022.05.23-02.31.07:146][  0]LogAudioMixer: Display: 1: FrontRight
+[2022.05.23-02.31.07:281][  0]LogAudioMixer: Display: Using Audio Device 스피커(Realtek(R) Audio)
+[2022.05.23-02.31.07:285][  0]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.05.23-02.31.07:288][  0]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.05.23-02.31.07:288][  0]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.05.23-02.31.07:289][  0]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.05.23-02.31.07:289][  0]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.05.23-02.31.07:289][  0]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.05.23-02.31.07:290][  0]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.05.23-02.31.07:290][  0]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.05.23-02.31.07:290][  0]LogInit: FAudioDevice initialized.
+[2022.05.23-02.31.07:290][  0]LogAudio: Display: Audio Device (ID: 1) registered with world 'Untitled'.
+[2022.05.23-02.31.07:290][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2022.05.23-02.31.07:344][  0]LogDerivedDataCache: Saved boot cache 0.05s 94MB C:/Users/User/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc.
+[2022.05.23-02.31.07:344][  0]LogInit: Texture streaming: Enabled
+[2022.05.23-02.31.07:364][  0]LogAnalytics: Display: [UEEditor.Rocket.Release] APIServer = https://datarouter.ol.epicgames.com/. AppVersion = 4.27.2-18319896+++UE4+Release-4.27
+[2022.05.23-02.31.07:372][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2022.05.23-02.31.07:373][  0]LogEngineSessionManager: EngineSessionManager sent abnormal shutdown report. Type=Crashed, SessionId={9EE374FC-4790-816A-55CF-92BF23C7739A}
+[2022.05.23-02.31.07:373][  0]LogEditorSessionSummary: Verbose: Initializing EditorSessionSummaryWriter for editor session tracking
+[2022.05.23-02.31.07:378][  0]LogEditorSessionSummary: EditorSessionSummaryWriter initialized
+[2022.05.23-02.31.07:408][  0]LogInit: Transaction tracking system initialized
+[2022.05.23-02.31.07:440][  0]BlueprintLog: New page: Editor Load
+[2022.05.23-02.31.07:529][  0]LocalizationService: Localization service is disabled
+[2022.05.23-02.31.07:567][  0]TimingProfiler: Initialize
+[2022.05.23-02.31.07:567][  0]TimingProfiler: OnSessionChanged
+[2022.05.23-02.31.07:567][  0]LoadingProfiler: Initialize
+[2022.05.23-02.31.07:567][  0]LoadingProfiler: OnSessionChanged
+[2022.05.23-02.31.07:567][  0]NetworkingProfiler: Initialize
+[2022.05.23-02.31.07:567][  0]NetworkingProfiler: OnSessionChanged
+[2022.05.23-02.31.07:567][  0]MemoryProfiler: Initialize
+[2022.05.23-02.31.07:567][  0]MemoryProfiler: OnSessionChanged
+[2022.05.23-02.31.07:762][  0]LogCook: Display: CookSettings for Memory: MemoryMaxUsedVirtual 0MiB, MemoryMaxUsedPhysical 16384MiB, MemoryMinFreeVirtual 0MiB, MemoryMinFreePhysical 1024MiB
+[2022.05.23-02.31.07:763][  0]LogCook: Display: Mobile HDR setting 1
+[2022.05.23-02.31.07:926][  0]LogFileCache: Scanning file cache for directory 'C:/Users/User/Documents/GitHub/ProjectW/ProjectW/Content/' took 0.01s
+[2022.05.23-02.31.08:284][  0]LogInit: Display: Engine is initialized. Leaving FEngineLoop::Init()
+[2022.05.23-02.31.08:289][  0]SourceControl: Source control is disabled
+[2022.05.23-02.31.08:289][  0]LogUnrealEdMisc: Loading editor; pre map load, took 8.077
+[2022.05.23-02.31.08:289][  0]Cmd: MAP LOAD FILE="../../../../../../Users/User/Documents/GitHub/ProjectW/ProjectW/Content/2DSideScrollerCPP/Maps/2DSideScrollerExampleMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2022.05.23-02.31.08:290][  0]LightingResults: New page: Lighting Build
+[2022.05.23-02.31.08:291][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2022.05.23-02.31.08:291][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.23-02.31.08:291][  0]MapCheck: New page: Map Check
+[2022.05.23-02.31.08:291][  0]LightingResults: New page: Lighting Build
+[2022.05.23-02.31.08:298][  0]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.05.23-02.31.08:301][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.33ms
+[2022.05.23-02.31.08:387][  0]LogAudio: Display: Audio Device (ID: 1) registered with world '2DSideScrollerExampleMap'.
+[2022.05.23-02.31.08:388][  0]LogAIModule: Creating AISystem for world 2DSideScrollerExampleMap
+[2022.05.23-02.31.08:393][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2022.05.23-02.31.08:399][  0]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2022.05.23-02.31.08:400][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2022.05.23-02.31.08:400][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.241ms to complete.
+[2022.05.23-02.31.08:400][  0]LogFileHelpers: Loading map '2DSideScrollerExampleMap' took 0.112
+[2022.05.23-02.31.08:403][  0]LogUnrealEdMisc: Total Editor Startup Time, took 8.191
+[2022.05.23-02.31.08:532][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.23-02.31.08:537][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.23-02.31.08:543][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.23-02.31.08:548][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.23-02.31.08:564][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0107 seconds. Added 3828 classes and 930 folders.
+[2022.05.23-02.31.08:568][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'WidgetCarousel' in 0.0004 seconds. Added 0 classes and 0 folders.
+[2022.05.23-02.31.08:571][  0]LogPakFile: PakFile PrimaryIndexSize=187
+[2022.05.23-02.31.08:571][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:571][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2022.05.23-02.31.08:571][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/FP_FirstPerson.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:571][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/FP_FirstPerson.upack)
+[2022.05.23-02.31.08:571][  0]LogPakFile: OnPakFileMounted2Time == 0.000055
+[2022.05.23-02.31.08:572][  0]LogPakFile: PakFile PrimaryIndexSize=189
+[2022.05.23-02.31.08:572][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:572][  0]LogPakFile: PakFile FullDirectoryIndexSize=152
+[2022.05.23-02.31.08:572][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/FP_FirstPersonBP.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:572][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/FP_FirstPersonBP.upack)
+[2022.05.23-02.31.08:572][  0]LogPakFile: OnPakFileMounted2Time == 0.000039
+[2022.05.23-02.31.08:573][  0]LogPakFile: PakFile PrimaryIndexSize=191
+[2022.05.23-02.31.08:573][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:573][  0]LogPakFile: PakFile FullDirectoryIndexSize=160
+[2022.05.23-02.31.08:573][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/MobileStarterContent.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:573][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/MobileStarterContent.upack)
+[2022.05.23-02.31.08:573][  0]LogPakFile: OnPakFileMounted2Time == 0.000032
+[2022.05.23-02.31.08:574][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2022.05.23-02.31.08:574][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:574][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2022.05.23-02.31.08:574][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/StarterContent.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:574][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/StarterContent.upack)
+[2022.05.23-02.31.08:574][  0]LogPakFile: OnPakFileMounted2Time == 0.000054
+[2022.05.23-02.31.08:575][  0]LogPakFile: PakFile PrimaryIndexSize=190
+[2022.05.23-02.31.08:575][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:575][  0]LogPakFile: PakFile FullDirectoryIndexSize=154
+[2022.05.23-02.31.08:575][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_2DSideScroller.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:575][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_2DSideScroller.upack)
+[2022.05.23-02.31.08:575][  0]LogPakFile: OnPakFileMounted2Time == 0.000040
+[2022.05.23-02.31.08:576][  0]LogPakFile: PakFile PrimaryIndexSize=192
+[2022.05.23-02.31.08:576][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:576][  0]LogPakFile: PakFile FullDirectoryIndexSize=158
+[2022.05.23-02.31.08:576][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_2DSideScrollerBP.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:576][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_2DSideScrollerBP.upack)
+[2022.05.23-02.31.08:576][  0]LogPakFile: OnPakFileMounted2Time == 0.000037
+[2022.05.23-02.31.08:577][  0]LogPakFile: PakFile PrimaryIndexSize=182
+[2022.05.23-02.31.08:577][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:577][  0]LogPakFile: PakFile FullDirectoryIndexSize=138
+[2022.05.23-02.31.08:577][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_Flying.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:577][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_Flying.upack)
+[2022.05.23-02.31.08:577][  0]LogPakFile: OnPakFileMounted2Time == 0.000039
+[2022.05.23-02.31.08:577][  0]LogPakFile: PakFile PrimaryIndexSize=184
+[2022.05.23-02.31.08:577][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:577][  0]LogPakFile: PakFile FullDirectoryIndexSize=142
+[2022.05.23-02.31.08:577][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_FlyingBP.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:577][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_FlyingBP.upack)
+[2022.05.23-02.31.08:577][  0]LogPakFile: OnPakFileMounted2Time == 0.000040
+[2022.05.23-02.31.08:578][  0]LogPakFile: PakFile PrimaryIndexSize=188
+[2022.05.23-02.31.08:578][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:578][  0]LogPakFile: PakFile FullDirectoryIndexSize=150
+[2022.05.23-02.31.08:578][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_HandheldARBP.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:578][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_HandheldARBP.upack)
+[2022.05.23-02.31.08:578][  0]LogPakFile: OnPakFileMounted2Time == 0.000032
+[2022.05.23-02.31.08:579][  0]LogPakFile: PakFile PrimaryIndexSize=182
+[2022.05.23-02.31.08:579][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:579][  0]LogPakFile: PakFile FullDirectoryIndexSize=138
+[2022.05.23-02.31.08:579][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_Puzzle.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:579][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_Puzzle.upack)
+[2022.05.23-02.31.08:579][  0]LogPakFile: OnPakFileMounted2Time == 0.000036
+[2022.05.23-02.31.08:580][  0]LogPakFile: PakFile PrimaryIndexSize=184
+[2022.05.23-02.31.08:580][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:580][  0]LogPakFile: PakFile FullDirectoryIndexSize=142
+[2022.05.23-02.31.08:580][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_PuzzleBP.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:580][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_PuzzleBP.upack)
+[2022.05.23-02.31.08:580][  0]LogPakFile: OnPakFileMounted2Time == 0.000036
+[2022.05.23-02.31.08:581][  0]LogPakFile: PakFile PrimaryIndexSize=183
+[2022.05.23-02.31.08:581][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:581][  0]LogPakFile: PakFile FullDirectoryIndexSize=140
+[2022.05.23-02.31.08:581][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_Rolling.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:581][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_Rolling.upack)
+[2022.05.23-02.31.08:581][  0]LogPakFile: OnPakFileMounted2Time == 0.000036
+[2022.05.23-02.31.08:582][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2022.05.23-02.31.08:582][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:582][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2022.05.23-02.31.08:582][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_RollingBP.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:582][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_RollingBP.upack)
+[2022.05.23-02.31.08:582][  0]LogPakFile: OnPakFileMounted2Time == 0.000037
+[2022.05.23-02.31.08:583][  0]LogPakFile: PakFile PrimaryIndexSize=188
+[2022.05.23-02.31.08:583][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:583][  0]LogPakFile: PakFile FullDirectoryIndexSize=150
+[2022.05.23-02.31.08:583][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_SideScroller.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:583][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_SideScroller.upack)
+[2022.05.23-02.31.08:583][  0]LogPakFile: OnPakFileMounted2Time == 0.000033
+[2022.05.23-02.31.08:584][  0]LogPakFile: PakFile PrimaryIndexSize=190
+[2022.05.23-02.31.08:584][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:584][  0]LogPakFile: PakFile FullDirectoryIndexSize=154
+[2022.05.23-02.31.08:584][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_SideScrollerBP.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:584][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_SideScrollerBP.upack)
+[2022.05.23-02.31.08:584][  0]LogPakFile: OnPakFileMounted2Time == 0.000033
+[2022.05.23-02.31.08:584][  0]LogPakFile: PakFile PrimaryIndexSize=187
+[2022.05.23-02.31.08:584][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:584][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2022.05.23-02.31.08:584][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_ThirdPerson.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:584][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_ThirdPerson.upack)
+[2022.05.23-02.31.08:584][  0]LogPakFile: OnPakFileMounted2Time == 0.000037
+[2022.05.23-02.31.08:585][  0]LogPakFile: PakFile PrimaryIndexSize=189
+[2022.05.23-02.31.08:585][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:585][  0]LogPakFile: PakFile FullDirectoryIndexSize=152
+[2022.05.23-02.31.08:585][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_ThirdPersonBP.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:585][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_ThirdPersonBP.upack)
+[2022.05.23-02.31.08:585][  0]LogPakFile: OnPakFileMounted2Time == 0.000030
+[2022.05.23-02.31.08:586][  0]LogPakFile: PakFile PrimaryIndexSize=183
+[2022.05.23-02.31.08:586][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:586][  0]LogPakFile: PakFile FullDirectoryIndexSize=140
+[2022.05.23-02.31.08:586][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_TopDown.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:586][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_TopDown.upack)
+[2022.05.23-02.31.08:586][  0]LogPakFile: OnPakFileMounted2Time == 0.000037
+[2022.05.23-02.31.08:586][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2022.05.23-02.31.08:586][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:586][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2022.05.23-02.31.08:586][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_TopDownBP.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:586][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_TopDownBP.upack)
+[2022.05.23-02.31.08:586][  0]LogPakFile: OnPakFileMounted2Time == 0.000031
+[2022.05.23-02.31.08:587][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2022.05.23-02.31.08:587][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:587][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2022.05.23-02.31.08:587][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_TwinStick.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:587][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_TwinStick.upack)
+[2022.05.23-02.31.08:587][  0]LogPakFile: OnPakFileMounted2Time == 0.000033
+[2022.05.23-02.31.08:587][  0]LogPakFile: PakFile PrimaryIndexSize=187
+[2022.05.23-02.31.08:588][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:588][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2022.05.23-02.31.08:588][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_TwinStickBP.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:588][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_TwinStickBP.upack)
+[2022.05.23-02.31.08:588][  0]LogPakFile: OnPakFileMounted2Time == 0.000030
+[2022.05.23-02.31.08:588][  0]LogPakFile: PakFile PrimaryIndexSize=183
+[2022.05.23-02.31.08:588][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:588][  0]LogPakFile: PakFile FullDirectoryIndexSize=140
+[2022.05.23-02.31.08:588][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_Vehicle.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:588][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_Vehicle.upack)
+[2022.05.23-02.31.08:588][  0]LogPakFile: OnPakFileMounted2Time == 0.000031
+[2022.05.23-02.31.08:589][  0]LogPakFile: PakFile PrimaryIndexSize=186
+[2022.05.23-02.31.08:589][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:589][  0]LogPakFile: PakFile FullDirectoryIndexSize=146
+[2022.05.23-02.31.08:589][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_VehicleAdv.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:589][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_VehicleAdv.upack)
+[2022.05.23-02.31.08:589][  0]LogPakFile: OnPakFileMounted2Time == 0.000033
+[2022.05.23-02.31.08:590][  0]LogPakFile: PakFile PrimaryIndexSize=188
+[2022.05.23-02.31.08:590][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:590][  0]LogPakFile: PakFile FullDirectoryIndexSize=150
+[2022.05.23-02.31.08:590][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_VehicleAdvBP.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:590][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_VehicleAdvBP.upack)
+[2022.05.23-02.31.08:590][  0]LogPakFile: OnPakFileMounted2Time == 0.000034
+[2022.05.23-02.31.08:590][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2022.05.23-02.31.08:590][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:590][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2022.05.23-02.31.08:590][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_VehicleBP.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:590][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_VehicleBP.upack)
+[2022.05.23-02.31.08:590][  0]LogPakFile: OnPakFileMounted2Time == 0.000034
+[2022.05.23-02.31.08:591][  0]LogPakFile: PakFile PrimaryIndexSize=192
+[2022.05.23-02.31.08:591][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2022.05.23-02.31.08:591][  0]LogPakFile: PakFile FullDirectoryIndexSize=158
+[2022.05.23-02.31.08:591][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_VirtualRealityBP.upack' (chunk index -1, root 'root:/') mounted
+[2022.05.23-02.31.08:591][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:C:/Program Files/Epic Games/UE_4.27/FeaturePacks/TP_VirtualRealityBP.upack)
+[2022.05.23-02.31.08:591][  0]LogPakFile: OnPakFileMounted2Time == 0.000031
+[2022.05.23-02.31.08:639][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'AddContentDialog' in 0.0002 seconds. Added 0 classes and 0 folders.
+[2022.05.23-02.31.08:643][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'SceneOutliner' in 0.0002 seconds. Added 2 classes and 0 folders.
+[2022.05.23-02.31.08:653][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'WorldBrowser' in 0.0003 seconds. Added 2 classes and 3 folders.
+[2022.05.23-02.31.08:718][  0]LogSlate: Took 0.000189 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2022.05.23-02.31.08:719][  0]LogSlate: Took 0.000198 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2022.05.23-02.31.08:720][  0]LogSlate: Took 0.000165 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2022.05.23-02.31.08:830][  0]LogRenderer: Reallocating scene render targets to support 1184x524 Format 10 NumSamples 1 (Frame:1).
+[2022.05.23-02.31.08:863][  0]LogSlate: Took 0.000166 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2022.05.23-02.31.08:906][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2022.05.23-02.31.08:906][  0]LogLoad: (Engine Initialization) Total time: 8.69 seconds
+[2022.05.23-02.31.08:906][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2022.05.23-02.31.08:954][  0]LogAssetRegistry: Asset discovery search completed in 5.0720 seconds
+[2022.05.23-02.31.08:959][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000003 seconds (updated 0 objects)
+[2022.05.23-02.31.08:961][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2022.05.23-02.31.13:171][150]LogHotReload: New module detected: UE4Editor-ProjectW-0120.dll
+[2022.05.23-02.31.13:852][153]LogHotReload: Starting Hot-Reload from IDE
+[2022.05.23-02.31.13:855][153]LogSlate: Took 0.000142 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2022.05.23-02.31.13:884][153]LogClass: State HotReload.
+[2022.05.23-02.31.13:890][153]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'ProjectW' in 0.0003 seconds. Added 6 classes and 2 folders.
+[2022.05.23-02.31.13:892][153]Display: HotReload successful (2 functions remapped  0 scriptstructs remapped)
+[2022.05.23-02.31.13:944][153]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0088 seconds. Added 3830 classes and 933 folders.
+[2022.05.23-02.31.13:948][153]Display: HotReload took  0.1s.
+[2022.05.23-02.31.16:576][321]LogTemp: Repeating last play command: Selected Viewport
+[2022.05.23-02.31.16:583][321]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.05.23-02.31.16:583][321]PIE: New page: PIE session: 2DSideScrollerExampleMap (May 23, 2022, 8:31:16 PM)
+[2022.05.23-02.31.16:585][321]LogOnline: OSS: Creating online subsystem instance for: NULL
+[2022.05.23-02.31.16:586][321]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+[2022.05.23-02.31.16:586][321]LogPlayLevel: Creating play world package: /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap
+[2022.05.23-02.31.16:588][321]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002474s)
+[2022.05.23-02.31.16:589][321]LogAIModule: Creating AISystem for world 2DSideScrollerExampleMap
+[2022.05.23-02.31.16:590][321]LogPlayLevel: PIE: World Init took: (0.002050s)
+[2022.05.23-02.31.16:590][321]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/2DSideScrollerCPP/Maps/2DSideScrollerExampleMap.2DSideScrollerExampleMap to /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap (0.004631s)
+[2022.05.23-02.31.16:595][321]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2022.05.23-02.31.16:596][321]LogAudio: Display: Creating Audio Device:                 Id: 2, Scope: Unique, Realtime: True
+[2022.05.23-02.31.16:596][321]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.05.23-02.31.16:596][321]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.05.23-02.31.16:596][321]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.05.23-02.31.16:596][321]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.05.23-02.31.16:596][321]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.05.23-02.31.16:596][321]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.05.23-02.31.16:596][321]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.05.23-02.31.16:596][321]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.05.23-02.31.16:596][321]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.05.23-02.31.16:596][321]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.05.23-02.31.16:596][321]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.05.23-02.31.16:596][321]LogAudioMixer: Display: Initializing audio mixer.
+[2022.05.23-02.31.16:613][321]LogAudioMixer: Display: 0: FrontLeft
+[2022.05.23-02.31.16:613][321]LogAudioMixer: Display: 1: FrontRight
+[2022.05.23-02.31.16:646][321]LogAudioMixer: Display: Using Audio Device 스피커(Realtek(R) Audio)
+[2022.05.23-02.31.16:647][321]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.05.23-02.31.16:647][321]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.05.23-02.31.16:647][321]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.05.23-02.31.16:647][321]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.05.23-02.31.16:647][321]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.05.23-02.31.16:647][321]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.05.23-02.31.16:648][321]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.05.23-02.31.16:648][321]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.05.23-02.31.16:648][321]LogInit: FAudioDevice initialized.
+[2022.05.23-02.31.16:648][321]LogAudio: Display: Audio Device (ID: 2) registered with world '2DSideScrollerExampleMap'.
+[2022.05.23-02.31.16:659][321]LogLoad: Game class is 'ProjectWGameMode'
+[2022.05.23-02.31.16:660][321]LogWorld: Bringing World /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap up for play (max tick rate 0) at 2022.05.23-11.31.16
+[2022.05.23-02.31.16:661][321]LogWorld: Bringing up level for play took: 0.000796
+[2022.05.23-02.31.16:661][321]LogOnline: OSS: Creating online subsystem instance for: :Context_1
+[2022.05.23-02.31.16:694][321]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'MovieSceneCapture' in 0.0003 seconds. Added 20 classes and 0 folders.
+[2022.05.23-02.31.16:695][321]PIE: Server logged in
+[2022.05.23-02.31.16:697][321]PIE: Play in editor total start time 0.116 seconds.
+[2022.05.23-02.31.17:466][411]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.17:467][411]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.17:467][411]LogTemp: Warning: Attack
+[2022.05.23-02.31.19:573][582]LogSlate: Took 0.000160 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
+[2022.05.23-02.31.19:613][582]LogSlate: Took 0.000847 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansFallback.ttf' (3848K)
+[2022.05.23-02.31.21:845][847]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.21:846][847]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.21:846][847]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.21:846][847]LogTemp: Warning: Attack
+[2022.05.23-02.31.23:090][996]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.23:090][996]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.23:090][996]LogTemp: Warning: Attack
+[2022.05.23-02.31.23:637][ 62]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.23:637][ 62]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.23:637][ 62]LogTemp: Warning: Attack
+[2022.05.23-02.31.24:029][109]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.24:029][109]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.24:029][109]LogTemp: Warning: Attack
+[2022.05.23-02.31.24:420][156]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.24:420][156]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.24:420][156]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.24:420][156]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.24:420][156]LogTemp: Warning: Attack
+[2022.05.23-02.31.24:871][210]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.24:871][210]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.24:871][210]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.24:871][210]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.24:871][210]LogTemp: Warning: Attack
+[2022.05.23-02.31.25:520][288]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.25:521][288]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.25:521][288]LogTemp: Warning: Attack
+[2022.05.23-02.31.25:920][336]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.25:920][336]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.25:920][336]LogTemp: Warning: Attack
+[2022.05.23-02.31.26:895][453]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.26:896][453]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.26:896][453]LogTemp: Warning: Attack
+[2022.05.23-02.31.27:270][498]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.27:271][498]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.27:271][498]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.27:271][498]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.27:271][498]LogTemp: Warning: Attack
+[2022.05.23-02.31.27:620][540]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.27:620][540]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.27:620][540]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.27:620][540]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.27:620][540]LogTemp: Warning: Attack
+[2022.05.23-02.31.28:529][649]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_12 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.28:529][649]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.28:529][649]LogTemp: Warning: Attack
+[2022.05.23-02.31.29:004][706]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_13 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.29:005][706]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.29:005][706]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.29:005][706]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.29:005][706]LogTemp: Warning: Attack
+[2022.05.23-02.31.30:087][836]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_14 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.30:087][836]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.30:087][836]LogTemp: Warning: Attack
+[2022.05.23-02.31.30:371][870]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_15 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.30:371][870]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.30:371][870]LogTemp: Warning: Attack
+[2022.05.23-02.31.30:654][904]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_16 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.30:654][904]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.30:654][904]LogTemp: Warning: Attack
+[2022.05.23-02.31.31:113][959]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_17 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.31:113][959]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.31:113][959]LogTemp: Warning: Attack
+[2022.05.23-02.31.31:863][ 49]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_18 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.31:863][ 49]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.31:863][ 49]LogTemp: Warning: Attack
+[2022.05.23-02.31.32:502][121]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.23-02.31.32:502][121]LogWorld: BeginTearingDown for /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap
+[2022.05.23-02.31.32:502][121]LogWorld: UWorld::CleanupWorld for 2DSideScrollerExampleMap, bSessionEnded=true, bCleanupResources=true
+[2022.05.23-02.31.32:502][121]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.23-02.31.32:511][121]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.05.23-02.31.32:512][121]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.23-02.31.32:516][121]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.05.23-02.31.32:516][121]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.23-02.31.32:517][121]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.23-02.31.32:520][121]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.23-02.31.32:521][121]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2022.05.23-02.31.32:562][124]LogPlayLevel: Display: Destroying online subsystem :Context_1
+[2022.05.23-02.31.36:148][554]LogEditorViewport: Clicking on Actor (LMB): PaperSpriteActor (Background_Sprite)
+[2022.05.23-02.31.38:569][834]Cmd: TRANSACTION UNDO
+[2022.05.23-02.31.38:569][834]LogEditorTransaction: Undo Move Actors
+[2022.05.23-02.31.40:827][ 61]LogEditorViewport: Clicking on Actor (LMB): BP_Enemy_C (BP_Enemy)
+[2022.05.23-02.31.43:681][372]LogTemp: Repeating last play command: Selected Viewport
+[2022.05.23-02.31.43:687][372]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.05.23-02.31.43:687][372]PIE: New page: PIE session: 2DSideScrollerExampleMap (May 23, 2022, 8:31:43 PM)
+[2022.05.23-02.31.43:710][372]LogPlayLevel: Creating play world package: /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap
+[2022.05.23-02.31.43:713][372]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002392s)
+[2022.05.23-02.31.43:713][372]LogAIModule: Creating AISystem for world 2DSideScrollerExampleMap
+[2022.05.23-02.31.43:715][372]LogPlayLevel: PIE: World Init took: (0.002579s)
+[2022.05.23-02.31.43:715][372]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/2DSideScrollerCPP/Maps/2DSideScrollerExampleMap.2DSideScrollerExampleMap to /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap (0.005100s)
+[2022.05.23-02.31.43:720][372]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2022.05.23-02.31.43:721][372]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2022.05.23-02.31.43:721][372]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.05.23-02.31.43:721][372]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.05.23-02.31.43:721][372]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.05.23-02.31.43:721][372]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.05.23-02.31.43:721][372]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.05.23-02.31.43:721][372]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.05.23-02.31.43:721][372]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.05.23-02.31.43:721][372]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.05.23-02.31.43:721][372]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.05.23-02.31.43:721][372]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.05.23-02.31.43:721][372]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.05.23-02.31.43:722][372]LogAudioMixer: Display: Initializing audio mixer.
+[2022.05.23-02.31.43:739][372]LogAudioMixer: Display: 0: FrontLeft
+[2022.05.23-02.31.43:739][372]LogAudioMixer: Display: 1: FrontRight
+[2022.05.23-02.31.43:772][372]LogAudioMixer: Display: Using Audio Device 스피커(Realtek(R) Audio)
+[2022.05.23-02.31.43:772][372]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.05.23-02.31.43:772][372]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.05.23-02.31.43:773][372]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.05.23-02.31.43:773][372]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.05.23-02.31.43:773][372]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.05.23-02.31.43:773][372]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.05.23-02.31.43:774][372]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.05.23-02.31.43:774][372]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.05.23-02.31.43:774][372]LogInit: FAudioDevice initialized.
+[2022.05.23-02.31.43:774][372]LogAudio: Display: Audio Device (ID: 3) registered with world '2DSideScrollerExampleMap'.
+[2022.05.23-02.31.43:783][372]LogLoad: Game class is 'ProjectWGameMode'
+[2022.05.23-02.31.43:785][372]LogWorld: Bringing World /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap up for play (max tick rate 0) at 2022.05.23-11.31.43
+[2022.05.23-02.31.43:785][372]LogWorld: Bringing up level for play took: 0.000708
+[2022.05.23-02.31.43:785][372]LogOnline: OSS: Creating online subsystem instance for: :Context_3
+[2022.05.23-02.31.43:787][372]PIE: Server logged in
+[2022.05.23-02.31.43:788][372]PIE: Play in editor total start time 0.103 seconds.
+[2022.05.23-02.31.44:442][449]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.44:443][449]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.44:443][449]LogTemp: Warning: Attack
+[2022.05.23-02.31.44:926][507]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.44:926][507]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.44:926][507]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.44:926][507]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.44:926][507]LogTemp: Warning: Attack
+[2022.05.23-02.31.45:635][592]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.45:635][592]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.45:635][592]LogTemp: Warning: Attack
+[2022.05.23-02.31.46:784][730]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.46:784][730]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.46:784][730]LogTemp: Warning: Attack
+[2022.05.23-02.31.47:001][756]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.47:001][756]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.47:001][756]LogTemp: Warning: Attack
+[2022.05.23-02.31.47:201][780]LogTemp: Warning: Attack
+[2022.05.23-02.31.47:410][805]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.47:410][805]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.47:410][805]LogTemp: Warning: Attack
+[2022.05.23-02.31.47:693][839]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.47:693][839]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.47:693][839]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.47:693][839]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.47:693][839]LogTemp: Warning: Attack
+[2022.05.23-02.31.47:926][867]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.47:926][867]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.47:926][867]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.47:926][867]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.47:926][867]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.47:926][867]LogTemp: Warning: Attack
+[2022.05.23-02.31.48:143][893]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.48:143][893]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.48:143][893]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.48:143][893]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.48:143][893]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.48:143][893]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.48:143][893]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.48:143][893]LogTemp: Warning: Attack
+[2022.05.23-02.31.48:385][922]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.48:385][922]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.48:385][922]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.48:385][922]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.48:385][922]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.48:385][922]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.48:385][922]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.48:385][922]LogTemp: Warning: Attack
+[2022.05.23-02.31.49:051][  2]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.49:051][  2]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.49:051][  2]LogTemp: Warning: Attack
+[2022.05.23-02.31.49:568][ 64]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.49:568][ 64]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.49:568][ 64]LogTemp: Warning: Attack
+[2022.05.23-02.31.49:909][105]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_12 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.49:909][105]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.49:909][105]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.49:909][105]LogTemp: Warning: Attack
+[2022.05.23-02.31.50:309][153]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_13 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.50:309][153]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.50:309][153]LogTemp: Warning: Attack
+[2022.05.23-02.31.51:485][294]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_14 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.51:485][294]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.51:485][294]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.51:485][294]LogTemp: Warning: Attack
+[2022.05.23-02.31.51:718][322]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_15 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.51:718][322]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.51:718][322]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.51:718][322]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.51:718][322]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.51:718][322]LogTemp: Warning: Attack
+[2022.05.23-02.31.52:626][431]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_16 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.52:626][431]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.52:626][431]LogTemp: Warning: Attack
+[2022.05.23-02.31.52:934][468]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_17 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.52:934][468]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.52:934][468]LogTemp: Warning: Attack
+[2022.05.23-02.31.53:168][496]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_18 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.53:168][496]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.53:168][496]LogTemp: Warning: Attack
+[2022.05.23-02.31.53:401][524]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_19 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.53:401][524]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.53:401][524]LogTemp: Warning: Attack
+[2022.05.23-02.31.53:643][553]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_20 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.53:643][553]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.53:644][553]LogTemp: Warning: Attack
+[2022.05.23-02.31.53:692][559]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.53:876][581]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_21 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.53:876][581]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.53:876][581]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.53:876][581]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.53:876][581]LogTemp: Warning: Attack
+[2022.05.23-02.31.54:118][610]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_22 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.54:118][610]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.54:118][610]LogTemp: Warning: Attack
+[2022.05.23-02.31.54:334][636]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_23 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.54:335][636]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.54:335][636]LogTemp: Warning: Attack
+[2022.05.23-02.31.54:534][660]LogTemp: Warning: Attack
+[2022.05.23-02.31.54:751][686]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_24 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.54:751][686]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.54:751][686]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.54:751][686]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.54:751][686]LogTemp: Warning: Attack
+[2022.05.23-02.31.54:968][712]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_25 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.54:968][712]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.54:968][712]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.54:968][712]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.54:968][712]LogTemp: Warning: Attack
+[2022.05.23-02.31.55:159][735]LogTemp: Warning: Attack
+[2022.05.23-02.31.55:342][757]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_26 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.55:343][757]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.55:343][757]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.55:343][757]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.55:343][757]LogTemp: Warning: Attack
+[2022.05.23-02.31.55:684][798]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_27 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.55:684][798]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.55:684][798]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.55:684][798]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.55:684][798]LogTemp: Warning: Attack
+[2022.05.23-02.31.56:851][938]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_28 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.56:851][938]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.56:851][938]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.56:851][938]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.56:851][938]LogTemp: Warning: Attack
+[2022.05.23-02.31.57:084][966]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_29 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.57:084][966]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.57:084][966]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.57:084][966]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.57:084][966]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.57:084][966]LogTemp: Warning: Attack
+[2022.05.23-02.31.57:518][ 18]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_30 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.57:518][ 18]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.57:518][ 18]LogTemp: Warning: Attack
+[2022.05.23-02.31.57:860][ 59]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_31 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.31.57:860][ 59]LogTemp: Warning: Overlapped
+[2022.05.23-02.31.57:860][ 59]LogTemp: Warning: Attack
+[2022.05.23-02.31.58:773][165]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.23-02.31.58:773][165]LogWorld: BeginTearingDown for /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap
+[2022.05.23-02.31.58:773][165]LogWorld: UWorld::CleanupWorld for 2DSideScrollerExampleMap, bSessionEnded=true, bCleanupResources=true
+[2022.05.23-02.31.58:773][165]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.23-02.31.58:780][165]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.05.23-02.31.58:850][165]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.23-02.31.58:853][165]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.23-02.31.58:853][165]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.23-02.31.58:855][165]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.23-02.31.58:859][165]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2022.05.23-02.31.58:894][166]LogPlayLevel: Display: Destroying online subsystem :Context_3
+[2022.05.23-02.32.09:128][593]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/2DSideScrollerCPP/Blueprints/BP_Enemy.BP_Enemy
+[2022.05.23-02.32.09:303][593]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'BlueprintGraph' in 0.0005 seconds. Added 126 classes and 0 folders.
+[2022.05.23-02.32.10:087][593]LogSlate: Took 0.000185 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2022.05.23-02.32.11:376][690]LogRenderer: Reallocating scene render targets to support 1184x660 Format 10 NumSamples 1 (Frame:1).
+[2022.05.23-02.32.45:225][788]BlueprintLog: New page: Compile BP_Enemy
+[2022.05.23-02.32.45:418][788]LogUObjectHash: Compacting FUObjectHashTables data took   2.11ms
+[2022.05.23-02.32.47:387][982]LogTemp: Repeating last play command: Selected Viewport
+[2022.05.23-02.32.47:393][982]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.05.23-02.32.47:393][982]PIE: New page: PIE session: 2DSideScrollerExampleMap (May 23, 2022, 8:32:47 PM)
+[2022.05.23-02.32.47:431][982]LogPlayLevel: Creating play world package: /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap
+[2022.05.23-02.32.47:433][982]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002421s)
+[2022.05.23-02.32.47:434][982]LogAIModule: Creating AISystem for world 2DSideScrollerExampleMap
+[2022.05.23-02.32.47:436][982]LogPlayLevel: PIE: World Init took: (0.002361s)
+[2022.05.23-02.32.47:436][982]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/2DSideScrollerCPP/Maps/2DSideScrollerExampleMap.2DSideScrollerExampleMap to /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap (0.004912s)
+[2022.05.23-02.32.47:453][982]LogUObjectHash: Compacting FUObjectHashTables data took   1.96ms
+[2022.05.23-02.32.47:454][982]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2022.05.23-02.32.47:454][982]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.05.23-02.32.47:454][982]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.05.23-02.32.47:454][982]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.05.23-02.32.47:454][982]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.05.23-02.32.47:455][982]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.05.23-02.32.47:455][982]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.05.23-02.32.47:455][982]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.05.23-02.32.47:455][982]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.05.23-02.32.47:455][982]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.05.23-02.32.47:455][982]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.05.23-02.32.47:455][982]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.05.23-02.32.47:455][982]LogAudioMixer: Display: Initializing audio mixer.
+[2022.05.23-02.32.47:470][982]LogAudioMixer: Display: 0: FrontLeft
+[2022.05.23-02.32.47:470][982]LogAudioMixer: Display: 1: FrontRight
+[2022.05.23-02.32.47:504][982]LogAudioMixer: Display: Using Audio Device 스피커(Realtek(R) Audio)
+[2022.05.23-02.32.47:504][982]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.05.23-02.32.47:504][982]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.05.23-02.32.47:504][982]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.05.23-02.32.47:504][982]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.05.23-02.32.47:504][982]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.05.23-02.32.47:505][982]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.05.23-02.32.47:505][982]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.05.23-02.32.47:505][982]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.05.23-02.32.47:505][982]LogInit: FAudioDevice initialized.
+[2022.05.23-02.32.47:505][982]LogAudio: Display: Audio Device (ID: 4) registered with world '2DSideScrollerExampleMap'.
+[2022.05.23-02.32.47:511][982]LogLoad: Game class is 'ProjectWGameMode'
+[2022.05.23-02.32.47:512][982]LogWorld: Bringing World /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap up for play (max tick rate 0) at 2022.05.23-11.32.47
+[2022.05.23-02.32.47:513][982]LogWorld: Bringing up level for play took: 0.000718
+[2022.05.23-02.32.47:513][982]LogOnline: OSS: Creating online subsystem instance for: :Context_5
+[2022.05.23-02.32.47:515][982]PIE: Server logged in
+[2022.05.23-02.32.47:515][982]PIE: Play in editor total start time 0.124 seconds.
+[2022.05.23-02.32.49:535][223]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.49:535][223]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.49:535][223]LogTemp: Warning: Attack
+[2022.05.23-02.32.49:752][249]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.49:752][249]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.49:752][249]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.49:752][249]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.49:752][249]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.49:752][249]LogTemp: Warning: Attack
+[2022.05.23-02.32.49:926][270]LogTemp: Warning: Attack
+[2022.05.23-02.32.50:126][294]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.50:127][294]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:127][294]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:127][294]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:127][294]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:127][294]LogTemp: Warning: Attack
+[2022.05.23-02.32.50:294][314]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.50:294][314]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:294][314]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:294][314]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:294][314]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:294][314]LogTemp: Warning: Attack
+[2022.05.23-02.32.50:485][337]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.50:485][337]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:485][337]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:485][337]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:485][337]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:485][337]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:485][337]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:485][337]LogTemp: Warning: Attack
+[2022.05.23-02.32.50:660][358]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.50:661][358]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:661][358]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:661][358]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:661][358]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:661][358]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:661][358]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.50:661][358]LogTemp: Warning: Attack
+[2022.05.23-02.32.53:177][575]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.53:177][575]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:177][575]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:177][575]LogTemp: Warning: Attack
+[2022.05.23-02.32.53:402][602]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.53:402][602]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:402][602]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:402][602]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:402][602]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:402][602]LogTemp: Warning: Attack
+[2022.05.23-02.32.53:636][630]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.53:636][630]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:636][630]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:636][630]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:636][630]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:636][630]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:636][630]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:636][630]LogTemp: Warning: Attack
+[2022.05.23-02.32.53:852][656]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.53:852][656]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:852][656]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:852][656]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:852][656]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:852][656]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:852][656]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.53:852][656]LogTemp: Warning: Attack
+[2022.05.23-02.32.54:235][702]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.54:236][702]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.54:236][702]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.54:236][702]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.54:236][702]LogTemp: Warning: Attack
+[2022.05.23-02.32.54:485][732]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.54:485][732]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.54:485][732]LogTemp: Warning: Attack
+[2022.05.23-02.32.54:711][759]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_12 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.54:711][759]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.54:711][759]LogTemp: Warning: Attack
+[2022.05.23-02.32.55:044][799]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_13 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.55:044][799]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.55:044][799]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.55:044][799]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.55:044][799]LogTemp: Warning: Attack
+[2022.05.23-02.32.55:311][831]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_14 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.55:311][831]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.55:311][831]LogTemp: Warning: Attack
+[2022.05.23-02.32.55:585][864]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_15 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.55:585][864]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.55:585][864]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.55:585][864]LogTemp: Warning: Attack
+[2022.05.23-02.32.55:819][892]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_16 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.55:819][892]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.55:819][892]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.55:819][892]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.55:819][892]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.55:819][892]LogTemp: Warning: Attack
+[2022.05.23-02.32.56:352][956]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_17 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.56:352][956]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.56:352][956]LogTemp: Warning: Attack
+[2022.05.23-02.32.57:019][ 36]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_18 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.57:019][ 36]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.57:019][ 36]LogTemp: Warning: Attack
+[2022.05.23-02.32.57:244][ 63]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_19 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.57:245][ 63]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.57:245][ 63]LogTemp: Warning: Attack
+[2022.05.23-02.32.57:452][ 88]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_20 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.57:452][ 88]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.57:452][ 88]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.57:452][ 88]LogTemp: Warning: Attack
+[2022.05.23-02.32.57:694][117]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_21 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.32.57:694][117]LogTemp: Warning: Overlapped
+[2022.05.23-02.32.57:694][117]LogTemp: Warning: Attack
+[2022.05.23-02.32.58:112][164]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.23-02.32.58:112][164]LogWorld: BeginTearingDown for /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap
+[2022.05.23-02.32.58:112][164]LogWorld: UWorld::CleanupWorld for 2DSideScrollerExampleMap, bSessionEnded=true, bCleanupResources=true
+[2022.05.23-02.32.58:112][164]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.23-02.32.58:120][164]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.05.23-02.32.58:184][164]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.23-02.32.58:200][164]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.23-02.32.58:200][164]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.23-02.32.58:201][164]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.23-02.32.58:206][164]LogUObjectHash: Compacting FUObjectHashTables data took   1.60ms
+[2022.05.23-02.32.58:243][165]LogPlayLevel: Display: Destroying online subsystem :Context_5
+[2022.05.23-02.33.01:004][477]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/2DSideScrollerCPP/Blueprints/BP_AttackEffects.BP_AttackEffects
+[2022.05.23-02.33.01:298][477]LogActor: Warning: BP_AttackEffects_C /Engine/Transient.World_2:PersistentLevel.BP_AttackEffects_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.33.08:287][ 93]BlueprintLog: New page: Compile BP_AttackEffects
+[2022.05.23-02.33.08:299][ 93]LogActor: Warning: BP_AttackEffects_C /Engine/Transient.World_2:PersistentLevel.BP_AttackEffects_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.33.08:327][ 93]LogUObjectHash: Compacting FUObjectHashTables data took   1.73ms
+[2022.05.23-02.33.09:020][156]LogSlate: Took 0.000181 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2022.05.23-02.33.11:111][359]LogTemp: Repeating last play command: Selected Viewport
+[2022.05.23-02.33.11:119][359]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.05.23-02.33.11:120][359]PIE: New page: PIE session: 2DSideScrollerExampleMap (May 23, 2022, 8:33:11 PM)
+[2022.05.23-02.33.11:160][359]LogPlayLevel: Creating play world package: /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap
+[2022.05.23-02.33.11:162][359]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002375s)
+[2022.05.23-02.33.11:163][359]LogAIModule: Creating AISystem for world 2DSideScrollerExampleMap
+[2022.05.23-02.33.11:165][359]LogPlayLevel: PIE: World Init took: (0.002575s)
+[2022.05.23-02.33.11:165][359]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/2DSideScrollerCPP/Maps/2DSideScrollerExampleMap.2DSideScrollerExampleMap to /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap (0.005086s)
+[2022.05.23-02.33.11:185][359]LogUObjectHash: Compacting FUObjectHashTables data took   2.03ms
+[2022.05.23-02.33.11:185][359]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2022.05.23-02.33.11:185][359]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.05.23-02.33.11:185][359]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.05.23-02.33.11:185][359]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.05.23-02.33.11:185][359]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.05.23-02.33.11:185][359]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.05.23-02.33.11:185][359]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.05.23-02.33.11:185][359]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.05.23-02.33.11:185][359]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.05.23-02.33.11:186][359]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.05.23-02.33.11:186][359]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.05.23-02.33.11:186][359]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.05.23-02.33.11:186][359]LogAudioMixer: Display: Initializing audio mixer.
+[2022.05.23-02.33.11:202][359]LogAudioMixer: Display: 0: FrontLeft
+[2022.05.23-02.33.11:202][359]LogAudioMixer: Display: 1: FrontRight
+[2022.05.23-02.33.11:235][359]LogAudioMixer: Display: Using Audio Device 스피커(Realtek(R) Audio)
+[2022.05.23-02.33.11:235][359]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.05.23-02.33.11:235][359]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.05.23-02.33.11:236][359]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.05.23-02.33.11:236][359]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.05.23-02.33.11:236][359]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.05.23-02.33.11:236][359]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.05.23-02.33.11:237][359]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.05.23-02.33.11:237][359]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.05.23-02.33.11:237][359]LogInit: FAudioDevice initialized.
+[2022.05.23-02.33.11:237][359]LogAudio: Display: Audio Device (ID: 5) registered with world '2DSideScrollerExampleMap'.
+[2022.05.23-02.33.11:246][359]LogLoad: Game class is 'ProjectWGameMode'
+[2022.05.23-02.33.11:247][359]LogWorld: Bringing World /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap up for play (max tick rate 0) at 2022.05.23-11.33.11
+[2022.05.23-02.33.11:248][359]LogWorld: Bringing up level for play took: 0.000715
+[2022.05.23-02.33.11:248][359]LogOnline: OSS: Creating online subsystem instance for: :Context_7
+[2022.05.23-02.33.11:250][359]PIE: Server logged in
+[2022.05.23-02.33.11:250][359]PIE: Play in editor total start time 0.133 seconds.
+[2022.05.23-02.33.11:810][425]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.33.11:810][425]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.11:810][425]LogTemp: Warning: Attack
+[2022.05.23-02.33.12:152][466]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.33.12:152][466]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.12:152][466]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.12:152][466]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.12:152][466]LogTemp: Warning: Attack
+[2022.05.23-02.33.13:211][593]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.33.13:211][593]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.13:211][593]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.13:211][593]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.13:211][593]LogTemp: Warning: Attack
+[2022.05.23-02.33.13:418][618]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.33.13:419][618]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.13:419][618]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.13:419][618]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.13:419][618]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.13:419][618]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.13:419][618]LogTemp: Warning: Attack
+[2022.05.23-02.33.15:651][805]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.33.15:651][805]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.15:651][805]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.15:651][805]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.15:651][805]LogTemp: Warning: Attack
+[2022.05.23-02.33.16:093][858]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.33.16:093][858]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.16:093][858]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.16:093][858]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.16:093][858]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.16:093][858]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.16:093][858]LogTemp: Warning: Attack
+[2022.05.23-02.33.16:468][903]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.33.16:468][903]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.16:468][903]LogTemp: Warning: Attack
+[2022.05.23-02.33.17:159][986]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.33.17:159][986]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.17:159][986]LogTemp: Warning: Attack
+[2022.05.23-02.33.17:350][  9]LogTemp: Warning: Attack
+[2022.05.23-02.33.17:542][ 32]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.33.17:543][ 32]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.17:543][ 32]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.17:543][ 32]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.17:543][ 32]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.17:543][ 32]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.17:543][ 32]LogTemp: Warning: Attack
+[2022.05.23-02.33.18:609][160]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.33.18:609][160]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.18:609][160]LogTemp: Warning: Attack
+[2022.05.23-02.33.19:118][221]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.33.19:118][221]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.19:118][221]LogTemp: Warning: Attack
+[2022.05.23-02.33.19:575][276]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.33.19:576][276]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.19:576][276]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.19:576][276]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.19:576][276]LogTemp: Warning: Attack
+[2022.05.23-02.33.19:975][324]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_12 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.33.19:976][324]LogTemp: Warning: Overlapped
+[2022.05.23-02.33.19:976][324]LogTemp: Warning: Attack
+[2022.05.23-02.33.20:642][400]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.23-02.33.20:642][400]LogWorld: BeginTearingDown for /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap
+[2022.05.23-02.33.20:642][400]LogWorld: UWorld::CleanupWorld for 2DSideScrollerExampleMap, bSessionEnded=true, bCleanupResources=true
+[2022.05.23-02.33.20:642][400]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.23-02.33.20:651][400]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.05.23-02.33.20:723][400]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.23-02.33.20:742][400]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.05.23-02.33.20:742][400]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.23-02.33.20:743][400]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.23-02.33.20:745][400]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.23-02.33.20:747][400]LogUObjectHash: Compacting FUObjectHashTables data took   1.58ms
+[2022.05.23-02.33.20:786][401]LogPlayLevel: Display: Destroying online subsystem :Context_7
+[2022.05.23-02.34.32:173][952]LogHotReload: New module detected: UE4Editor-ProjectW-0121.dll
+[2022.05.23-02.34.32:858][955]LogHotReload: Starting Hot-Reload from IDE
+[2022.05.23-02.34.32:894][955]LogClass: State HotReload.
+[2022.05.23-02.34.32:901][955]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'ProjectW' in 0.0003 seconds. Added 6 classes and 2 folders.
+[2022.05.23-02.34.32:906][955]Display: HotReload successful (2 functions remapped  0 scriptstructs remapped)
+[2022.05.23-02.34.32:981][955]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0093 seconds. Added 3830 classes and 933 folders.
+[2022.05.23-02.34.32:984][955]Display: HotReload took  0.1s.
+[2022.05.23-02.34.34:765][ 51]LogTemp: Repeating last play command: Selected Viewport
+[2022.05.23-02.34.34:771][ 51]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.05.23-02.34.34:771][ 51]PIE: New page: PIE session: 2DSideScrollerExampleMap (May 23, 2022, 8:34:34 PM)
+[2022.05.23-02.34.34:801][ 51]LogPlayLevel: Creating play world package: /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap
+[2022.05.23-02.34.34:805][ 51]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003921s)
+[2022.05.23-02.34.34:805][ 51]LogAIModule: Creating AISystem for world 2DSideScrollerExampleMap
+[2022.05.23-02.34.34:806][ 51]LogPlayLevel: PIE: World Init took: (0.002240s)
+[2022.05.23-02.34.34:806][ 51]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/2DSideScrollerCPP/Maps/2DSideScrollerExampleMap.2DSideScrollerExampleMap to /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap (0.006287s)
+[2022.05.23-02.34.34:848][ 51]LogUObjectHash: Compacting FUObjectHashTables data took   3.01ms
+[2022.05.23-02.34.34:848][ 51]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2022.05.23-02.34.34:848][ 51]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.05.23-02.34.34:849][ 51]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.05.23-02.34.34:849][ 51]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.05.23-02.34.34:849][ 51]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.05.23-02.34.34:849][ 51]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.05.23-02.34.34:849][ 51]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.05.23-02.34.34:849][ 51]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.05.23-02.34.34:849][ 51]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.05.23-02.34.34:849][ 51]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.05.23-02.34.34:849][ 51]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.05.23-02.34.34:849][ 51]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.05.23-02.34.34:849][ 51]LogAudioMixer: Display: Initializing audio mixer.
+[2022.05.23-02.34.34:867][ 51]LogAudioMixer: Display: 0: FrontLeft
+[2022.05.23-02.34.34:867][ 51]LogAudioMixer: Display: 1: FrontRight
+[2022.05.23-02.34.34:902][ 51]LogAudioMixer: Display: Using Audio Device 스피커(Realtek(R) Audio)
+[2022.05.23-02.34.34:902][ 51]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.05.23-02.34.34:902][ 51]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.05.23-02.34.34:902][ 51]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.05.23-02.34.34:902][ 51]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.05.23-02.34.34:902][ 51]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.05.23-02.34.34:902][ 51]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.05.23-02.34.34:903][ 51]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.05.23-02.34.34:903][ 51]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.05.23-02.34.34:903][ 51]LogInit: FAudioDevice initialized.
+[2022.05.23-02.34.34:903][ 51]LogAudio: Display: Audio Device (ID: 6) registered with world '2DSideScrollerExampleMap'.
+[2022.05.23-02.34.34:911][ 51]LogLoad: Game class is 'ProjectWGameMode'
+[2022.05.23-02.34.34:912][ 51]LogWorld: Bringing World /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap up for play (max tick rate 0) at 2022.05.23-11.34.34
+[2022.05.23-02.34.34:912][ 51]LogWorld: Bringing up level for play took: 0.000715
+[2022.05.23-02.34.34:913][ 51]LogOnline: OSS: Creating online subsystem instance for: :Context_8
+[2022.05.23-02.34.34:914][ 51]PIE: Server logged in
+[2022.05.23-02.34.34:915][ 51]PIE: Play in editor total start time 0.147 seconds.
+[2022.05.23-02.34.35:544][125]LogActor: Warning: BP_AttackEffects_C /Game/2DSideScrollerCPP/Maps/UEDPIE_0_2DSideScrollerExampleMap.2DSideScrollerExampleMap:PersistentLevel.BP_AttackEffects_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.23-02.34.35:544][125]LogTemp: Warning: Overlapped

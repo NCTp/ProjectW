@@ -8,15 +8,26 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FHitResult;
 #ifdef PROJECTW_AttackEffect_generated_h
 #error "AttackEffect.generated.h already included, missing '#pragma once' in AttackEffect.h"
 #endif
 #define PROJECTW_AttackEffect_generated_h
 
-#define ProjectW_Source_ProjectW_AttackEffect_h_12_SPARSE_DATA
-#define ProjectW_Source_ProjectW_AttackEffect_h_12_RPC_WRAPPERS
-#define ProjectW_Source_ProjectW_AttackEffect_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define ProjectW_Source_ProjectW_AttackEffect_h_12_INCLASS_NO_PURE_DECLS \
+#define ProjectW_Source_ProjectW_AttackEffect_h_14_SPARSE_DATA
+#define ProjectW_Source_ProjectW_AttackEffect_h_14_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnOverlapBegin);
+
+
+#define ProjectW_Source_ProjectW_AttackEffect_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnOverlapBegin);
+
+
+#define ProjectW_Source_ProjectW_AttackEffect_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAAttackEffect(); \
 	friend struct Z_Construct_UClass_AAttackEffect_Statics; \
@@ -25,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(AAttackEffect)
 
 
-#define ProjectW_Source_ProjectW_AttackEffect_h_12_INCLASS \
+#define ProjectW_Source_ProjectW_AttackEffect_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesAAttackEffect(); \
 	friend struct Z_Construct_UClass_AAttackEffect_Statics; \
@@ -34,7 +45,7 @@ public: \
 	DECLARE_SERIALIZER(AAttackEffect)
 
 
-#define ProjectW_Source_ProjectW_AttackEffect_h_12_STANDARD_CONSTRUCTORS \
+#define ProjectW_Source_ProjectW_AttackEffect_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AAttackEffect(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AAttackEffect) \
@@ -47,7 +58,7 @@ private: \
 public:
 
 
-#define ProjectW_Source_ProjectW_AttackEffect_h_12_ENHANCED_CONSTRUCTORS \
+#define ProjectW_Source_ProjectW_AttackEffect_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AAttackEffect(AAttackEffect&&); \
@@ -58,28 +69,31 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AAttackEffect)
 
 
-#define ProjectW_Source_ProjectW_AttackEffect_h_12_PRIVATE_PROPERTY_OFFSET
-#define ProjectW_Source_ProjectW_AttackEffect_h_9_PROLOG
-#define ProjectW_Source_ProjectW_AttackEffect_h_12_GENERATED_BODY_LEGACY \
+#define ProjectW_Source_ProjectW_AttackEffect_h_14_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__attackCollision() { return STRUCT_OFFSET(AAttackEffect, attackCollision); }
+
+
+#define ProjectW_Source_ProjectW_AttackEffect_h_11_PROLOG
+#define ProjectW_Source_ProjectW_AttackEffect_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ProjectW_Source_ProjectW_AttackEffect_h_12_PRIVATE_PROPERTY_OFFSET \
-	ProjectW_Source_ProjectW_AttackEffect_h_12_SPARSE_DATA \
-	ProjectW_Source_ProjectW_AttackEffect_h_12_RPC_WRAPPERS \
-	ProjectW_Source_ProjectW_AttackEffect_h_12_INCLASS \
-	ProjectW_Source_ProjectW_AttackEffect_h_12_STANDARD_CONSTRUCTORS \
+	ProjectW_Source_ProjectW_AttackEffect_h_14_PRIVATE_PROPERTY_OFFSET \
+	ProjectW_Source_ProjectW_AttackEffect_h_14_SPARSE_DATA \
+	ProjectW_Source_ProjectW_AttackEffect_h_14_RPC_WRAPPERS \
+	ProjectW_Source_ProjectW_AttackEffect_h_14_INCLASS \
+	ProjectW_Source_ProjectW_AttackEffect_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define ProjectW_Source_ProjectW_AttackEffect_h_12_GENERATED_BODY \
+#define ProjectW_Source_ProjectW_AttackEffect_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ProjectW_Source_ProjectW_AttackEffect_h_12_PRIVATE_PROPERTY_OFFSET \
-	ProjectW_Source_ProjectW_AttackEffect_h_12_SPARSE_DATA \
-	ProjectW_Source_ProjectW_AttackEffect_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	ProjectW_Source_ProjectW_AttackEffect_h_12_INCLASS_NO_PURE_DECLS \
-	ProjectW_Source_ProjectW_AttackEffect_h_12_ENHANCED_CONSTRUCTORS \
+	ProjectW_Source_ProjectW_AttackEffect_h_14_PRIVATE_PROPERTY_OFFSET \
+	ProjectW_Source_ProjectW_AttackEffect_h_14_SPARSE_DATA \
+	ProjectW_Source_ProjectW_AttackEffect_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	ProjectW_Source_ProjectW_AttackEffect_h_14_INCLASS_NO_PURE_DECLS \
+	ProjectW_Source_ProjectW_AttackEffect_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
