@@ -1,3 +1,0 @@
-C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\Definitions.ProjectW.h
-C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Source\ProjectW\Projectiles.h
-C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\Projectiles.generated.h

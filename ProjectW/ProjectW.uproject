@@ -7,11 +7,7 @@
 		{
 			"Name": "ProjectW",
 			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"Engine",
-				"Paper2D"
-			]
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
