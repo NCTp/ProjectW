@@ -1,2 +1,0 @@
-C:\Users\User\Desktop\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\Definitions.ProjectW.h
-C:\Users\User\Desktop\ProjectW\Source\ProjectW\ProjectW.h

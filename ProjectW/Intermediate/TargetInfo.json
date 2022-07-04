@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "ProjectW",
-			"Path": "C:\\Users\\User\\Desktop\\ProjectW\\Source\\ProjectW.Target.cs",
+			"Path": "D:\\GitHub\\ProjectW\\Source\\ProjectW.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "ProjectWEditor",
-			"Path": "C:\\Users\\User\\Desktop\\ProjectW\\Source\\ProjectWEditor.Target.cs",
+			"Path": "D:\\GitHub\\ProjectW\\Source\\ProjectWEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

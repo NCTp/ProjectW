@@ -74,6 +74,8 @@ AProjectWCharacter::AProjectWCharacter()
 	// Enable replication on the Sprite component so animations show up when networked
 	GetSprite()->SetIsReplicated(true);
 	bReplicates = true;
+
+	m_bIsFiring = false;
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -84,19 +86,95 @@ void AProjectWCharacter::UpdateAnimation()
 	const FVector PlayerVelocity = GetVelocity();
 	const float PlayerSpeedSqr = PlayerVelocity.SizeSquared();
 
-	// Are we moving or standing still?
-	UPaperFlipbook* DesiredAnimation = (PlayerSpeedSqr > 0.0f) ? RunningAnimation : IdleAnimation;
-	if( GetSprite()->GetFlipbook() != DesiredAnimation 	)
+	if (m_bIsFiring)
 	{
-		GetSprite()->SetFlipbook(DesiredAnimation);
+		CharacterState = ECharacterState::Fire;
 	}
+	else
+	{
+		if (PlayerSpeedSqr <= 0.0f)
+		{
+			CharacterState = ECharacterState::Idle;
+		}
+		else
+		{
+			if (!GetCharacterMovement()->IsFalling())
+			{
+				if (m_bIsRolling)
+				{
+					CharacterState = ECharacterState::Roll;
+				}
+				else
+				{
+					CharacterState = ECharacterState::Run;
+				}
+			}
+			else
+			{
+				if (m_bIsRolling)
+				{
+					CharacterState = ECharacterState::Roll;
+				}
+				else
+				{
+					if (PlayerVelocity.Z <= 0.0f)
+					{
+						CharacterState = ECharacterState::Fall;
+					}
+					else
+					{
+						CharacterState = ECharacterState::Jump;
+					}
+				}
+			}
+		}
+	}
+
+	UPaperFlipbook* DesiredAnimation = nullptr;
+
+	if (CharacterState == ECharacterState::Idle)
+	{
+		DesiredAnimation = IdleAnimation;
+	}
+	else if (CharacterState == ECharacterState::Run)
+	{
+		DesiredAnimation = RunningAnimation;
+	}
+	else if (CharacterState == ECharacterState::Jump)
+	{
+		DesiredAnimation = JumpingAnimation;
+	}
+	else if (CharacterState == ECharacterState::Fall)
+	{
+		DesiredAnimation = FallingAnimation;
+	}
+	else if (CharacterState == ECharacterState::Roll)
+	{
+		DesiredAnimation = RollingAnimation;
+	}
+	else if (CharacterState == ECharacterState::Fire)
+	{
+		DesiredAnimation = FiringAnimation;
+	}
+
+	GetSprite()->SetFlipbook(DesiredAnimation);
 }
 
 void AProjectWCharacter::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 	
-	UpdateCharacter();	
+	UpdateCharacter();
+
+	if (m_bIsRolling)
+	{
+		m_fRollingCount += DeltaSeconds;
+		if (m_fRollingCount > 0.7f)
+		{
+			m_bIsRolling = false;
+			m_fRollingCount = 0.0f;
+		}
+	}
 }
 
 
@@ -108,7 +186,14 @@ void AProjectWCharacter::SetupPlayerInputComponent(class UInputComponent* Player
 	// Note: the 'Jump' action and the 'MoveRight' axis are bound to actual keys/buttons/sticks in DefaultInput.ini (editable from Project Settings..Input)
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AProjectWCharacter::Fire);
+	PlayerInputComponent->BindAction("Fire", IE_Released, this, &AProjectWCharacter::StopFiring);
+
+	PlayerInputComponent->BindAction("Roll", IE_Pressed, this, &AProjectWCharacter::Roll);
+
 	PlayerInputComponent->BindAxis("MoveRight", this, &AProjectWCharacter::MoveRight);
+	PlayerInputComponent->BindAxis("MoveUp", this, &AProjectWCharacter::MoveUp);
 
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &AProjectWCharacter::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &AProjectWCharacter::TouchStopped);
@@ -121,6 +206,58 @@ void AProjectWCharacter::MoveRight(float Value)
 	// Apply the input to the character motion
 	AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value);
 }
+
+void AProjectWCharacter::MoveUp(float Value)
+{
+	AddMovementInput(FVector(0.0f, 1.0f, 0.0f), Value);
+}
+
+void AProjectWCharacter::Fire()
+{
+	if (!m_bIsRolling)
+	{
+		m_bIsFiring = true;
+	}
+}
+
+void AProjectWCharacter::StopFiring()
+{
+	m_bIsFiring = false;
+}
+
+void AProjectWCharacter::Roll()
+{
+	if (CharacterState != ECharacterState::Idle && CharacterState != ECharacterState::Jump && CharacterState != ECharacterState::Fall)
+	{
+		if (!m_bIsRolling)
+		{
+			m_bIsRolling = true;
+
+			const FVector fvPlayerVelocity = GetVelocity();
+
+			if (fvPlayerVelocity != FVector(0, 0, 0))
+			{
+				if (!GetCharacterMovement()->IsFalling())
+				{
+					float fLaunchVelocityZ = fvPlayerVelocity.Z + 1.0f;
+					FVector fvLaunchVelocity(fvPlayerVelocity.X, fvPlayerVelocity.Y, fLaunchVelocityZ);
+					fvLaunchVelocity = fvLaunchVelocity * FVector(2.5f, 1.5f, 400.0f);
+
+					LaunchCharacter(fvLaunchVelocity, true, true);
+				}
+			}
+		}
+	}
+}
+
+void AProjectWCharacter::Jump()
+{
+	if (!m_bIsRolling)
+	{
+		ACharacter::Jump();
+	}
+}
+
 
 void AProjectWCharacter::TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location)
 {

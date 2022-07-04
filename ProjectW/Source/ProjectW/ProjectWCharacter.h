@@ -8,6 +8,18 @@
 
 class UTextRenderComponent;
 
+UENUM()
+enum class ECharacterState : uint8
+{
+	Default	UMETA(DisplayName = "Default"),
+	Idle	UMETA(DisplayName = "Idle"),
+	Run		UMETA(DisplayName = "Run"),
+	Jump	UMETA(DisplayName = "Jump"),
+	Fall	UMETA(DisplayName = "Fall"),
+	Roll	UMETA(DisplayName = "Roll"),
+	Fire	UMETA(DisplayName = "Fire")
+};
+
 /**
  * This class is the default character for ProjectW, and it is responsible for all
  * physical interaction between the player and the world.
@@ -33,12 +45,39 @@ class AProjectWCharacter : public APaperCharacter
 	virtual void Tick(float DeltaSeconds) override;
 protected:
 	// The animation to play while running around
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Animations)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
 	class UPaperFlipbook* RunningAnimation;
 
 	// The animation to play while idle (standing still)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
 	class UPaperFlipbook* IdleAnimation;
+
+	// The animation to play while Firing
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* FiringAnimation;
+
+	// The animation to play while Rolling
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* RollingAnimation;
+
+	// The animation to play while Falling
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* FallingAnimation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* JumpingAnimation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	ECharacterState CharacterState = ECharacterState::Default;
+
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Transient, Category = "IsFiring")
+	bool m_bIsFiring;
+
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Transient, Category = "IsRolling")
+	bool m_bIsRolling;
+
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Transient, Category = "IsRolling")
+	float m_fRollingCount;
 
 	/** Called to choose the correct animation to play based on the character's movement state */
 	void UpdateAnimation();
@@ -46,7 +85,18 @@ protected:
 	/** Called for side to side input */
 	void MoveRight(float Value);
 
+	void MoveUp(float Value);
+
+	void Fire();
+
+	void StopFiring();
+
+	void Roll();
+
+	virtual void Jump() override;
+
 	void UpdateCharacter();
+
 
 	/** Handle touch inputs. */
 	void TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location);
