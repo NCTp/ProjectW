@@ -44,28 +44,54 @@ class AProjectWCharacter : public APaperCharacter
 	UTextRenderComponent* TextComponent;
 	virtual void Tick(float DeltaSeconds) override;
 protected:
-	// The animation to play while running around
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* RunningAnimation;
-
 	// The animation to play while idle (standing still)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* IdleAnimation;
+	class UPaperFlipbook* RifleIdleAnimation;
 
-	// The animation to play while Firing
+	// The animation to play while running around
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* FiringAnimation;
+	class UPaperFlipbook* RifleRunningAnimation;
 
-	// The animation to play while Rolling
+	// The animation to play while jumping
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* RollingAnimation;
+	class UPaperFlipbook* RifleJumpingAnimation;
 
 	// The animation to play while Falling
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* FallingAnimation;
+	class UPaperFlipbook* RifleFallingAnimation;
 
+	// The animation to play while Rolling
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* JumpingAnimation;
+	class UPaperFlipbook* RifleRollingAnimation;
+
+	// The animation to play while Firing
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* RifleFiringAnimation;
+
+	// The animation to play while idle (standing still)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* ShotgunIdleAnimation;
+
+	// The animation to play while running around
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* ShotgunRunningAnimation;
+
+	// The animation to play while jumping
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* ShotgunJumpingAnimation;
+
+	// The animation to play while Falling
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* ShotgunFallingAnimation;
+
+	// The animation to play while Rolling
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* ShotgunRollingAnimation;
+
+	// The animation to play while Firing
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* ShotgunFiringAnimation;
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ECharacterState CharacterState = ECharacterState::Default;
@@ -78,6 +104,11 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Transient, Category = "IsRolling")
 	float m_fRollingCount;
+
+	// Current Weapon Type
+	// 0 : Rifle, 1 : Shotgun
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Transient, Category = "CurrentWeapon")
+	int m_uCurrentWeapon;
 
 	/** Called to choose the correct animation to play based on the character's movement state */
 	void UpdateAnimation();
@@ -94,6 +125,8 @@ protected:
 	void Roll();
 
 	virtual void Jump() override;
+
+	void ChangeWeapon();
 
 	void UpdateCharacter();
 

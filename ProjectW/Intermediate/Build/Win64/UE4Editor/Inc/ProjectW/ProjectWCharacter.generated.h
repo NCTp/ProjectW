@@ -61,16 +61,23 @@ public: \
 #define ProjectW_Source_ProjectW_ProjectWCharacter_h_34_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__SideViewCameraComponent() { return STRUCT_OFFSET(AProjectWCharacter, SideViewCameraComponent); } \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(AProjectWCharacter, CameraBoom); } \
-	FORCEINLINE static uint32 __PPO__RunningAnimation() { return STRUCT_OFFSET(AProjectWCharacter, RunningAnimation); } \
-	FORCEINLINE static uint32 __PPO__IdleAnimation() { return STRUCT_OFFSET(AProjectWCharacter, IdleAnimation); } \
-	FORCEINLINE static uint32 __PPO__FiringAnimation() { return STRUCT_OFFSET(AProjectWCharacter, FiringAnimation); } \
-	FORCEINLINE static uint32 __PPO__RollingAnimation() { return STRUCT_OFFSET(AProjectWCharacter, RollingAnimation); } \
-	FORCEINLINE static uint32 __PPO__FallingAnimation() { return STRUCT_OFFSET(AProjectWCharacter, FallingAnimation); } \
-	FORCEINLINE static uint32 __PPO__JumpingAnimation() { return STRUCT_OFFSET(AProjectWCharacter, JumpingAnimation); } \
+	FORCEINLINE static uint32 __PPO__RifleIdleAnimation() { return STRUCT_OFFSET(AProjectWCharacter, RifleIdleAnimation); } \
+	FORCEINLINE static uint32 __PPO__RifleRunningAnimation() { return STRUCT_OFFSET(AProjectWCharacter, RifleRunningAnimation); } \
+	FORCEINLINE static uint32 __PPO__RifleJumpingAnimation() { return STRUCT_OFFSET(AProjectWCharacter, RifleJumpingAnimation); } \
+	FORCEINLINE static uint32 __PPO__RifleFallingAnimation() { return STRUCT_OFFSET(AProjectWCharacter, RifleFallingAnimation); } \
+	FORCEINLINE static uint32 __PPO__RifleRollingAnimation() { return STRUCT_OFFSET(AProjectWCharacter, RifleRollingAnimation); } \
+	FORCEINLINE static uint32 __PPO__RifleFiringAnimation() { return STRUCT_OFFSET(AProjectWCharacter, RifleFiringAnimation); } \
+	FORCEINLINE static uint32 __PPO__ShotgunIdleAnimation() { return STRUCT_OFFSET(AProjectWCharacter, ShotgunIdleAnimation); } \
+	FORCEINLINE static uint32 __PPO__ShotgunRunningAnimation() { return STRUCT_OFFSET(AProjectWCharacter, ShotgunRunningAnimation); } \
+	FORCEINLINE static uint32 __PPO__ShotgunJumpingAnimation() { return STRUCT_OFFSET(AProjectWCharacter, ShotgunJumpingAnimation); } \
+	FORCEINLINE static uint32 __PPO__ShotgunFallingAnimation() { return STRUCT_OFFSET(AProjectWCharacter, ShotgunFallingAnimation); } \
+	FORCEINLINE static uint32 __PPO__ShotgunRollingAnimation() { return STRUCT_OFFSET(AProjectWCharacter, ShotgunRollingAnimation); } \
+	FORCEINLINE static uint32 __PPO__ShotgunFiringAnimation() { return STRUCT_OFFSET(AProjectWCharacter, ShotgunFiringAnimation); } \
 	FORCEINLINE static uint32 __PPO__CharacterState() { return STRUCT_OFFSET(AProjectWCharacter, CharacterState); } \
 	FORCEINLINE static uint32 __PPO__m_bIsFiring() { return STRUCT_OFFSET(AProjectWCharacter, m_bIsFiring); } \
 	FORCEINLINE static uint32 __PPO__m_bIsRolling() { return STRUCT_OFFSET(AProjectWCharacter, m_bIsRolling); } \
-	FORCEINLINE static uint32 __PPO__m_fRollingCount() { return STRUCT_OFFSET(AProjectWCharacter, m_fRollingCount); }
+	FORCEINLINE static uint32 __PPO__m_fRollingCount() { return STRUCT_OFFSET(AProjectWCharacter, m_fRollingCount); } \
+	FORCEINLINE static uint32 __PPO__m_uCurrentWeapon() { return STRUCT_OFFSET(AProjectWCharacter, m_uCurrentWeapon); }
 
 
 #define ProjectW_Source_ProjectW_ProjectWCharacter_h_31_PROLOG
