@@ -1,0 +1,24 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\User\Documents\GitHub\ProjectW).
+  Creating makefile for ProjectWEditor (game project files are newer)
+  Parsing headers for ProjectWEditor
+    Running UnrealHeaderTool "C:\Users\User\Documents\GitHub\ProjectW\ProjectW\ProjectW.uproject" "C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\ProjectWEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\User\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  LogInit: Display: Loading text-based GConfig....
+  Reflection code generated for ProjectWEditor in 11.142398 seconds
+  Building ProjectWEditor...
+  Using Visual Studio 2019 14.29.30141 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 11 actions with 12 processes...
+    [1/11] Default.rc2
+    [2/11] SharedPCH.Engine.ShadowErrors.cpp
+    [3/11] ProjectW.cpp
+    [4/11] ProjectW.init.gen.cpp
+    [5/11] ProjectWGameMode.cpp
+    [6/11] ProjectWGameMode.gen.cpp
+    [7/11] ProjectWCharacter.gen.cpp
+    [8/11] ProjectWCharacter.cpp
+    [9/11] UE4Editor-ProjectW-0001.lib
+       C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0001.lib 라이브러리 및 C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0001.exp 개체를 생성하고 있습니다.
+    [10/11] UE4Editor-ProjectW-0001.dll
+       C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0001.suppressed.lib 라이브러리 및 C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0001.suppressed.exp 개체를 생성하고 있습니다.
+    [11/11] ProjectWEditor.target
+  Total time in Parallel executor: 23.53 seconds
+  Total execution time: 37.51 seconds
