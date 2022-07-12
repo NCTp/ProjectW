@@ -76,6 +76,8 @@ AProjectWCharacter::AProjectWCharacter()
 	bReplicates = true;
 
 	m_bIsFiring = false;
+
+	m_uCurrentWeapon = 0;
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -131,30 +133,59 @@ void AProjectWCharacter::UpdateAnimation()
 	}
 
 	UPaperFlipbook* DesiredAnimation = nullptr;
-
-	if (CharacterState == ECharacterState::Idle)
+	if (m_uCurrentWeapon == 0)
 	{
-		DesiredAnimation = IdleAnimation;
+		if (CharacterState == ECharacterState::Idle)
+		{
+			DesiredAnimation = RifleIdleAnimation;
+		}
+		else if (CharacterState == ECharacterState::Run)
+		{
+			DesiredAnimation = RifleRunningAnimation;
+		}
+		else if (CharacterState == ECharacterState::Jump)
+		{
+			DesiredAnimation = RifleJumpingAnimation;
+		}
+		else if (CharacterState == ECharacterState::Fall)
+		{
+			DesiredAnimation = RifleFallingAnimation;
+		}
+		else if (CharacterState == ECharacterState::Roll)
+		{
+			DesiredAnimation = RifleRollingAnimation;
+		}
+		else if (CharacterState == ECharacterState::Fire)
+		{
+			DesiredAnimation = RifleFiringAnimation;
+		}
 	}
-	else if (CharacterState == ECharacterState::Run)
+	else if (m_uCurrentWeapon == 1)
 	{
-		DesiredAnimation = RunningAnimation;
-	}
-	else if (CharacterState == ECharacterState::Jump)
-	{
-		DesiredAnimation = JumpingAnimation;
-	}
-	else if (CharacterState == ECharacterState::Fall)
-	{
-		DesiredAnimation = FallingAnimation;
-	}
-	else if (CharacterState == ECharacterState::Roll)
-	{
-		DesiredAnimation = RollingAnimation;
-	}
-	else if (CharacterState == ECharacterState::Fire)
-	{
-		DesiredAnimation = FiringAnimation;
+		if (CharacterState == ECharacterState::Idle)
+		{
+			DesiredAnimation = ShotgunIdleAnimation;
+		}
+		else if (CharacterState == ECharacterState::Run)
+		{
+			DesiredAnimation = ShotgunRunningAnimation;
+		}
+		else if (CharacterState == ECharacterState::Jump)
+		{
+			DesiredAnimation = ShotgunJumpingAnimation;
+		}
+		else if (CharacterState == ECharacterState::Fall)
+		{
+			DesiredAnimation = ShotgunFallingAnimation;
+		}
+		else if (CharacterState == ECharacterState::Roll)
+		{
+			DesiredAnimation = ShotgunRollingAnimation;
+		}
+		else if (CharacterState == ECharacterState::Fire)
+		{
+			DesiredAnimation = ShotgunFiringAnimation;
+		}
 	}
 
 	GetSprite()->SetFlipbook(DesiredAnimation);
@@ -169,7 +200,7 @@ void AProjectWCharacter::Tick(float DeltaSeconds)
 	if (m_bIsRolling)
 	{
 		m_fRollingCount += DeltaSeconds;
-		if (m_fRollingCount > 0.7f)
+		if (m_fRollingCount > 0.8f)
 		{
 			m_bIsRolling = false;
 			m_fRollingCount = 0.0f;
@@ -192,6 +223,8 @@ void AProjectWCharacter::SetupPlayerInputComponent(class UInputComponent* Player
 
 	PlayerInputComponent->BindAction("Roll", IE_Pressed, this, &AProjectWCharacter::Roll);
 
+	PlayerInputComponent->BindAction("ChangeWeapon", IE_Pressed, this, &AProjectWCharacter::ChangeWeapon);
+
 	PlayerInputComponent->BindAxis("MoveRight", this, &AProjectWCharacter::MoveRight);
 	PlayerInputComponent->BindAxis("MoveUp", this, &AProjectWCharacter::MoveUp);
 
@@ -204,12 +237,18 @@ void AProjectWCharacter::MoveRight(float Value)
 	/*UpdateChar();*/
 
 	// Apply the input to the character motion
-	AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value);
+	if (CharacterState != ECharacterState::Roll)
+	{
+		AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value);
+	}
 }
 
 void AProjectWCharacter::MoveUp(float Value)
 {
-	AddMovementInput(FVector(0.0f, 1.0f, 0.0f), Value);
+	if (CharacterState != ECharacterState::Roll)
+	{
+		AddMovementInput(FVector(0.0f, 1.0f, 0.0f), Value);
+	}
 }
 
 void AProjectWCharacter::Fire()
@@ -235,16 +274,57 @@ void AProjectWCharacter::Roll()
 
 			const FVector fvPlayerVelocity = GetVelocity();
 
-			if (fvPlayerVelocity != FVector(0, 0, 0))
+			if (!GetCharacterMovement()->IsFalling())
 			{
-				if (!GetCharacterMovement()->IsFalling())
+				FVector fvLaunchVelocity = FVector(1.0f, 1.0f, 500.0f);
+				
+				if (fvPlayerVelocity.X > 0.0f)
 				{
-					float fLaunchVelocityZ = fvPlayerVelocity.Z + 1.0f;
-					FVector fvLaunchVelocity(fvPlayerVelocity.X, fvPlayerVelocity.Y, fLaunchVelocityZ);
-					fvLaunchVelocity = fvLaunchVelocity * FVector(2.5f, 1.5f, 400.0f);
-
-					LaunchCharacter(fvLaunchVelocity, true, true);
+					if (fvPlayerVelocity.Y > 0.0f)
+					{
+						fvLaunchVelocity.X *= 500.0f;
+						fvLaunchVelocity.Y *= 500.0f;
+					}
+					else if (fvPlayerVelocity.Y < 0.0f)
+					{
+						fvLaunchVelocity.X *= 500.0f;
+						fvLaunchVelocity.Y *= -500.0f;
+					}
+					else
+					{
+						fvLaunchVelocity.X *= 1000.0f;
+					}
 				}
+				else if (fvPlayerVelocity.X < 0.0f)
+				{
+					if (fvPlayerVelocity.Y > 0.0f)
+					{
+						fvLaunchVelocity.X *= -500.0f;
+						fvLaunchVelocity.Y *= 500.0f;
+					}
+					else if (fvPlayerVelocity.Y < 0.0f)
+					{
+						fvLaunchVelocity.X *= -500.0f;
+						fvLaunchVelocity.Y *= -500.0f;
+					}
+					else
+					{
+						fvLaunchVelocity.X *= -1000.0f;
+					}
+				}
+				else
+				{
+					if (fvPlayerVelocity.Y > 0.0f)
+					{
+						fvLaunchVelocity.Y *= 1000.0f;
+					}
+					else if (fvPlayerVelocity.Y < 0.0f)
+					{
+						fvLaunchVelocity.Y *= -1000.0f;
+					}
+				}
+
+				LaunchCharacter(fvLaunchVelocity, true, true);			
 			}
 		}
 	}
@@ -258,6 +338,14 @@ void AProjectWCharacter::Jump()
 	}
 }
 
+void AProjectWCharacter::ChangeWeapon()
+{
+	m_uCurrentWeapon += 1;
+	if (m_uCurrentWeapon == 2)
+	{
+		m_uCurrentWeapon = 0;
+	}
+}
 
 void AProjectWCharacter::TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location)
 {
