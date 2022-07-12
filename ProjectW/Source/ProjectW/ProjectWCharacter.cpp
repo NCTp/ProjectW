@@ -200,7 +200,7 @@ void AProjectWCharacter::Tick(float DeltaSeconds)
 	if (m_bIsRolling)
 	{
 		m_fRollingCount += DeltaSeconds;
-		if (m_fRollingCount > 0.7f)
+		if (m_fRollingCount > 0.8f)
 		{
 			m_bIsRolling = false;
 			m_fRollingCount = 0.0f;
@@ -237,12 +237,18 @@ void AProjectWCharacter::MoveRight(float Value)
 	/*UpdateChar();*/
 
 	// Apply the input to the character motion
-	AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value);
+	if (CharacterState != ECharacterState::Roll)
+	{
+		AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value);
+	}
 }
 
 void AProjectWCharacter::MoveUp(float Value)
 {
-	AddMovementInput(FVector(0.0f, 1.0f, 0.0f), Value);
+	if (CharacterState != ECharacterState::Roll)
+	{
+		AddMovementInput(FVector(0.0f, 1.0f, 0.0f), Value);
+	}
 }
 
 void AProjectWCharacter::Fire()
@@ -268,16 +274,57 @@ void AProjectWCharacter::Roll()
 
 			const FVector fvPlayerVelocity = GetVelocity();
 
-			if (fvPlayerVelocity != FVector(0, 0, 0))
+			if (!GetCharacterMovement()->IsFalling())
 			{
-				if (!GetCharacterMovement()->IsFalling())
+				FVector fvLaunchVelocity = FVector(1.0f, 1.0f, 500.0f);
+				
+				if (fvPlayerVelocity.X > 0.0f)
 				{
-					float fLaunchVelocityZ = fvPlayerVelocity.Z + 1.0f;
-					FVector fvLaunchVelocity(fvPlayerVelocity.X, fvPlayerVelocity.Y, fLaunchVelocityZ);
-					fvLaunchVelocity = fvLaunchVelocity * FVector(2.5f, 1.5f, 400.0f);
-
-					LaunchCharacter(fvLaunchVelocity, true, true);
+					if (fvPlayerVelocity.Y > 0.0f)
+					{
+						fvLaunchVelocity.X *= 500.0f;
+						fvLaunchVelocity.Y *= 500.0f;
+					}
+					else if (fvPlayerVelocity.Y < 0.0f)
+					{
+						fvLaunchVelocity.X *= 500.0f;
+						fvLaunchVelocity.Y *= -500.0f;
+					}
+					else
+					{
+						fvLaunchVelocity.X *= 1000.0f;
+					}
 				}
+				else if (fvPlayerVelocity.X < 0.0f)
+				{
+					if (fvPlayerVelocity.Y > 0.0f)
+					{
+						fvLaunchVelocity.X *= -500.0f;
+						fvLaunchVelocity.Y *= 500.0f;
+					}
+					else if (fvPlayerVelocity.Y < 0.0f)
+					{
+						fvLaunchVelocity.X *= -500.0f;
+						fvLaunchVelocity.Y *= -500.0f;
+					}
+					else
+					{
+						fvLaunchVelocity.X *= -1000.0f;
+					}
+				}
+				else
+				{
+					if (fvPlayerVelocity.Y > 0.0f)
+					{
+						fvLaunchVelocity.Y *= 1000.0f;
+					}
+					else if (fvPlayerVelocity.Y < 0.0f)
+					{
+						fvLaunchVelocity.Y *= -1000.0f;
+					}
+				}
+
+				LaunchCharacter(fvLaunchVelocity, true, true);			
 			}
 		}
 	}
