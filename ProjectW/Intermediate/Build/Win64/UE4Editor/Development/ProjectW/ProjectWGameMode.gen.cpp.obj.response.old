@@ -32,8 +32,8 @@
 /wd4244
 /wd4838
 /I .
-/I C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW
-/I C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Source
+/I D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW
+/I D:\GitHub\ProjectW\ProjectW\Source
 /I Runtime
 /I Runtime\TraceLog\Public
 /I Runtime\Core\Public
@@ -266,12 +266,12 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"
-/FI"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\ProjectWGameMode.gen.cpp"
-/FI"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\Definitions.ProjectW.h"
-/Fo"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\ProjectWGameMode.gen.cpp.obj"
+/FI"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\ProjectWGameMode.gen.cpp"
+/FI"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\Definitions.ProjectW.h"
+/Fo"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\ProjectWGameMode.gen.cpp.obj"
 /TP
 /GR-
 /W4

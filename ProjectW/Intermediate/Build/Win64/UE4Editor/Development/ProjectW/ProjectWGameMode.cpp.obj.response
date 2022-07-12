@@ -32,13 +32,31 @@
 /wd4244
 /wd4838
 /I .
-/I D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW
-/I D:\GitHub\ProjectW\ProjectW\Source
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\UMGEditor
+/I Editor
+/I Editor\UMGEditor\Classes
+/I Editor\UMGEditor\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\Sequencer
+/I Editor\Sequencer\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\TimeManagement
 /I Runtime
+/I Runtime\TimeManagement\Public
 /I Runtime\TraceLog\Public
 /I Runtime\Core\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\CoreUObject
 /I Runtime\CoreUObject\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\SlateCore
+/I Runtime\SlateCore\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\InputCore
+/I Runtime\InputCore\Classes
+/I Runtime\InputCore\Public
+/I Runtime\ApplicationCore\Public
+/I Runtime\RHI\Public
+/I Runtime\Json\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\Slate
+/I Runtime\Slate\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\ImageWrapper
+/I Runtime\ImageWrapper\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\Engine
 /I Runtime\Engine\Classes
 /I Runtime\Engine\Public
@@ -46,18 +64,6 @@
 /I Runtime\Net
 /I Runtime\Net\Core\Classes
 /I Runtime\Net\Core\Public
-/I Runtime\ApplicationCore\Public
-/I Runtime\RHI\Public
-/I Runtime\Json\Public
-/I ..\Intermediate\Build\Win64\UE4Editor\Inc\SlateCore
-/I Runtime\SlateCore\Public
-/I ..\Intermediate\Build\Win64\UE4Editor\Inc\InputCore
-/I Runtime\InputCore\Classes
-/I Runtime\InputCore\Public
-/I ..\Intermediate\Build\Win64\UE4Editor\Inc\Slate
-/I Runtime\Slate\Public
-/I ..\Intermediate\Build\Win64\UE4Editor\Inc\ImageWrapper
-/I Runtime\ImageWrapper\Public
 /I Runtime\Messaging\Public
 /I Runtime\MessagingCommon\Public
 /I Runtime\RenderCore\Public
@@ -112,7 +118,6 @@
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\PropertyAccess
 /I Runtime\PropertyAccess\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd
-/I Editor
 /I Programs\UnrealLightmass\Public
 /I Developer\Android\AndroidDeviceDetection\Public\Interfaces
 /I Editor\UnrealEd\Classes
@@ -190,8 +195,6 @@
 /I Runtime\UMG\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene
 /I Runtime\MovieScene\Public
-/I ..\Intermediate\Build\Win64\UE4Editor\Inc\TimeManagement
-/I Runtime\TimeManagement\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\MovieSceneTracks
 /I Runtime\MovieSceneTracks\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\AnimationCore
@@ -233,6 +236,12 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\SceneOutliner
+/I Editor\SceneOutliner\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\CurveEditor
+/I Editor\CurveEditor\Public
+/I C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW
+/I C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Source
 /I ..\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D
 /I ..\Plugins\2D\Paper2D\Source
 /I ..\Plugins\2D\Paper2D\Source\Paper2D\Classes
@@ -266,12 +275,12 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"
-/FI"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"D:\GitHub\ProjectW\ProjectW\Source\ProjectW\ProjectWGameMode.cpp"
-/FI"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\Definitions.ProjectW.h"
-/Fo"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\ProjectWGameMode.cpp.obj"
+/FI"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Source\ProjectW\ProjectWGameMode.cpp"
+/FI"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\Definitions.ProjectW.h"
+/Fo"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\ProjectWGameMode.cpp.obj"
 /TP
 /GR-
 /W4
