@@ -92,6 +92,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
 	class UPaperFlipbook* ShotgunFiringAnimation;
 
+	
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ECharacterState CharacterState = ECharacterState::Default;
