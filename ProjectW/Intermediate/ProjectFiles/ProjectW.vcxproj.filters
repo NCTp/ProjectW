@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ProjectW.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{06B573FE-8F67-4913-8205-D9380DF9D28D}</UniqueIdentifier>
+      <UniqueIdentifier>{25634A97-A970-4C7B-B68B-D18413AEF82D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ProjectW.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\README.md" />
     <Filter Include="Config">
-      <UniqueIdentifier>{9684FD25-F648-4218-976E-53DDFEAC68E7}</UniqueIdentifier>
+      <UniqueIdentifier>{B9C77704-EDF2-4C21-833E-852EAEA01518}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,8 +31,32 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ProjectW">
-      <UniqueIdentifier>{5A40E04A-D5CC-425C-844D-26A240083C73}</UniqueIdentifier>
+      <UniqueIdentifier>{F6A95C86-4255-4697-82FD-5F156F1BF663}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectW\Combatant.cpp">
+      <Filter>Source\ProjectW</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectW\Combatant.h">
+      <Filter>Source\ProjectW</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectW\EnemyBase.cpp">
+      <Filter>Source\ProjectW</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectW\EnemyBase.h">
+      <Filter>Source\ProjectW</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectW\EnemyBoss.cpp">
+      <Filter>Source\ProjectW</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectW\EnemyBoss.h">
+      <Filter>Source\ProjectW</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectW\Projectile.cpp">
+      <Filter>Source\ProjectW</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectW\Projectile.h">
+      <Filter>Source\ProjectW</Filter>
+    </ClInclude>
     <None Include="..\..\Source\ProjectW\ProjectW.Build.cs">
       <Filter>Source\ProjectW</Filter>
     </None>

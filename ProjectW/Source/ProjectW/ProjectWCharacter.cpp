@@ -5,10 +5,16 @@
 #include "Components/TextRenderComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
+#include "Components/ArrowComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "Camera/CameraComponent.h"
+#include "GameFramework/PlayerController.h"
+
+#include "Projectile.h"
+
+#include "ProjectWGameMode.h"
 
 DEFINE_LOG_CATEGORY_STATIC(SideScrollerCharacter, Log, All);
 
@@ -35,7 +41,6 @@ AProjectWCharacter::AProjectWCharacter()
 	CameraBoom->bDoCollisionTest = false;
 	CameraBoom->SetRelativeRotation(FRotator(0.0f, -90.0f, 0.0f));
 	
-
 	// Create an orthographic camera (no perspective) and attach it to the boom
 	SideViewCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("SideViewCamera"));
 	SideViewCameraComponent->ProjectionMode = ECameraProjectionMode::Orthographic;
@@ -47,6 +52,9 @@ AProjectWCharacter::AProjectWCharacter()
 	SideViewCameraComponent->bUsePawnControlRotation = false;
 	SideViewCameraComponent->bAutoActivate = true;
 	GetCharacterMovement()->bOrientRotationToMovement = false;
+
+	MuzzlePoint = CreateDefaultSubobject<UArrowComponent>(TEXT("MuzzlePoint"));
+	MuzzlePoint->SetupAttachment(RootComponent);
 
 	// Configure character movement
 	GetCharacterMovement()->GravityScale = 2.0f;
@@ -191,6 +199,13 @@ void AProjectWCharacter::UpdateAnimation()
 	GetSprite()->SetFlipbook(DesiredAnimation);
 }
 
+void AProjectWCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
+	World = GetWorld();
+}
+
 void AProjectWCharacter::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
@@ -200,7 +215,7 @@ void AProjectWCharacter::Tick(float DeltaSeconds)
 	if (m_bIsRolling)
 	{
 		m_fRollingCount += DeltaSeconds;
-		if (m_fRollingCount > 0.8f)
+		if (m_fRollingCount > 0.7f)
 		{
 			m_bIsRolling = false;
 			m_fRollingCount = 0.0f;
@@ -237,17 +252,23 @@ void AProjectWCharacter::MoveRight(float Value)
 	/*UpdateChar();*/
 
 	// Apply the input to the character motion
-	if (CharacterState != ECharacterState::Roll)
+	if (Value != 0.0f)
 	{
-		AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value);
+		if (CharacterState != ECharacterState::Roll)
+		{
+			AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value);
+		}
 	}
 }
 
 void AProjectWCharacter::MoveUp(float Value)
 {
-	if (CharacterState != ECharacterState::Roll)
+	if (Value != 0.0f)
 	{
-		AddMovementInput(FVector(0.0f, 1.0f, 0.0f), Value);
+		if (CharacterState != ECharacterState::Roll)
+		{
+			AddMovementInput(FVector(0.0f, 1.0f, 0.0f), Value);
+		}
 	}
 }
 
@@ -256,6 +277,14 @@ void AProjectWCharacter::Fire()
 	if (!m_bIsRolling)
 	{
 		m_bIsFiring = true;
+
+		SpawnTransform = MuzzlePoint->GetComponentTransform();
+		
+		FActorSpawnParameters actorSpawnParams;
+		actorSpawnParams.SpawnCollisionHandlingOverride =
+			ESpawnActorCollisionHandlingMethod::Undefined;
+
+		World->SpawnActor<AProjectile>(Projectile, SpawnTransform, actorSpawnParams);
 	}
 }
 
@@ -278,49 +307,62 @@ void AProjectWCharacter::Roll()
 			{
 				FVector fvLaunchVelocity = FVector(1.0f, 1.0f, 500.0f);
 				
-				if (fvPlayerVelocity.X > 0.0f)
+				if (Controller)
 				{
-					if (fvPlayerVelocity.Y > 0.0f)
+					if (Controller->IsLocalPlayerController())
 					{
-						fvLaunchVelocity.X *= 500.0f;
-						fvLaunchVelocity.Y *= 500.0f;
-					}
-					else if (fvPlayerVelocity.Y < 0.0f)
-					{
-						fvLaunchVelocity.X *= 500.0f;
-						fvLaunchVelocity.Y *= -500.0f;
-					}
-					else
-					{
-						fvLaunchVelocity.X *= 1000.0f;
-					}
-				}
-				else if (fvPlayerVelocity.X < 0.0f)
-				{
-					if (fvPlayerVelocity.Y > 0.0f)
-					{
-						fvLaunchVelocity.X *= -500.0f;
-						fvLaunchVelocity.Y *= 500.0f;
-					}
-					else if (fvPlayerVelocity.Y < 0.0f)
-					{
-						fvLaunchVelocity.X *= -500.0f;
-						fvLaunchVelocity.Y *= -500.0f;
-					}
-					else
-					{
-						fvLaunchVelocity.X *= -1000.0f;
-					}
-				}
-				else
-				{
-					if (fvPlayerVelocity.Y > 0.0f)
-					{
-						fvLaunchVelocity.Y *= 1000.0f;
-					}
-					else if (fvPlayerVelocity.Y < 0.0f)
-					{
-						fvLaunchVelocity.Y *= -1000.0f;
+						APlayerController* PlayerController = Cast<APlayerController>(Controller);
+						if (PlayerController)
+						{
+							if (PlayerController->IsInputKeyDown(EKeys::D))
+							{
+								if (PlayerController->IsInputKeyDown(EKeys::W))
+								{
+
+									fvLaunchVelocity.X *= 500.0f;
+									fvLaunchVelocity.Y *= -250.0f;
+								}
+								else if (PlayerController->IsInputKeyDown(EKeys::S))
+								{
+
+									fvLaunchVelocity.X *= 500.0f;
+									fvLaunchVelocity.Y *= 250.0f;
+								}
+								else
+								{
+									fvLaunchVelocity.X *= 1000.0f;
+
+								}
+							}
+							else if (PlayerController->IsInputKeyDown(EKeys::A))
+							{
+
+								if (PlayerController->IsInputKeyDown(EKeys::W))
+								{
+
+									fvLaunchVelocity.X *= -500.0f;
+									fvLaunchVelocity.Y *= -250.0f;
+								}
+								else if (PlayerController->IsInputKeyDown(EKeys::S))
+								{
+
+									fvLaunchVelocity.X *= -500.0f;
+									fvLaunchVelocity.Y *= 250.0f;
+								}
+								else
+								{
+									fvLaunchVelocity.X *= -1000.0f;
+								}
+							}
+							else if (PlayerController->IsInputKeyDown(EKeys::W))
+							{
+								fvLaunchVelocity.Y *= -500.0f;
+							}
+							else if (PlayerController->IsInputKeyDown(EKeys::S))
+							{
+								fvLaunchVelocity.Y *= 500.0f;
+							}
+						}
 					}
 				}
 

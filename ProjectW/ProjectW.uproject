@@ -9,7 +9,9 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
-				"UMGEditor"
+				"UMGEditor",
+				"Engine",
+				"Paper2D"
 			]
 		}
 	],

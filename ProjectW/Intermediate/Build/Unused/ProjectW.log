@@ -1,17 +1,102 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\User\Documents\GitHub\ProjectW).
-  Invalidating makefile for ProjectWEditor (source file removed)
-  Parsing headers for ProjectWEditor
-    Running UnrealHeaderTool "C:\Users\User\Documents\GitHub\ProjectW\ProjectW\ProjectW.uproject" "C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\ProjectWEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\User\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  LogInit: Display: Loading text-based GConfig....
-  Reflection code generated for ProjectWEditor in 12.684988 seconds
+﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\GitHub\ProjectW).
+  Creating makefile for ProjectWEditor (game project files are newer)
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-0001.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-0001.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-0012.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-0012.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-0014.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-0014.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-0027.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-0027.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-0035.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-0035.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-0845.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-0845.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-1219.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-1219.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-1758.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-1758.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-1908.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-1908.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-2297.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-2297.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-2433.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-2433.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-2465.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-2465.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-2621.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-2621.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-2831.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-2831.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-2885.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-2885.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-3614.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-3614.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-4065.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-4065.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-4444.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-4444.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-5000.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-5000.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-5007.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-5007.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-5181.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-5181.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-5895.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-5895.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-6389.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-6389.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-6449.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-6449.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-7208.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-7208.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-7649.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-7649.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-7713.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-7713.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-7877.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-7877.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-8866.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-8866.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-9324.dll
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Binaries\Win64\UE4Editor-ProjectW-9324.pdb
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0001.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0012.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0014.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0027.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0035.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0845.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-1219.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-1758.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-1908.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-2297.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-2433.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-2465.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-2621.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-2831.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-2885.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-3614.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-4065.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-4444.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-5000.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-5007.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-5181.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-5895.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-6389.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-6449.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-7208.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-7649.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-7713.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-7877.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-8866.lib
+  Deleted hot-reload file: D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-9324.lib
   Building ProjectWEditor...
-  Using Visual Studio 2019 14.29.30141 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 12 processes...
-    [1/4] ProjectW.init.gen.cpp
-    [2/4] UE4Editor-ProjectW-0003.lib
-       C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0003.lib 라이브러리 및 C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0003.exp 개체를 생성하고 있습니다.
-    [3/4] UE4Editor-ProjectW-0003.dll
-       C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0003.suppressed.lib 라이브러리 및 C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0003.suppressed.exp 개체를 생성하고 있습니다.
-    [4/4] ProjectWEditor.target
-  Total time in Parallel executor: 5.60 seconds
-  Total execution time: 22.20 seconds
+  Using Visual Studio 2019 14.29.30145 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 3 actions with 16 processes...
+    [1/3] UE4Editor-ProjectW.lib
+       D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW.lib 라이브러리 및 D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW.exp 개체를 생성하고 있습니다.
+    [2/3] UE4Editor-ProjectW.dll
+       D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW.suppressed.lib 라이브러리 및 D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW.suppressed.exp 개체를 생성하고 있습니다.
+    [3/3] ProjectWEditor.target
+  Total time in Parallel executor: 0.93 seconds
+  Total execution time: 5.70 seconds

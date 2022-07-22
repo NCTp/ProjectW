@@ -240,12 +240,26 @@
 /I Editor\SceneOutliner\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\CurveEditor
 /I Editor\CurveEditor\Public
-/I C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW
-/I C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Source
 /I ..\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D
 /I ..\Plugins\2D\Paper2D\Source
 /I ..\Plugins\2D\Paper2D\Source\Paper2D\Classes
 /I ..\Plugins\2D\Paper2D\Source\Paper2D\Public
+/I D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW
+/I D:\GitHub\ProjectW\ProjectW\Source
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\AugmentedReality
+/I Runtime\AugmentedReality\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\MRMesh
+/I Runtime\MRMesh\Public
+/I ..\Plugins\Cameras\GameplayCameras\Intermediate\Build\Win64\UE4Editor\Inc\GameplayCameras
+/I ..\Plugins\Cameras\GameplayCameras\Source
+/I ..\Plugins\Cameras\GameplayCameras\Source\GameplayCameras\Public
+/I ..\Plugins\MovieScene\TemplateSequence\Intermediate\Build\Win64\UE4Editor\Inc\TemplateSequence
+/I ..\Plugins\MovieScene\TemplateSequence\Source
+/I ..\Plugins\MovieScene\TemplateSequence\Source\TemplateSequence\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\CinematicCamera
+/I Runtime\CinematicCamera\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\LevelSequence
+/I Runtime\LevelSequence\Public
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -275,12 +289,12 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"
-/FI"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\ProjectWCharacter.gen.cpp"
-/FI"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\Definitions.ProjectW.h"
-/Fo"C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\ProjectWCharacter.gen.cpp.obj"
+/FI"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\ProjectWCharacter.gen.cpp"
+/FI"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\Definitions.ProjectW.h"
+/Fo"D:\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\ProjectWCharacter.gen.cpp.obj"
 /TP
 /GR-
 /W4

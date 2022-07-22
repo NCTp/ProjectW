@@ -21,6 +21,11 @@ void EmptyLinkFunctionForGeneratedCodeProjectWCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	PAPER2D_API UClass* Z_Construct_UClass_UPaperFlipbook_NoRegister();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	PROJECTW_API UClass* Z_Construct_UClass_AProjectile_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UArrowComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 // End Cross Module References
 	static UEnum* ECharacterState_StaticEnum()
 	{
@@ -184,6 +189,22 @@ void EmptyLinkFunctionForGeneratedCodeProjectWCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_uCurrentWeapon_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_m_uCurrentWeapon;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Projectile_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Projectile;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FireSound_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FireSound;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MuzzlePoint_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MuzzlePoint;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MuzzleLocation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MuzzleLocation;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -377,6 +398,37 @@ void EmptyLinkFunctionForGeneratedCodeProjectWCharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_m_uCurrentWeapon = { "m_uCurrentWeapon", nullptr, (EPropertyFlags)0x0020080000022015, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProjectWCharacter, m_uCurrentWeapon), METADATA_PARAMS(Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_m_uCurrentWeapon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_m_uCurrentWeapon_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_Projectile_MetaData[] = {
+		{ "Category", "Projectile" },
+		{ "ModuleRelativePath", "ProjectWCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_Projectile = { "Projectile", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProjectWCharacter, Projectile), Z_Construct_UClass_AProjectile_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_Projectile_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_Projectile_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_FireSound_MetaData[] = {
+		{ "Category", "Gameplay" },
+		{ "ModuleRelativePath", "ProjectWCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_FireSound = { "FireSound", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProjectWCharacter, FireSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_FireSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_FireSound_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_MuzzlePoint_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "MuzzlePoint" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "ProjectWCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_MuzzlePoint = { "MuzzlePoint", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProjectWCharacter, MuzzlePoint), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_MuzzlePoint_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_MuzzlePoint_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_MuzzleLocation_MetaData[] = {
+		{ "Category", "MuzzlePoint" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "ProjectWCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_MuzzleLocation = { "MuzzleLocation", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AProjectWCharacter, MuzzleLocation), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_MuzzleLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_MuzzleLocation_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AProjectWCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_SideViewCameraComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_CameraBoom,
@@ -398,6 +450,10 @@ void EmptyLinkFunctionForGeneratedCodeProjectWCharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_m_bIsRolling,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_m_fRollingCount,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_m_uCurrentWeapon,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_Projectile,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_FireSound,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_MuzzlePoint,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProjectWCharacter_Statics::NewProp_MuzzleLocation,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AProjectWCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AProjectWCharacter>::IsAbstract,
@@ -426,7 +482,7 @@ void EmptyLinkFunctionForGeneratedCodeProjectWCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AProjectWCharacter, 481254282);
+	IMPLEMENT_CLASS(AProjectWCharacter, 2886237127);
 	template<> PROJECTW_API UClass* StaticClass<AProjectWCharacter>()
 	{
 		return AProjectWCharacter::StaticClass();
