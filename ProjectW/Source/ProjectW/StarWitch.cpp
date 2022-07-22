@@ -1,7 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "StarWitch.h"
+#include "Engine/World.h"
+#include "AIController.h"
+#include "Kismet/GameplayStatics.h"
 #include "PaperFlipbookComponent.h"
 
 
@@ -10,7 +12,8 @@ AStarWitch::AStarWitch()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	PlayingAnim = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("FlipBook"));
+	FlipbookComponent = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("FlipBook"));
+
 
 }
 
@@ -18,7 +21,9 @@ AStarWitch::AStarWitch()
 void AStarWitch::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	StarWitchState = EActorState::StarWitchState_Idle;
+
+	Player = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 }
 
 // Called every frame
@@ -26,6 +31,7 @@ void AStarWitch::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	StateMachine();
 	UpdateAnimation();
 
 }
@@ -52,12 +58,12 @@ void AStarWitch::Flip()
 		SetActorRotation(FRotator(0.0f, 0.0f, 0.0f));
 	}
 
-}
+} 
 
 void AStarWitch::UpdateAnimation()
 {
 	Flip();
-	UPaperFlipbook* anim = IdleAnim;
+	UPaperFlipbook* anim = nullptr;
 
 	if (StarWitchState == EActorState::StarWitchState_Idle)
 	{
@@ -81,7 +87,38 @@ void AStarWitch::UpdateAnimation()
 	}
 
 	// Set Flipbook to anim
-	PlayingAnim->SetFlipbook(anim);
+	FlipbookComponent->SetFlipbook(anim);
+}
 
+void AStarWitch::SetState(EActorState newState)
+{
+	if (StarWitchState != EActorState::StarWitchState_Dead)
+		StarWitchState = newState;
+}
+
+void AStarWitch::StateIdle()
+{
+	if (Player && FVector::Distance(Player->GetActorLocation(), GetActorLocation()) <= 2000.0f)
+	{
+		StarWitchState = EActorState::StarWitchState_Idle;
+	}
+}
+
+void AStarWitch::StateWalk()
+{
+	StarWitchState = EActorState::StarWitchState_Walking;
+}
+
+void AStarWitch::StateMachine()
+{
+	switch (StarWitchState)
+	{
+	case EActorState::StarWitchState_Idle :
+		StateIdle();
+		break;
+	case EActorState::StarWitchState_Walking :
+		StateWalk();
+		break;
+	}
 }
 

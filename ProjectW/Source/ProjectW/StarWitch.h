@@ -4,23 +4,28 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "PaperCharacter.h"
 #include "StarWitch.generated.h"
 
 UENUM()
 enum class EActorState : uint8
 {
-	StarWitchState_Idle UMETA(DisplayName = "Idle"),
-	StarWitchState_Walking UMETA(DisplayName = "Walking"),
-	StarWitchState_Attack_01 UMETA(DisplayName = "Attack_01"),
-	StarWitchState_Attack_02 UMETA(DisplayName = "Attack_02"),
-	StarWitchState_Attack_03 UMETA(DIsplayName = "Attack_03"),
-	StarWitchState_CounterReady UMETA(DisplayNmae = "CounterReady")
+	StarWitchState_Idle         UMETA(DisplayName = "Idle"),
+	StarWitchState_Walking      UMETA(DisplayName = "Walking"),
+	StarWitchState_Attack_01    UMETA(DisplayName = "Attack_01"),
+	StarWitchState_Attack_02    UMETA(DisplayName = "Attack_02"),
+	StarWitchState_Attack_03    UMETA(DIsplayName = "Attack_03"),
+	StarWitchState_CounterReady UMETA(DisplayNmae = "CounterReady"),
+	StarWitchState_Dead         UMETA(DisplayNmae = "Dead")
 };
 
 UCLASS()
 class PROJECTW_API AStarWitch : public AActor
 {
 	GENERATED_BODY()
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Animation, meta = (AllowPrivateAccess = "true"))
+	class UPaperFlipbookComponent* FlipbookComponent;
 	
 public:	
 	// Sets default values for this actor's properties
@@ -36,7 +41,7 @@ public:
 
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = State)
-	EActorState StarWitchState = EActorState::StarWitchState_Idle;
+	EActorState StarWitchState;
 
 	////////// Animations ///////////
 	// Idle Animation
@@ -49,7 +54,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations)
 	class UPaperFlipbook* CastingAnim;
 	// Casting when casting Shotgun Laser (Attack02)
-	// UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations)
 	class UPaperFlipbook* CastingAnim_02;
 	// Counter Ready Animation
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations)
@@ -60,9 +65,6 @@ public:
 	// Teleport Animation
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations)
 	class UPaperFlipbook* TeleportAnim;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbookComponent* PlayingAnim;
 
 	////////// States ///////////
 	
@@ -81,6 +83,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
 	bool m_isPhaseThree;
 
+	APawn* Player;
 private:
 	// Get Damage
 	void GetDamage();
@@ -88,7 +91,12 @@ private:
 	void Flip();
 	// Update Animations
 	void UpdateAnimation();
-
-
+	// Set States
+	void SetState(EActorState newState);
+	void StateIdle();
+	void StateWalk();
+	void StateMachine();
 	int health;
+
+	FORCEINLINE class UPaperFlipbookComponent* GetFlipbookComponent() const { return FlipbookComponent; }
 };
