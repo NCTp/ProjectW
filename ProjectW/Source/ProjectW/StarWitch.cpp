@@ -30,10 +30,10 @@ void AStarWitch::BeginPlay()
 void AStarWitch::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	StateMachine();
+	
+	StateMachine(DeltaTime);
 	UpdateAnimation();
-
+	
 }
 // Get Damage
 void AStarWitch::GetDamage()
@@ -98,18 +98,74 @@ void AStarWitch::SetState(EActorState newState)
 
 void AStarWitch::StateIdle()
 {
-	if (Player && FVector::Distance(Player->GetActorLocation(), GetActorLocation()) <= 2000.0f)
+	float distance = FVector::Distance(GetActorLocation(), Player->GetActorLocation());
+	if (Player && distance <= 210.0f)
 	{
 		StarWitchState = EActorState::StarWitchState_Idle;
+		UE_LOG(LogTemp, Log, TEXT("Close, Idle"));
+	}
+	else if (Player && distance <= 400.0f && distance > 210.0f)
+	{
+		StarWitchState = EActorState::StarWitchState_Walking;
+		//UE_LOG(LogTemp, Log, TEXT("Far, Chase the player"));
 	}
 }
 
-void AStarWitch::StateWalk()
+void AStarWitch::StateWalk(float DeltaTime)
 {
-	StarWitchState = EActorState::StarWitchState_Walking;
+	float distance = FVector::Distance(GetActorLocation(), Player->GetActorLocation());
+	if (Player && distance <= 200.0f)
+	{
+		StarWitchState = EActorState::StarWitchState_Idle;
+		//UE_LOG(LogTemp, Log, TEXT("Close, Idle"));
+	}
+	else if (Player && distance <= 400.0f && distance > 200.0f)
+	{
+		UE_LOG(LogTemp, Log, TEXT("Far, Chase the player"));
+
+		
+		FVector playerDirection = Player->GetActorLocation() - GetActorLocation();
+		float dotProduct = FVector::DotProduct(GetActorForwardVector(), playerDirection.GetSafeNormal());
+
+		// Move Location
+		FVector CurrentLocation;
+		float speed;
+		CurrentLocation = this->GetActorLocation();
+		speed = 100.0f;
+		if (dotProduct >= 0)
+		{
+			CurrentLocation.X -= speed * DeltaTime;
+		}
+		else 
+		{
+			CurrentLocation.X += speed * DeltaTime;
+		}
+		SetActorLocation(CurrentLocation);
+
+	}
+
+
+	
 }
 
-void AStarWitch::StateMachine()
+void AStarWitch::StateCloseToTarget()
+{
+	if (Player && FVector::Distance(Player->GetActorLocation(), GetActorLocation()) <= 200.0f)
+	{
+		StarWitchState = EActorState::StarWitchState_Idle;
+		UE_LOG(LogTemp, Log, TEXT("Close"));
+	}
+}
+
+void AStarWitch::StateFarFromTarget()
+{
+	if (Player && FVector::Distance(Player->GetActorLocation(), GetActorLocation()) <= 400.0f)
+	{
+		StarWitchState = EActorState::StarWitchState_Walking;
+		UE_LOG(LogTemp, Log, TEXT("Far"));
+	}
+}
+void AStarWitch::StateMachine(float DeltaTime)
 {
 	switch (StarWitchState)
 	{
@@ -117,8 +173,9 @@ void AStarWitch::StateMachine()
 		StateIdle();
 		break;
 	case EActorState::StarWitchState_Walking :
-		StateWalk();
+		StateWalk(DeltaTime);
 		break;
 	}
+	
 }
 

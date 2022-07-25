@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "GameFramework/Pawn.h"
 #include "PaperCharacter.h"
 #include "StarWitch.generated.h"
 
@@ -20,7 +20,7 @@ enum class EActorState : uint8
 };
 
 UCLASS()
-class PROJECTW_API AStarWitch : public AActor
+class PROJECTW_API AStarWitch : public APawn
 {
 	GENERATED_BODY()
 
@@ -84,6 +84,7 @@ public:
 	bool m_isPhaseThree;
 
 	APawn* Player;
+	
 private:
 	// Get Damage
 	void GetDamage();
@@ -94,8 +95,10 @@ private:
 	// Set States
 	void SetState(EActorState newState);
 	void StateIdle();
-	void StateWalk();
-	void StateMachine();
+	void StateWalk(float DeltaTime);
+	void StateCloseToTarget();
+	void StateFarFromTarget();
+	void StateMachine(float DeltaTime);
 	int health;
 
 	FORCEINLINE class UPaperFlipbookComponent* GetFlipbookComponent() const { return FlipbookComponent; }

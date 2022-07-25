@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 	UPackage* Z_Construct_UPackage__Script_ProjectW();
 	PROJECTW_API UClass* Z_Construct_UClass_AStarWitch_NoRegister();
 	PROJECTW_API UClass* Z_Construct_UClass_AStarWitch();
-	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	PAPER2D_API UClass* Z_Construct_UClass_UPaperFlipbookComponent_NoRegister();
 	PAPER2D_API UClass* Z_Construct_UClass_UPaperFlipbook_NoRegister();
 // End Cross Module References
@@ -171,11 +171,12 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_AStarWitch_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_AActor,
+		(UObject* (*)())Z_Construct_UClass_APawn,
 		(UObject* (*)())Z_Construct_UPackage__Script_ProjectW,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::Class_MetaDataParams[] = {
+		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "StarWitch.h" },
 		{ "ModuleRelativePath", "StarWitch.h" },
 	};
@@ -339,7 +340,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 	};
 	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AStarWitch_Statics::ClassParams = {
 		&AStarWitch::StaticClass,
-		"Engine",
+		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
@@ -361,7 +362,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AStarWitch, 4126442244);
+	IMPLEMENT_CLASS(AStarWitch, 2267158758);
 	template<> PROJECTW_API UClass* StaticClass<AStarWitch>()
 	{
 		return AStarWitch::StaticClass();

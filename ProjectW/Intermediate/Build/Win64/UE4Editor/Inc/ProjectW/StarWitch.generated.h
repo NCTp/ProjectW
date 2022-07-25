@@ -21,7 +21,7 @@ private: \
 	static void StaticRegisterNativesAStarWitch(); \
 	friend struct Z_Construct_UClass_AStarWitch_Statics; \
 public: \
-	DECLARE_CLASS(AStarWitch, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ProjectW"), NO_API) \
+	DECLARE_CLASS(AStarWitch, APawn, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ProjectW"), NO_API) \
 	DECLARE_SERIALIZER(AStarWitch)
 
 
@@ -30,7 +30,7 @@ private: \
 	static void StaticRegisterNativesAStarWitch(); \
 	friend struct Z_Construct_UClass_AStarWitch_Statics; \
 public: \
-	DECLARE_CLASS(AStarWitch, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ProjectW"), NO_API) \
+	DECLARE_CLASS(AStarWitch, APawn, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ProjectW"), NO_API) \
 	DECLARE_SERIALIZER(AStarWitch)
 
 
