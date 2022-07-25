@@ -13,7 +13,8 @@ AStarWitch::AStarWitch()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	FlipbookComponent = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("FlipBook"));
-
+	FlipbookComponent->GetAbsoluteRotationPropertyName();
+	m_isRight = true;
 
 }
 
@@ -30,7 +31,22 @@ void AStarWitch::BeginPlay()
 void AStarWitch::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
+
+	FVector playerDirection = Player->GetActorLocation() - GetActorLocation();
+	float dotProduct = FVector::DotProduct(GetActorForwardVector(), playerDirection.GetSafeNormal());
+
+	if (dotProduct < 0)
+	{
+		if (m_isRight)
+			Flip();
+	}
+	else
+	{
+		if (!m_isRight)
+			Flip();
+
+	}
+
 	StateMachine(DeltaTime);
 	UpdateAnimation();
 	
@@ -46,23 +62,14 @@ void AStarWitch::GetDamage()
 // Flip the sprites
 void AStarWitch::Flip()
 {
-	const FVector PlayerVelocity = GetVelocity();
-	float TravelDirection = PlayerVelocity.X;
-
-	if (TravelDirection < 0.0f)
-	{
-		SetActorRotation(FRotator(0.0, 180.0f, 0.0f));
-	}
-	else if (TravelDirection > 0.0f)
-	{
-		SetActorRotation(FRotator(0.0f, 0.0f, 0.0f));
-	}
-
+	FVector scale = this->GetActorScale();
+	scale.X *= -1;
+	SetActorScale3D(scale);
+	m_isRight = !m_isRight;
 } 
 
 void AStarWitch::UpdateAnimation()
 {
-	Flip();
 	UPaperFlipbook* anim = nullptr;
 
 	if (StarWitchState == EActorState::StarWitchState_Idle)
@@ -99,12 +106,13 @@ void AStarWitch::SetState(EActorState newState)
 void AStarWitch::StateIdle()
 {
 	float distance = FVector::Distance(GetActorLocation(), Player->GetActorLocation());
-	if (Player && distance <= 210.0f)
+	if (Player && distance <= 300.0f)
 	{
 		StarWitchState = EActorState::StarWitchState_Idle;
+		
 		UE_LOG(LogTemp, Log, TEXT("Close, Idle"));
 	}
-	else if (Player && distance <= 400.0f && distance > 210.0f)
+	else if (Player && distance > 300.0f)
 	{
 		StarWitchState = EActorState::StarWitchState_Walking;
 		//UE_LOG(LogTemp, Log, TEXT("Far, Chase the player"));
@@ -119,11 +127,10 @@ void AStarWitch::StateWalk(float DeltaTime)
 		StarWitchState = EActorState::StarWitchState_Idle;
 		//UE_LOG(LogTemp, Log, TEXT("Close, Idle"));
 	}
-	else if (Player && distance <= 400.0f && distance > 200.0f)
+	else if (Player && distance <= 1000.0f && distance > 300.0f)
 	{
 		UE_LOG(LogTemp, Log, TEXT("Far, Chase the player"));
 
-		
 		FVector playerDirection = Player->GetActorLocation() - GetActorLocation();
 		float dotProduct = FVector::DotProduct(GetActorForwardVector(), playerDirection.GetSafeNormal());
 
@@ -132,20 +139,13 @@ void AStarWitch::StateWalk(float DeltaTime)
 		float speed;
 		CurrentLocation = this->GetActorLocation();
 		speed = 100.0f;
-		if (dotProduct >= 0)
-		{
+		if (dotProduct < 0)
 			CurrentLocation.X -= speed * DeltaTime;
-		}
-		else 
-		{
+		else
 			CurrentLocation.X += speed * DeltaTime;
-		}
+
 		SetActorLocation(CurrentLocation);
-
 	}
-
-
-	
 }
 
 void AStarWitch::StateCloseToTarget()

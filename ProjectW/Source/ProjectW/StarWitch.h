@@ -24,7 +24,7 @@ class PROJECTW_API AStarWitch : public APawn
 {
 	GENERATED_BODY()
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Animation, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animation, meta = (AllowPrivateAccess = "true"))
 	class UPaperFlipbookComponent* FlipbookComponent;
 	
 public:	
@@ -82,6 +82,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
 	bool m_isPhaseThree;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
+	bool m_isRight;
 
 	APawn* Player;
 	
