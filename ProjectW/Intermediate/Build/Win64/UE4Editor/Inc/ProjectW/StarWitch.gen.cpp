@@ -35,7 +35,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		return EActorState_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EActorState(EActorState_StaticEnum, TEXT("/Script/ProjectW"), TEXT("EActorState"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_ProjectW_EActorState_Hash() { return 2047201944U; }
+	uint32 Get_Z_Construct_UEnum_ProjectW_EActorState_Hash() { return 2056529973U; }
 	UEnum* Z_Construct_UEnum_ProjectW_EActorState()
 	{
 #if WITH_HOT_RELOAD
@@ -51,7 +51,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 				{ "EActorState::StarWitchState_Walking", (int64)EActorState::StarWitchState_Walking },
 				{ "EActorState::StarWitchState_Attack_01", (int64)EActorState::StarWitchState_Attack_01 },
 				{ "EActorState::StarWitchState_Attack_02", (int64)EActorState::StarWitchState_Attack_02 },
-				{ "EActorState::StarWitchState_Attack_03", (int64)EActorState::StarWitchState_Attack_03 },
+				{ "EActorState::StarWitchState_Teleport", (int64)EActorState::StarWitchState_Teleport },
 				{ "EActorState::StarWitchState_CounterReady", (int64)EActorState::StarWitchState_CounterReady },
 				{ "EActorState::StarWitchState_Dead", (int64)EActorState::StarWitchState_Dead },
 			};
@@ -62,14 +62,14 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 				{ "StarWitchState_Attack_01.Name", "EActorState::StarWitchState_Attack_01" },
 				{ "StarWitchState_Attack_02.DisplayName", "Attack_02" },
 				{ "StarWitchState_Attack_02.Name", "EActorState::StarWitchState_Attack_02" },
-				{ "StarWitchState_Attack_03.DIsplayName", "Attack_03" },
-				{ "StarWitchState_Attack_03.Name", "EActorState::StarWitchState_Attack_03" },
 				{ "StarWitchState_CounterReady.DisplayNmae", "CounterReady" },
 				{ "StarWitchState_CounterReady.Name", "EActorState::StarWitchState_CounterReady" },
 				{ "StarWitchState_Dead.DisplayNmae", "Dead" },
 				{ "StarWitchState_Dead.Name", "EActorState::StarWitchState_Dead" },
 				{ "StarWitchState_Idle.DisplayName", "Idle" },
 				{ "StarWitchState_Idle.Name", "EActorState::StarWitchState_Idle" },
+				{ "StarWitchState_Teleport.DIsplayName", "Teleport" },
+				{ "StarWitchState_Teleport.Name", "EActorState::StarWitchState_Teleport" },
 				{ "StarWitchState_Walking.DisplayName", "Walking" },
 				{ "StarWitchState_Walking.Name", "EActorState::StarWitchState_Walking" },
 			};

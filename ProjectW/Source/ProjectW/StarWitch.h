@@ -14,7 +14,7 @@ enum class EActorState : uint8
 	StarWitchState_Walking      UMETA(DisplayName = "Walking"),
 	StarWitchState_Attack_01    UMETA(DisplayName = "Attack_01"),
 	StarWitchState_Attack_02    UMETA(DisplayName = "Attack_02"),
-	StarWitchState_Attack_03    UMETA(DIsplayName = "Attack_03"),
+	StarWitchState_Teleport    UMETA(DIsplayName = "Teleport"),
 	StarWitchState_CounterReady UMETA(DisplayNmae = "CounterReady"),
 	StarWitchState_Dead         UMETA(DisplayNmae = "Dead")
 };
@@ -101,6 +101,7 @@ private:
 	void StateWalk(float DeltaTime);
 	void StateCloseToTarget();
 	void StateFarFromTarget();
+	void Teleport();
 	void StateMachine(float DeltaTime);
 	int health;
 

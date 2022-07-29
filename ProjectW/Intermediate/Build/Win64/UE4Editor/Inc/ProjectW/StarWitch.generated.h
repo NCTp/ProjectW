@@ -98,7 +98,7 @@ template<> PROJECTW_API UClass* StaticClass<class AStarWitch>();
 	op(EActorState::StarWitchState_Walking) \
 	op(EActorState::StarWitchState_Attack_01) \
 	op(EActorState::StarWitchState_Attack_02) \
-	op(EActorState::StarWitchState_Attack_03) \
+	op(EActorState::StarWitchState_Teleport) \
 	op(EActorState::StarWitchState_CounterReady) \
 	op(EActorState::StarWitchState_Dead) 
 

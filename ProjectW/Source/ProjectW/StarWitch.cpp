@@ -108,14 +108,11 @@ void AStarWitch::StateIdle()
 	float distance = FVector::Distance(GetActorLocation(), Player->GetActorLocation());
 	if (Player && distance <= 300.0f)
 	{
-		StarWitchState = EActorState::StarWitchState_Idle;
-		
 		UE_LOG(LogTemp, Log, TEXT("Close, Idle"));
 	}
 	else if (Player && distance > 300.0f)
 	{
-		StarWitchState = EActorState::StarWitchState_Walking;
-		//UE_LOG(LogTemp, Log, TEXT("Far, Chase the player"));
+		SetState(EActorState::StarWitchState_Walking);
 	}
 }
 
@@ -124,8 +121,7 @@ void AStarWitch::StateWalk(float DeltaTime)
 	float distance = FVector::Distance(GetActorLocation(), Player->GetActorLocation());
 	if (Player && distance <= 200.0f)
 	{
-		StarWitchState = EActorState::StarWitchState_Idle;
-		//UE_LOG(LogTemp, Log, TEXT("Close, Idle"));
+		SetState(EActorState::StarWitchState_Idle);
 	}
 	else if (Player && distance <= 1000.0f && distance > 300.0f)
 	{
@@ -139,9 +135,9 @@ void AStarWitch::StateWalk(float DeltaTime)
 		float speed;
 		CurrentLocation = this->GetActorLocation();
 		speed = 100.0f;
-		if (dotProduct < 0)
+		if (dotProduct < 0) // player is left of starwitch
 			CurrentLocation.X -= speed * DeltaTime;
-		else
+		else // player is right of starwitch
 			CurrentLocation.X += speed * DeltaTime;
 
 		SetActorLocation(CurrentLocation);
@@ -152,8 +148,9 @@ void AStarWitch::StateCloseToTarget()
 {
 	if (Player && FVector::Distance(Player->GetActorLocation(), GetActorLocation()) <= 200.0f)
 	{
-		StarWitchState = EActorState::StarWitchState_Idle;
 		UE_LOG(LogTemp, Log, TEXT("Close"));
+		m_isCloseToPlayer = true;
+		m_isFarFromPlayer = false;
 	}
 }
 
@@ -161,9 +158,27 @@ void AStarWitch::StateFarFromTarget()
 {
 	if (Player && FVector::Distance(Player->GetActorLocation(), GetActorLocation()) <= 400.0f)
 	{
-		StarWitchState = EActorState::StarWitchState_Walking;
 		UE_LOG(LogTemp, Log, TEXT("Far"));
+		m_isCloseToPlayer = false;
+		m_isFarFromPlayer = true;
 	}
+}
+
+void AStarWitch::Teleport()
+{
+	UE_LOG(LogTemp, Log, TEXT("Teleport"));
+	FVector playerDirection = Player->GetActorLocation() - GetActorLocation();
+	FVector playerLocation = Player->GetActorLocation();
+	float dotProduct = FVector::DotProduct(GetActorForwardVector(), playerDirection.GetSafeNormal());
+	FVector teleportLocation = FVector(playerLocation.X + 300.0f, playerLocation.Y, playerLocation.Z);
+	if (dotProduct < 0) // player is left of starwitch
+		SetActorLocation(teleportLocation);
+	else // player is right of starwitch
+		SetActorLocation(teleportLocation);
+
+	SetState(EActorState::StarWitchState_Idle);
+
+
 }
 void AStarWitch::StateMachine(float DeltaTime)
 {
@@ -175,7 +190,11 @@ void AStarWitch::StateMachine(float DeltaTime)
 	case EActorState::StarWitchState_Walking :
 		StateWalk(DeltaTime);
 		break;
+	case EActorState::StarWitchState_Teleport:
+		Teleport();
+		break;
 	}
+
 	
 }
 
