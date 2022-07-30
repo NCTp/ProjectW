@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	PAPER2D_API UClass* Z_Construct_UClass_UPaperFlipbookComponent_NoRegister();
 	PAPER2D_API UClass* Z_Construct_UClass_UPaperFlipbook_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 // End Cross Module References
 	static UEnum* EActorState_StaticEnum()
 	{
@@ -171,6 +172,24 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 #endif
 		static void NewProp_m_isRight_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_m_isRight;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_startFighting_MetaData[];
+#endif
+		static void NewProp_m_startFighting_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_m_startFighting;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_isTeleporting_MetaData[];
+#endif
+		static void NewProp_m_isTeleporting_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_m_isTeleporting;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Projectile_Laser_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Projectile_Laser;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Projectile_Ball_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Projectile_Ball;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -269,9 +288,9 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isFarFromPlayer_MetaData[] = {
 		{ "Category", "State" },
-		{ "Comment", "////////// States ///////////\n" },
+		{ "Comment", "////////// States and Boolean Values ///////////\n" },
 		{ "ModuleRelativePath", "StarWitch.h" },
-		{ "ToolTip", "/ States" },
+		{ "ToolTip", "/ States and Boolean Values" },
 	};
 #endif
 	void Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isFarFromPlayer_SetBit(void* Obj)
@@ -334,6 +353,44 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		((AStarWitch*)Obj)->m_isRight = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isRight = { "m_isRight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AStarWitch), &Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isRight_SetBit, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isRight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isRight_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting_MetaData[] = {
+		{ "Category", "State" },
+		{ "ModuleRelativePath", "StarWitch.h" },
+	};
+#endif
+	void Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting_SetBit(void* Obj)
+	{
+		((AStarWitch*)Obj)->m_startFighting = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting = { "m_startFighting", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AStarWitch), &Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting_SetBit, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting_MetaData[] = {
+		{ "Category", "State" },
+		{ "ModuleRelativePath", "StarWitch.h" },
+	};
+#endif
+	void Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting_SetBit(void* Obj)
+	{
+		((AStarWitch*)Obj)->m_isTeleporting = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting = { "m_isTeleporting", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AStarWitch), &Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting_SetBit, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser_MetaData[] = {
+		{ "Category", "Projectile" },
+		{ "Comment", "// Player\n" },
+		{ "ModuleRelativePath", "StarWitch.h" },
+		{ "ToolTip", "Player" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser = { "Projectile_Laser", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStarWitch, Projectile_Laser), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball_MetaData[] = {
+		{ "Category", "Projectile" },
+		{ "ModuleRelativePath", "StarWitch.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball = { "Projectile_Ball", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStarWitch, Projectile_Ball), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AStarWitch_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_FlipbookComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_StarWitchState_Underlying,
@@ -351,6 +408,10 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isPhaseTwo,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isPhaseThree,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isRight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AStarWitch_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AStarWitch>::IsAbstract,
@@ -379,7 +440,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AStarWitch, 4169342391);
+	IMPLEMENT_CLASS(AStarWitch, 367812688);
 	template<> PROJECTW_API UClass* StaticClass<AStarWitch>()
 	{
 		return AStarWitch::StaticClass();

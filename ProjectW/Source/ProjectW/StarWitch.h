@@ -35,10 +35,14 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	int32 TeleportCounter = 3;
+
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	// Timer Practice
+	void TimerFunction();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = State)
 	EActorState StarWitchState;
@@ -66,8 +70,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations)
 	class UPaperFlipbook* TeleportAnim;
 
-	////////// States ///////////
-	
+
+	////////// States and Boolean Values ///////////
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
 	bool m_isFarFromPlayer;
 
@@ -86,22 +90,49 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
 	bool m_isRight;
 
-	APawn* Player;
-	
-private:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
+	bool m_startFighting;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
+	bool m_isTeleporting;
+
+	////////// Objects ///////////
+	APawn* Player; // Player
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Projectile)
+	AActor* Projectile_Laser;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Projectile)
+	AActor* Projectile_Ball;
+	// Timer Practice
+	FTimerHandle TimerHandle;
+	FTimerHandle TeleportTimerHandle;
+
+	////////// Private Functions ///////////
 	// Get Damage
 	void GetDamage();
+	
+private:
+
+	////////// Public Functions ///////////
+
 	// Flip sprite following to moving direction
 	void Flip();
 	// Update Animations
 	void UpdateAnimation();
 	// Set States
 	void SetState(EActorState newState);
+
+	////////// Action Functions ///////////
+	void Teleport();
+	void ShootLazer();
+	void ShootBall();
+
+	////////// Functions called each states ///////////
 	void StateIdle();
 	void StateWalk(float DeltaTime);
+	void StateTeleport();
 	void StateCloseToTarget();
 	void StateFarFromTarget();
-	void Teleport();
 	void StateMachine(float DeltaTime);
 	int health;
 

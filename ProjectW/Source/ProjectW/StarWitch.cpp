@@ -6,7 +6,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "PaperFlipbookComponent.h"
 
-
+#define PrintString(String) GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::White, String)
 // Sets default values
 AStarWitch::AStarWitch()
 {
@@ -15,16 +15,19 @@ AStarWitch::AStarWitch()
 	FlipbookComponent = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("FlipBook"));
 	FlipbookComponent->GetAbsoluteRotationPropertyName();
 	m_isRight = true;
-
+	m_startFighting = true;
+	m_isTeleporting = false;
 }
 
 // Called when the game starts or when spawned
 void AStarWitch::BeginPlay()
 {
 	Super::BeginPlay();
-	StarWitchState = EActorState::StarWitchState_Idle;
+	StarWitchState = EActorState::StarWitchState_Teleport;
 
 	Player = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	// Call the function every 3 seconds, ensure the timer loops and delay first call for half a second.
+	//GetWorldTimerManager().SetTimer(TimerHandle, this, &AStarWitch::TimerFunction, 2.0f, true, 0.5f);
 }
 
 // Called every frame
@@ -51,6 +54,17 @@ void AStarWitch::Tick(float DeltaTime)
 	UpdateAnimation();
 	
 }
+/*
+void AStarWitch::TimerFunction()
+{
+	// Track the number of times we're calling the function
+	CallTracker--;
+	// If CallTracker is zero then print A andf Clear the Timer to stop it looping, Otherwise print B.
+	CallTracker == 0 ? PrintString("Finished Looping"), GetWorldTimerManager().ClearTimer(TimerHandle) : PrintString("Timer Called");
+	// Print the number of loops the tracker has remaining.
+	PrintString(FString::Printf(TEXT("Calls Remaining: &d"), CallTracker));
+}
+*/
 // Get Damage
 void AStarWitch::GetDamage()
 {
@@ -92,6 +106,10 @@ void AStarWitch::UpdateAnimation()
 	{
 		anim = CastingAnim_02;
 	}
+	else if (StarWitchState == EActorState::StarWitchState_Teleport)
+	{
+		anim = IdleAnim;
+	}
 
 	// Set Flipbook to anim
 	FlipbookComponent->SetFlipbook(anim);
@@ -121,6 +139,7 @@ void AStarWitch::StateWalk(float DeltaTime)
 	float distance = FVector::Distance(GetActorLocation(), Player->GetActorLocation());
 	if (Player && distance <= 200.0f)
 	{
+		//Teleport();
 		SetState(EActorState::StarWitchState_Idle);
 	}
 	else if (Player && distance <= 1000.0f && distance > 300.0f)
@@ -142,42 +161,63 @@ void AStarWitch::StateWalk(float DeltaTime)
 
 		SetActorLocation(CurrentLocation);
 	}
+	else if (Player && distance > 2000.0f)
+	{
+		SetState(EActorState::StarWitchState_Teleport);
+	}
 }
 
 void AStarWitch::StateCloseToTarget()
 {
-	if (Player && FVector::Distance(Player->GetActorLocation(), GetActorLocation()) <= 200.0f)
-	{
-		UE_LOG(LogTemp, Log, TEXT("Close"));
-		m_isCloseToPlayer = true;
-		m_isFarFromPlayer = false;
-	}
 }
 
 void AStarWitch::StateFarFromTarget()
 {
-	if (Player && FVector::Distance(Player->GetActorLocation(), GetActorLocation()) <= 400.0f)
-	{
-		UE_LOG(LogTemp, Log, TEXT("Far"));
-		m_isCloseToPlayer = false;
-		m_isFarFromPlayer = true;
-	}
 }
 
 void AStarWitch::Teleport()
 {
-	UE_LOG(LogTemp, Log, TEXT("Teleport"));
+	UE_LOG(LogTemp, Log, TEXT("TeleportStart"));
+
 	FVector playerDirection = Player->GetActorLocation() - GetActorLocation();
 	FVector playerLocation = Player->GetActorLocation();
 	float dotProduct = FVector::DotProduct(GetActorForwardVector(), playerDirection.GetSafeNormal());
-	FVector teleportLocation = FVector(playerLocation.X + 300.0f, playerLocation.Y, playerLocation.Z);
+	FVector teleportLocationOfRight = FVector(playerLocation.X + 300.0f, playerLocation.Y, playerLocation.Z);
+	FVector teleportLocationOfLeft = FVector(playerLocation.X - 300.0f, playerLocation.Y, playerLocation.Z);
 	if (dotProduct < 0) // player is left of starwitch
-		SetActorLocation(teleportLocation);
+		SetActorLocation(teleportLocationOfLeft);
 	else // player is right of starwitch
-		SetActorLocation(teleportLocation);
+		SetActorLocation(teleportLocationOfRight);
 
-	SetState(EActorState::StarWitchState_Idle);
+	TeleportCounter--;
+	PrintString(FString::Printf(TEXT("Calls Remaining: %d"), TeleportCounter));
+	//SetState(EActorState::StarWitchState_Idle);
+	if (TeleportCounter == 0)
+	{
+		PrintString("Finished Looping");
+		TeleportCounter = 3;
+		m_isTeleporting = false;
+		GetWorldTimerManager().ClearTimer(TeleportTimerHandle);
+		SetState(EActorState::StarWitchState_Idle);
 
+	}
+}
+
+void AStarWitch::StateTeleport()
+{
+	if (!m_isTeleporting)
+	{
+		m_isTeleporting = true;
+		GetWorldTimerManager().SetTimer(TeleportTimerHandle, this, &AStarWitch::Teleport, 1.0f, true, 0.5f);
+	}
+	
+}
+void AStarWitch::ShootLazer()
+{
+
+}
+void AStarWitch::ShootBall()
+{
 
 }
 void AStarWitch::StateMachine(float DeltaTime)
@@ -185,16 +225,14 @@ void AStarWitch::StateMachine(float DeltaTime)
 	switch (StarWitchState)
 	{
 	case EActorState::StarWitchState_Idle :
-		StateIdle();
+		AStarWitch::StateIdle();
 		break;
 	case EActorState::StarWitchState_Walking :
-		StateWalk(DeltaTime);
+		AStarWitch::StateWalk(DeltaTime);
 		break;
 	case EActorState::StarWitchState_Teleport:
-		Teleport();
+		AStarWitch::StateTeleport();
 		break;
 	}
-
-	
 }
 
