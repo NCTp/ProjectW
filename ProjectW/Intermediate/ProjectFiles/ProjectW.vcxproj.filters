@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ProjectW.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{98D5EAFC-4D7D-455C-B00C-976748E952F4}</UniqueIdentifier>
+      <UniqueIdentifier>{A20E07BB-85FE-46BE-8726-563EA98A4F63}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ProjectW.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\README.md" />
     <Filter Include="Config">
-      <UniqueIdentifier>{38253AAF-96E9-47DC-BFDD-741314836455}</UniqueIdentifier>
+      <UniqueIdentifier>{FA210DF0-20F5-4C5E-853A-E8AC4C99FCD7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ProjectW">
-      <UniqueIdentifier>{46C54680-96DD-436D-BFBD-8D2512DC9DA1}</UniqueIdentifier>
+      <UniqueIdentifier>{DFC4692B-250D-4122-A51E-D35B825D2BD5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ProjectW\ProjectW.Build.cs">
       <Filter>Source\ProjectW</Filter>
@@ -58,6 +58,24 @@
       <Filter>Source\ProjectW</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectW\StarWitch.h">
+      <Filter>Source\ProjectW</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectW\StarWitchBall.cpp">
+      <Filter>Source\ProjectW</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectW\StarWitchBall.h">
+      <Filter>Source\ProjectW</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectW\StarWitchLaser.cpp">
+      <Filter>Source\ProjectW</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectW\StarWitchLaser.h">
+      <Filter>Source\ProjectW</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectW\StarWitchTeleportEffects.cpp">
+      <Filter>Source\ProjectW</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectW\StarWitchTeleportEffects.h">
       <Filter>Source\ProjectW</Filter>
     </ClInclude>
   </ItemGroup>

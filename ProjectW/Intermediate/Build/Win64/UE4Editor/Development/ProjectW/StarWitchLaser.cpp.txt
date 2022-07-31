@@ -1,0 +1,3 @@
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\Definitions.ProjectW.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Source\ProjectW\StarWitchLaser.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\StarWitchLaser.generated.h

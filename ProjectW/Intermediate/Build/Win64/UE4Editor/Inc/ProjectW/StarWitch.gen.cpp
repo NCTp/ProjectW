@@ -20,7 +20,10 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	PAPER2D_API UClass* Z_Construct_UClass_UPaperFlipbookComponent_NoRegister();
 	PAPER2D_API UClass* Z_Construct_UClass_UPaperFlipbook_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	PROJECTW_API UClass* Z_Construct_UClass_AStarWitchLaser_NoRegister();
+	PROJECTW_API UClass* Z_Construct_UClass_AStarWitchBall_NoRegister();
+	PROJECTW_API UClass* Z_Construct_UClass_AStarWitchTeleportEffects_NoRegister();
 // End Cross Module References
 	static UEnum* EActorState_StaticEnum()
 	{
@@ -185,11 +188,15 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Projectile_Laser_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Projectile_Laser;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Projectile_Laser;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Projectile_Ball_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Projectile_Ball;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Projectile_Ball;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Effects_Teleport_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Effects_Teleport;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -383,14 +390,21 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		{ "ToolTip", "Player" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser = { "Projectile_Laser", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStarWitch, Projectile_Laser), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser = { "Projectile_Laser", nullptr, (EPropertyFlags)0x0014000000000015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStarWitch, Projectile_Laser), Z_Construct_UClass_AStarWitchLaser_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball_MetaData[] = {
 		{ "Category", "Projectile" },
 		{ "ModuleRelativePath", "StarWitch.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball = { "Projectile_Ball", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStarWitch, Projectile_Ball), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball = { "Projectile_Ball", nullptr, (EPropertyFlags)0x0014000000000015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStarWitch, Projectile_Ball), Z_Construct_UClass_AStarWitchBall_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_Effects_Teleport_MetaData[] = {
+		{ "Category", "Effects" },
+		{ "ModuleRelativePath", "StarWitch.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_Effects_Teleport = { "Effects_Teleport", nullptr, (EPropertyFlags)0x0014000000000015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStarWitch, Effects_Teleport), Z_Construct_UClass_AStarWitchTeleportEffects_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_Effects_Teleport_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_Effects_Teleport_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AStarWitch_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_FlipbookComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_StarWitchState_Underlying,
@@ -412,6 +426,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_Effects_Teleport,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AStarWitch_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AStarWitch>::IsAbstract,
@@ -440,7 +455,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AStarWitch, 367812688);
+	IMPLEMENT_CLASS(AStarWitch, 207198553);
 	template<> PROJECTW_API UClass* StaticClass<AStarWitch>()
 	{
 		return AStarWitch::StaticClass();

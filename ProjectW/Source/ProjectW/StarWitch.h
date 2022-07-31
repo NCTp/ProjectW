@@ -7,6 +7,11 @@
 #include "PaperCharacter.h"
 #include "StarWitch.generated.h"
 
+class AStarWitchBall;
+class AStarWitchLaser;
+class AStarWitchTeleportEffects;
+
+
 UENUM()
 enum class EActorState : uint8
 {
@@ -100,9 +105,11 @@ public:
 	APawn* Player; // Player
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Projectile)
-	AActor* Projectile_Laser;
+	TSubclassOf<AStarWitchLaser> Projectile_Laser;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Projectile)
-	AActor* Projectile_Ball;
+	TSubclassOf<AStarWitchBall> Projectile_Ball;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Effects)
+	TSubclassOf<AStarWitchTeleportEffects> Effects_Teleport;
 	// Timer Practice
 	FTimerHandle TimerHandle;
 	FTimerHandle TeleportTimerHandle;
@@ -134,7 +141,12 @@ private:
 	void StateCloseToTarget();
 	void StateFarFromTarget();
 	void StateMachine(float DeltaTime);
+
+
+	////////// Private Variables ///////////
 	int health;
+
+	FActorSpawnParameters spawnInfo = FActorSpawnParameters();
 
 	FORCEINLINE class UPaperFlipbookComponent* GetFlipbookComponent() const { return FlipbookComponent; }
 };

@@ -6,6 +6,10 @@
 #include "Kismet/GameplayStatics.h"
 #include "PaperFlipbookComponent.h"
 
+#include "StarWitchTeleportEffects.h"
+#include "StarWitchBall.h"
+#include "StarWitchLaser.h"
+
 #define PrintString(String) GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::White, String)
 // Sets default values
 AStarWitch::AStarWitch()
@@ -161,9 +165,9 @@ void AStarWitch::StateWalk(float DeltaTime)
 
 		SetActorLocation(CurrentLocation);
 	}
-	else if (Player && distance > 2000.0f)
+	else if (Player && distance > 1500.0f)
 	{
-		SetState(EActorState::StarWitchState_Teleport);
+		AStarWitch::Teleport();
 	}
 }
 
@@ -182,15 +186,13 @@ void AStarWitch::Teleport()
 	FVector playerDirection = Player->GetActorLocation() - GetActorLocation();
 	FVector playerLocation = Player->GetActorLocation();
 	float dotProduct = FVector::DotProduct(GetActorForwardVector(), playerDirection.GetSafeNormal());
-	FVector teleportLocationOfRight = FVector(playerLocation.X + 300.0f, playerLocation.Y, playerLocation.Z);
-	FVector teleportLocationOfLeft = FVector(playerLocation.X - 300.0f, playerLocation.Y, playerLocation.Z);
-	if (dotProduct < 0) // player is left of starwitch
-		SetActorLocation(teleportLocationOfLeft);
-	else // player is right of starwitch
-		SetActorLocation(teleportLocationOfRight);
+	FVector teleportLocationOfRight = FVector(playerLocation.X + 400.0f, GetActorLocation().Y, GetActorLocation().Z);
+	FVector teleportLocationOfLeft = FVector(playerLocation.X - 400.0f, GetActorLocation().Y, GetActorLocation().Z);
 
-	TeleportCounter--;
-	PrintString(FString::Printf(TEXT("Calls Remaining: %d"), TeleportCounter));
+	AStarWitchTeleportEffects* teleportEffect = nullptr;
+	AStarWitchBall* ball = nullptr;
+	AStarWitchLaser* laser = nullptr;
+
 	//SetState(EActorState::StarWitchState_Idle);
 	if (TeleportCounter == 0)
 	{
@@ -199,7 +201,26 @@ void AStarWitch::Teleport()
 		m_isTeleporting = false;
 		GetWorldTimerManager().ClearTimer(TeleportTimerHandle);
 		SetState(EActorState::StarWitchState_Idle);
-
+		AStarWitch::ShootLazer();
+	}
+	else
+	{
+		PrintString(FString::Printf(TEXT("Calls Remaining: %d"), TeleportCounter));
+		if (!m_isRight) // player is left of starwitch
+		{
+			SetActorLocation(teleportLocationOfLeft);
+			teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
+			if(StarWitchState == EActorState::StarWitchState_Teleport)
+				ball = GetWorld()->SpawnActor<AStarWitchBall>(Projectile_Ball, GetActorLocation(), FRotator(0, 0, 0), spawnInfo);
+		}
+		else // player is right of starwitch
+		{
+			SetActorLocation(teleportLocationOfRight);
+			teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
+			if (StarWitchState == EActorState::StarWitchState_Teleport)
+				ball = GetWorld()->SpawnActor<AStarWitchBall>(Projectile_Ball, GetActorLocation(), FRotator(0, 180.0f, 0), spawnInfo);
+		}
+		TeleportCounter--;
 	}
 }
 
@@ -214,11 +235,17 @@ void AStarWitch::StateTeleport()
 }
 void AStarWitch::ShootLazer()
 {
+	AStarWitchLaser* laser = nullptr;
+
+	if (!m_isRight)
+		laser = GetWorld()->SpawnActor<AStarWitchLaser>(Projectile_Laser, GetActorLocation(), FRotator(0, 180.0f, 0), spawnInfo);
+	else
+		laser = GetWorld()->SpawnActor<AStarWitchLaser>(Projectile_Laser, GetActorLocation(), FRotator(0, 0, 0), spawnInfo);
 
 }
 void AStarWitch::ShootBall()
 {
-
+	
 }
 void AStarWitch::StateMachine(float DeltaTime)
 {

@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTW_StarWitch_generated_h
 
-#define ProjectW_Source_ProjectW_StarWitch_h_25_SPARSE_DATA
-#define ProjectW_Source_ProjectW_StarWitch_h_25_RPC_WRAPPERS
-#define ProjectW_Source_ProjectW_StarWitch_h_25_RPC_WRAPPERS_NO_PURE_DECLS
-#define ProjectW_Source_ProjectW_StarWitch_h_25_INCLASS_NO_PURE_DECLS \
+#define ProjectW_Source_ProjectW_StarWitch_h_30_SPARSE_DATA
+#define ProjectW_Source_ProjectW_StarWitch_h_30_RPC_WRAPPERS
+#define ProjectW_Source_ProjectW_StarWitch_h_30_RPC_WRAPPERS_NO_PURE_DECLS
+#define ProjectW_Source_ProjectW_StarWitch_h_30_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAStarWitch(); \
 	friend struct Z_Construct_UClass_AStarWitch_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(AStarWitch)
 
 
-#define ProjectW_Source_ProjectW_StarWitch_h_25_INCLASS \
+#define ProjectW_Source_ProjectW_StarWitch_h_30_INCLASS \
 private: \
 	static void StaticRegisterNativesAStarWitch(); \
 	friend struct Z_Construct_UClass_AStarWitch_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(AStarWitch)
 
 
-#define ProjectW_Source_ProjectW_StarWitch_h_25_STANDARD_CONSTRUCTORS \
+#define ProjectW_Source_ProjectW_StarWitch_h_30_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AStarWitch(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AStarWitch) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define ProjectW_Source_ProjectW_StarWitch_h_25_ENHANCED_CONSTRUCTORS \
+#define ProjectW_Source_ProjectW_StarWitch_h_30_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AStarWitch(AStarWitch&&); \
@@ -58,31 +58,31 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AStarWitch)
 
 
-#define ProjectW_Source_ProjectW_StarWitch_h_25_PRIVATE_PROPERTY_OFFSET \
+#define ProjectW_Source_ProjectW_StarWitch_h_30_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__FlipbookComponent() { return STRUCT_OFFSET(AStarWitch, FlipbookComponent); }
 
 
-#define ProjectW_Source_ProjectW_StarWitch_h_22_PROLOG
-#define ProjectW_Source_ProjectW_StarWitch_h_25_GENERATED_BODY_LEGACY \
+#define ProjectW_Source_ProjectW_StarWitch_h_27_PROLOG
+#define ProjectW_Source_ProjectW_StarWitch_h_30_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ProjectW_Source_ProjectW_StarWitch_h_25_PRIVATE_PROPERTY_OFFSET \
-	ProjectW_Source_ProjectW_StarWitch_h_25_SPARSE_DATA \
-	ProjectW_Source_ProjectW_StarWitch_h_25_RPC_WRAPPERS \
-	ProjectW_Source_ProjectW_StarWitch_h_25_INCLASS \
-	ProjectW_Source_ProjectW_StarWitch_h_25_STANDARD_CONSTRUCTORS \
+	ProjectW_Source_ProjectW_StarWitch_h_30_PRIVATE_PROPERTY_OFFSET \
+	ProjectW_Source_ProjectW_StarWitch_h_30_SPARSE_DATA \
+	ProjectW_Source_ProjectW_StarWitch_h_30_RPC_WRAPPERS \
+	ProjectW_Source_ProjectW_StarWitch_h_30_INCLASS \
+	ProjectW_Source_ProjectW_StarWitch_h_30_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define ProjectW_Source_ProjectW_StarWitch_h_25_GENERATED_BODY \
+#define ProjectW_Source_ProjectW_StarWitch_h_30_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ProjectW_Source_ProjectW_StarWitch_h_25_PRIVATE_PROPERTY_OFFSET \
-	ProjectW_Source_ProjectW_StarWitch_h_25_SPARSE_DATA \
-	ProjectW_Source_ProjectW_StarWitch_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
-	ProjectW_Source_ProjectW_StarWitch_h_25_INCLASS_NO_PURE_DECLS \
-	ProjectW_Source_ProjectW_StarWitch_h_25_ENHANCED_CONSTRUCTORS \
+	ProjectW_Source_ProjectW_StarWitch_h_30_PRIVATE_PROPERTY_OFFSET \
+	ProjectW_Source_ProjectW_StarWitch_h_30_SPARSE_DATA \
+	ProjectW_Source_ProjectW_StarWitch_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
+	ProjectW_Source_ProjectW_StarWitch_h_30_INCLASS_NO_PURE_DECLS \
+	ProjectW_Source_ProjectW_StarWitch_h_30_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
