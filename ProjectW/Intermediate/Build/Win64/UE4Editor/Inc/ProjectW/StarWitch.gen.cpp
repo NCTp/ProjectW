@@ -39,7 +39,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		return EActorState_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EActorState(EActorState_StaticEnum, TEXT("/Script/ProjectW"), TEXT("EActorState"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_ProjectW_EActorState_Hash() { return 2056529973U; }
+	uint32 Get_Z_Construct_UEnum_ProjectW_EActorState_Hash() { return 2700063250U; }
 	UEnum* Z_Construct_UEnum_ProjectW_EActorState()
 	{
 #if WITH_HOT_RELOAD
@@ -53,8 +53,8 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "EActorState::StarWitchState_Idle", (int64)EActorState::StarWitchState_Idle },
 				{ "EActorState::StarWitchState_Walking", (int64)EActorState::StarWitchState_Walking },
-				{ "EActorState::StarWitchState_Attack_01", (int64)EActorState::StarWitchState_Attack_01 },
-				{ "EActorState::StarWitchState_Attack_02", (int64)EActorState::StarWitchState_Attack_02 },
+				{ "EActorState::StarWitchState_Magic_01", (int64)EActorState::StarWitchState_Magic_01 },
+				{ "EActorState::StarWitchState_Magic_02", (int64)EActorState::StarWitchState_Magic_02 },
 				{ "EActorState::StarWitchState_Teleport", (int64)EActorState::StarWitchState_Teleport },
 				{ "EActorState::StarWitchState_CounterReady", (int64)EActorState::StarWitchState_CounterReady },
 				{ "EActorState::StarWitchState_Dead", (int64)EActorState::StarWitchState_Dead },
@@ -62,16 +62,16 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "ModuleRelativePath", "StarWitch.h" },
-				{ "StarWitchState_Attack_01.DisplayName", "Attack_01" },
-				{ "StarWitchState_Attack_01.Name", "EActorState::StarWitchState_Attack_01" },
-				{ "StarWitchState_Attack_02.DisplayName", "Attack_02" },
-				{ "StarWitchState_Attack_02.Name", "EActorState::StarWitchState_Attack_02" },
 				{ "StarWitchState_CounterReady.DisplayNmae", "CounterReady" },
 				{ "StarWitchState_CounterReady.Name", "EActorState::StarWitchState_CounterReady" },
 				{ "StarWitchState_Dead.DisplayNmae", "Dead" },
 				{ "StarWitchState_Dead.Name", "EActorState::StarWitchState_Dead" },
 				{ "StarWitchState_Idle.DisplayName", "Idle" },
 				{ "StarWitchState_Idle.Name", "EActorState::StarWitchState_Idle" },
+				{ "StarWitchState_Magic_01.DisplayName", "Magic01" },
+				{ "StarWitchState_Magic_01.Name", "EActorState::StarWitchState_Magic_01" },
+				{ "StarWitchState_Magic_02.DisplayName", "Magic02" },
+				{ "StarWitchState_Magic_02.Name", "EActorState::StarWitchState_Magic_02" },
 				{ "StarWitchState_Teleport.DIsplayName", "Teleport" },
 				{ "StarWitchState_Teleport.Name", "EActorState::StarWitchState_Teleport" },
 				{ "StarWitchState_Walking.DisplayName", "Walking" },
@@ -130,9 +130,9 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CastingAnim;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CastingAnim_02_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CastingLaserAnim_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CastingAnim_02;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CastingLaserAnim;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CounterReadyAnim_MetaData[];
 #endif
@@ -171,6 +171,11 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		static void NewProp_m_isPhaseThree_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_m_isPhaseThree;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_isDead_MetaData[];
+#endif
+		static void NewProp_m_isDead_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_m_isDead;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_isRight_MetaData[];
 #endif
 		static void NewProp_m_isRight_SetBit(void* Obj);
@@ -185,6 +190,11 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 #endif
 		static void NewProp_m_isTeleporting_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_m_isTeleporting;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_isCastingMagic01_MetaData[];
+#endif
+		static void NewProp_m_isCastingMagic01_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_m_isCastingMagic01;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Projectile_Laser_MetaData[];
 #endif
@@ -257,14 +267,14 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_CastingAnim = { "CastingAnim", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStarWitch, CastingAnim), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_CastingAnim_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_CastingAnim_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_CastingAnim_02_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_CastingLaserAnim_MetaData[] = {
 		{ "Category", "Animations" },
 		{ "Comment", "// Casting when casting Shotgun Laser (Attack02)\n" },
 		{ "ModuleRelativePath", "StarWitch.h" },
 		{ "ToolTip", "Casting when casting Shotgun Laser (Attack02)" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_CastingAnim_02 = { "CastingAnim_02", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStarWitch, CastingAnim_02), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_CastingAnim_02_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_CastingAnim_02_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_CastingLaserAnim = { "CastingLaserAnim", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStarWitch, CastingLaserAnim), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_CastingLaserAnim_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_CastingLaserAnim_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_CounterReadyAnim_MetaData[] = {
 		{ "Category", "Animations" },
@@ -350,6 +360,17 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isPhaseThree = { "m_isPhaseThree", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AStarWitch), &Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isPhaseThree_SetBit, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isPhaseThree_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isPhaseThree_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isDead_MetaData[] = {
+		{ "Category", "State" },
+		{ "ModuleRelativePath", "StarWitch.h" },
+	};
+#endif
+	void Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isDead_SetBit(void* Obj)
+	{
+		((AStarWitch*)Obj)->m_isDead = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isDead = { "m_isDead", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AStarWitch), &Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isDead_SetBit, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isDead_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isDead_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isRight_MetaData[] = {
 		{ "Category", "State" },
 		{ "ModuleRelativePath", "StarWitch.h" },
@@ -383,6 +404,17 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting = { "m_isTeleporting", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AStarWitch), &Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting_SetBit, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic01_MetaData[] = {
+		{ "Category", "State" },
+		{ "ModuleRelativePath", "StarWitch.h" },
+	};
+#endif
+	void Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic01_SetBit(void* Obj)
+	{
+		((AStarWitch*)Obj)->m_isCastingMagic01 = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic01 = { "m_isCastingMagic01", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AStarWitch), &Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic01_SetBit, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic01_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic01_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser_MetaData[] = {
 		{ "Category", "Projectile" },
 		{ "Comment", "// Player\n" },
@@ -412,7 +444,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_IdleAnim,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_WalkingAnim,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_CastingAnim,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_CastingAnim_02,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_CastingLaserAnim,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_CounterReadyAnim,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_CounterAnim,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_TeleportAnim,
@@ -421,9 +453,11 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isPhaseOne,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isPhaseTwo,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isPhaseThree,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isDead,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isRight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic01,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_Effects_Teleport,
@@ -455,7 +489,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AStarWitch, 207198553);
+	IMPLEMENT_CLASS(AStarWitch, 1677685138);
 	template<> PROJECTW_API UClass* StaticClass<AStarWitch>()
 	{
 		return AStarWitch::StaticClass();

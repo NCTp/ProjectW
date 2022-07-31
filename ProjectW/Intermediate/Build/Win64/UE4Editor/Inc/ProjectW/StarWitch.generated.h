@@ -96,8 +96,8 @@ template<> PROJECTW_API UClass* StaticClass<class AStarWitch>();
 #define FOREACH_ENUM_EACTORSTATE(op) \
 	op(EActorState::StarWitchState_Idle) \
 	op(EActorState::StarWitchState_Walking) \
-	op(EActorState::StarWitchState_Attack_01) \
-	op(EActorState::StarWitchState_Attack_02) \
+	op(EActorState::StarWitchState_Magic_01) \
+	op(EActorState::StarWitchState_Magic_02) \
 	op(EActorState::StarWitchState_Teleport) \
 	op(EActorState::StarWitchState_CounterReady) \
 	op(EActorState::StarWitchState_Dead) 

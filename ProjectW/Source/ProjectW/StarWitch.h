@@ -17,9 +17,9 @@ enum class EActorState : uint8
 {
 	StarWitchState_Idle         UMETA(DisplayName = "Idle"),
 	StarWitchState_Walking      UMETA(DisplayName = "Walking"),
-	StarWitchState_Attack_01    UMETA(DisplayName = "Attack_01"),
-	StarWitchState_Attack_02    UMETA(DisplayName = "Attack_02"),
-	StarWitchState_Teleport    UMETA(DIsplayName = "Teleport"),
+	StarWitchState_Magic_01     UMETA(DisplayName = "Magic01"),
+	StarWitchState_Magic_02     UMETA(DisplayName = "Magic02"),
+	StarWitchState_Teleport     UMETA(DIsplayName = "Teleport"),
 	StarWitchState_CounterReady UMETA(DisplayNmae = "CounterReady"),
 	StarWitchState_Dead         UMETA(DisplayNmae = "Dead")
 };
@@ -41,13 +41,13 @@ protected:
 	virtual void BeginPlay() override;
 
 	int32 TeleportCounter = 3;
+	int32 MagicCounter01 = 3;
+	
 
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	// Timer Practice
-	void TimerFunction();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = State)
 	EActorState StarWitchState;
@@ -64,7 +64,7 @@ public:
 	class UPaperFlipbook* CastingAnim;
 	// Casting when casting Shotgun Laser (Attack02)
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations)
-	class UPaperFlipbook* CastingAnim_02;
+	class UPaperFlipbook* CastingLaserAnim;
 	// Counter Ready Animation
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations)
 	class UPaperFlipbook* CounterReadyAnim;
@@ -93,6 +93,9 @@ public:
 	bool m_isPhaseThree;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
+	bool m_isDead;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
 	bool m_isRight;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
@@ -100,6 +103,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
 	bool m_isTeleporting;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
+	bool m_isCastingMagic01;
 
 	////////// Objects ///////////
 	APawn* Player; // Player
@@ -110,9 +116,11 @@ public:
 	TSubclassOf<AStarWitchBall> Projectile_Ball;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Effects)
 	TSubclassOf<AStarWitchTeleportEffects> Effects_Teleport;
+
 	// Timer Practice
-	FTimerHandle TimerHandle;
 	FTimerHandle TeleportTimerHandle;
+	FTimerHandle MagicTimerHandle_0;
+	FTimerHandle MagicTimerHandle_1;
 
 	////////// Private Functions ///////////
 	// Get Damage
@@ -132,14 +140,15 @@ private:
 	////////// Action Functions ///////////
 	void Teleport();
 	void ShootLazer();
-	void ShootBall();
-
+	void ShootBall(float angle);
+	void Magic01();
+	void Magic02();
 	////////// Functions called each states ///////////
 	void StateIdle();
 	void StateWalk(float DeltaTime);
 	void StateTeleport();
-	void StateCloseToTarget();
-	void StateFarFromTarget();
+	void StateMagic01();
+	void StateMagic02();
 	void StateMachine(float DeltaTime);
 
 
