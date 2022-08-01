@@ -16,7 +16,7 @@ void AStarWitchTeleportEffects::BeginPlay()
 {
 	Super::BeginPlay();
 	FTimerHandle timer;
-	GetWorldTimerManager().SetTimer(timer, this, &AStarWitchTeleportEffects::DestroyMyself, 0.5f, false);
+	GetWorldTimerManager().SetTimer(timer, this, &AStarWitchTeleportEffects::DestroyMyself, 0.2f, false);
 	
 }
 

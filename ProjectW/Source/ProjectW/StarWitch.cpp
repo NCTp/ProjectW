@@ -24,6 +24,7 @@ AStarWitch::AStarWitch()
 	m_startFighting = true;
 	m_isTeleporting = false;
 	m_isCastingMagic01 = false;
+	m_isCastingMagic02 = false;
 	m_isPhaseOne = true;
 	m_isPhaseTwo = false;
 	m_isPhaseThree = false;
@@ -34,7 +35,7 @@ AStarWitch::AStarWitch()
 void AStarWitch::BeginPlay()
 {
 	Super::BeginPlay();
-	StarWitchState = EActorState::StarWitchState_Teleport;
+	StarWitchState = EActorState::StarWitchState_Idle;
 
 	Player = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 	// Call the function every 3 seconds, ensure the timer loops and delay first call for half a second.
@@ -86,8 +87,9 @@ void AStarWitch::Tick(float DeltaTime)
 		m_isPhaseThree = false;
 		m_isDead = true;
 	}
+	if (m_startFighting && !m_isDead)
+		StateMachine(DeltaTime);
 
-	StateMachine(DeltaTime);
 	UpdateAnimation();
 	
 }
@@ -139,6 +141,14 @@ void AStarWitch::UpdateAnimation()
 	{
 		anim = IdleAnim;
 	}
+	else if (StarWitchState == EActorState::StarWitchState_Magic_01)
+	{
+		anim = IdleAnim;
+	}
+	else if (StarWitchState == EActorState::StarWitchState_Magic_02)
+	{
+		anim = IdleAnim;
+	}
 
 	// Set Flipbook to anim
 	FlipbookComponent->SetFlipbook(anim);
@@ -157,7 +167,7 @@ void AStarWitch::StateIdle()
 	std::mt19937 gen(rd());
 	std::uniform_int_distribution<int> dis(0, 3); // 0 ~ 3
 	
-	if (Player && distance <= 200.0f)
+	if (Player && distance <= 300.0f)
 	{
 		UE_LOG(LogTemp, Log, TEXT("Close, Idle"));
 		if (dis(gen) == 0)
@@ -166,14 +176,14 @@ void AStarWitch::StateIdle()
 		}
 		else if (dis(gen) == 1)
 		{
-			SetState(EActorState::StarWitchState_Magic_01);
+			SetState(EActorState::StarWitchState_Magic_02);
 		}
 		else if (dis(gen) == 2)
 		{
 			SetState(EActorState::StarWitchState_Teleport);
 		}
 	}
-	else if (Player && distance > 200.0f)
+	else if (Player && distance > 300.0f)
 	{
 		SetState(EActorState::StarWitchState_Walking);
 	}
@@ -226,7 +236,6 @@ void AStarWitch::Teleport()
 	AStarWitchBall* ball = nullptr;
 	AStarWitchLaser* laser = nullptr;
 
-	//SetState(EActorState::StarWitchState_Idle);
 	if (TeleportCounter == 0)
 	{
 		PrintString("Finished Looping");
@@ -241,6 +250,7 @@ void AStarWitch::Teleport()
 		PrintString(FString::Printf(TEXT("Calls Remaining: %d"), TeleportCounter));
 		if (!m_isRight) // player is left of starwitch
 		{
+			teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
 			SetActorLocation(teleportLocationOfLeft);
 			teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
 			if (StarWitchState == EActorState::StarWitchState_Teleport)
@@ -250,13 +260,13 @@ void AStarWitch::Teleport()
 		}
 		else // player is right of starwitch
 		{
+			teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
 			SetActorLocation(teleportLocationOfRight);
 			teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
 			if (StarWitchState == EActorState::StarWitchState_Teleport)
 			{
 				AStarWitch::ShootBall(180.0f);
 			}
-
 		}
 		TeleportCounter--;
 	}
@@ -291,12 +301,11 @@ void AStarWitch::ShootBall(float angle)
 }
 void AStarWitch::Magic01()
 {
-
 	if (MagicCounter01 == 0)
 	{
-		MagicCounter01 = 3;
+		MagicCounter01 = 4;
 		m_isCastingMagic01 = false;
-		GetWorldTimerManager().ClearTimer(MagicTimerHandle_0);
+		GetWorldTimerManager().ClearTimer(MagicTimerHandle_1);
 		SetState(EActorState::StarWitchState_Idle);
 	}
 	else if (MagicCounter01 % 2 == 0) // Â¦¼ö
@@ -343,19 +352,34 @@ void AStarWitch::StateMagic01()
 	if (!m_isCastingMagic01)
 	{
 		m_isCastingMagic01 = true;
-		GetWorldTimerManager().SetTimer(MagicTimerHandle_0, this, &AStarWitch::Magic01, 1.0f, true, 0.5f);
+		GetWorldTimerManager().SetTimer(MagicTimerHandle_1, this, &AStarWitch::Magic01, 0.5f, true, 0.5f);
 	}
 
 }
 
 void AStarWitch::Magic02()
 {
-
+	if (MagicCounter02 == 0)
+	{
+		GetWorldTimerManager().ClearTimer(MagicTimerHandle_2);
+		MagicCounter02 = 3;
+		m_isCastingMagic02 = false;
+		SetState(EActorState::StarWitchState_Idle);
+	}
+	else
+	{
+		AStarWitch::ShootLazer();
+		MagicCounter02--;
+	}
 }
 
 void AStarWitch::StateMagic02()
 {
-
+	if (!m_isCastingMagic02)
+	{
+		m_isCastingMagic02 = true;
+		GetWorldTimerManager().SetTimer(MagicTimerHandle_2, this, &AStarWitch::Magic02, 0.7f, true, 0.5f);
+	}
 }
 
 void AStarWitch::StateMachine(float DeltaTime)

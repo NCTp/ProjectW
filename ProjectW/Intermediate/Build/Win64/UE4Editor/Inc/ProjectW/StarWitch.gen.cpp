@@ -196,6 +196,11 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		static void NewProp_m_isCastingMagic01_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_m_isCastingMagic01;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_isCastingMagic02_MetaData[];
+#endif
+		static void NewProp_m_isCastingMagic02_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_m_isCastingMagic02;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Projectile_Laser_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Projectile_Laser;
@@ -415,6 +420,17 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic01 = { "m_isCastingMagic01", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AStarWitch), &Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic01_SetBit, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic01_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic01_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic02_MetaData[] = {
+		{ "Category", "State" },
+		{ "ModuleRelativePath", "StarWitch.h" },
+	};
+#endif
+	void Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic02_SetBit(void* Obj)
+	{
+		((AStarWitch*)Obj)->m_isCastingMagic02 = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic02 = { "m_isCastingMagic02", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AStarWitch), &Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic02_SetBit, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic02_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic02_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser_MetaData[] = {
 		{ "Category", "Projectile" },
 		{ "Comment", "// Player\n" },
@@ -458,6 +474,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic01,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic02,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_Effects_Teleport,
@@ -489,7 +506,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AStarWitch, 1677685138);
+	IMPLEMENT_CLASS(AStarWitch, 446136166);
 	template<> PROJECTW_API UClass* StaticClass<AStarWitch>()
 	{
 		return AStarWitch::StaticClass();

@@ -3,10 +3,10 @@
   Using Visual Studio 2019 14.29.30141 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
   Building 4 actions with 12 processes...
     [1/4] StarWitch.cpp
-    [2/4] UE4Editor-ProjectW-0275.lib
-       C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0275.lib 라이브러리 및 C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0275.exp 개체를 생성하고 있습니다.
-    [3/4] UE4Editor-ProjectW-0275.dll
-       C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0275.suppressed.lib 라이브러리 및 C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0275.suppressed.exp 개체를 생성하고 있습니다.
+    [2/4] UE4Editor-ProjectW-0291.lib
+       C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0291.lib 라이브러리 및 C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0291.exp 개체를 생성하고 있습니다.
+    [3/4] UE4Editor-ProjectW-0291.dll
+       C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0291.suppressed.lib 라이브러리 및 C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0291.suppressed.exp 개체를 생성하고 있습니다.
     [4/4] ProjectWEditor.target
-  Total time in Parallel executor: 2.11 seconds
-  Total execution time: 2.82 seconds
+  Total time in Parallel executor: 2.22 seconds
+  Total execution time: 2.97 seconds

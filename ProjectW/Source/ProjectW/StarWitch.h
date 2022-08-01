@@ -41,10 +41,9 @@ protected:
 	virtual void BeginPlay() override;
 
 	int32 TeleportCounter = 3;
-	int32 MagicCounter01 = 3;
+	int32 MagicCounter01 = 4;
+	int32 MagicCounter02 = 3;
 	
-
-
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -107,6 +106,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
 	bool m_isCastingMagic01;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
+	bool m_isCastingMagic02;
+
 	////////// Objects ///////////
 	APawn* Player; // Player
 
@@ -119,8 +121,8 @@ public:
 
 	// Timer Practice
 	FTimerHandle TeleportTimerHandle;
-	FTimerHandle MagicTimerHandle_0;
 	FTimerHandle MagicTimerHandle_1;
+	FTimerHandle MagicTimerHandle_2;
 
 	////////// Private Functions ///////////
 	// Get Damage
@@ -143,6 +145,7 @@ private:
 	void ShootBall(float angle);
 	void Magic01();
 	void Magic02();
+
 	////////// Functions called each states ///////////
 	void StateIdle();
 	void StateWalk(float DeltaTime);
@@ -150,7 +153,6 @@ private:
 	void StateMagic01();
 	void StateMagic02();
 	void StateMachine(float DeltaTime);
-
 
 	////////// Private Variables ///////////
 	int health;
