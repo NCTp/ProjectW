@@ -17,8 +17,9 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'">
-    <LocalDebuggerCommandArguments>"$(SolutionDir)ProjectW.uproject" -skipcompile</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>"D:\ProjectW\ProjectW\ProjectW.uproject" -skipcompile</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <RemoteDebuggerCommandArguments>"D:\ProjectW\ProjectW\ProjectW.uproject" -skipcompile</RemoteDebuggerCommandArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|Win32'">
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>

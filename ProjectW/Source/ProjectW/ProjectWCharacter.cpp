@@ -43,7 +43,7 @@ AProjectWCharacter::AProjectWCharacter()
 	
 	// Create an orthographic camera (no perspective) and attach it to the boom
 	SideViewCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("SideViewCamera"));
-	SideViewCameraComponent->ProjectionMode = ECameraProjectionMode::Orthographic;
+	SideViewCameraComponent->ProjectionMode = ECameraProjectionMode::Perspective;
 	SideViewCameraComponent->OrthoWidth = 2048.0f;
 	SideViewCameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 
@@ -213,7 +213,7 @@ void AProjectWCharacter::Tick(float DeltaSeconds)
 	UpdateCharacter();
 
 	if (m_bIsRolling)
-	{
+	{		
 		m_fRollingCount += DeltaSeconds;
 		if (m_fRollingCount > 0.7f)
 		{

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ProjectW.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{25634A97-A970-4C7B-B68B-D18413AEF82D}</UniqueIdentifier>
+      <UniqueIdentifier>{B5EDF1FD-906A-4B32-AF52-8B8A99B8793E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ProjectW.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\README.md" />
     <Filter Include="Config">
-      <UniqueIdentifier>{B9C77704-EDF2-4C21-833E-852EAEA01518}</UniqueIdentifier>
+      <UniqueIdentifier>{58D1BD5B-09F1-4D38-8E04-C9609F37F586}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,24 +31,12 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ProjectW">
-      <UniqueIdentifier>{F6A95C86-4255-4697-82FD-5F156F1BF663}</UniqueIdentifier>
+      <UniqueIdentifier>{ED900821-BC53-45F5-8827-85F1AD8C30E5}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\ProjectW\Combatant.cpp">
+    <ClCompile Include="..\..\Source\ProjectW\NightWitch.cpp">
       <Filter>Source\ProjectW</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectW\Combatant.h">
-      <Filter>Source\ProjectW</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ProjectW\EnemyBase.cpp">
-      <Filter>Source\ProjectW</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectW\EnemyBase.h">
-      <Filter>Source\ProjectW</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ProjectW\EnemyBoss.cpp">
-      <Filter>Source\ProjectW</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectW\EnemyBoss.h">
+    <ClInclude Include="..\..\Source\ProjectW\NightWitch.h">
       <Filter>Source\ProjectW</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\ProjectW\Projectile.cpp">
@@ -76,6 +64,18 @@
       <Filter>Source\ProjectW</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectW\ProjectWGameMode.h">
+      <Filter>Source\ProjectW</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectW\testwitch.cpp">
+      <Filter>Source\ProjectW</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectW\testwitch.h">
+      <Filter>Source\ProjectW</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectW\witchtest.cpp">
+      <Filter>Source\ProjectW</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectW\witchtest.h">
       <Filter>Source\ProjectW</Filter>
     </ClInclude>
   </ItemGroup>

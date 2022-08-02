@@ -34,7 +34,7 @@ class AProjectWCharacter : public APaperCharacter
 	GENERATED_BODY()
 
 	/** Side view camera */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera, meta=(AllowPrivateAccess="true"))
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* SideViewCameraComponent;
 
 	/** Camera boom positioning the camera beside the character */
