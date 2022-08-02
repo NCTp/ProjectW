@@ -174,7 +174,7 @@ void AStarWitch::StateIdle()
 	std::mt19937 gen(rd());
 	std::uniform_int_distribution<int> dis(0, 3); // 0 ~ 3
 	
-	if (Player && distance <= 300.0f)
+	if (Player && distance <= 600.0f)
 	{
 		UE_LOG(LogTemp, Log, TEXT("Close, Idle"));
 		if (dis(gen) == 0)
@@ -190,7 +190,7 @@ void AStarWitch::StateIdle()
 			SetState(EActorState::StarWitchState_Teleport);
 		}
 	}
-	else if (Player && distance > 300.0f)
+	else if (Player && distance > 700.0f)
 	{
 		SetState(EActorState::StarWitchState_Walking);
 	}
@@ -199,12 +199,12 @@ void AStarWitch::StateIdle()
 void AStarWitch::StateWalk(float DeltaTime)
 {
 	float distance = FVector::Distance(GetActorLocation(), Player->GetActorLocation());
-	if (Player && distance <= 200.0f)
+	if (Player && distance <= 600.0f)
 	{
 		//Teleport();
 		SetState(EActorState::StarWitchState_Idle);
 	}
-	else if (Player && distance <= 1000.0f && distance > 300.0f)
+	else if (Player && distance <= 1200.0f && distance > 600.0f)
 	{
 		UE_LOG(LogTemp, Log, TEXT("Far, Chase the player"));
 
@@ -223,7 +223,7 @@ void AStarWitch::StateWalk(float DeltaTime)
 
 		SetActorLocation(CurrentLocation);
 	}
-	else if (Player && distance > 1500.0f)
+	else if (Player && distance > 1200.0f)
 	{
 		AStarWitch::Teleport();
 	}
@@ -236,8 +236,11 @@ void AStarWitch::Teleport()
 	FVector playerDirection = Player->GetActorLocation() - GetActorLocation();
 	FVector playerLocation = Player->GetActorLocation();
 	float dotProduct = FVector::DotProduct(GetActorForwardVector(), playerDirection.GetSafeNormal());
-	FVector teleportLocationOfRight = FVector(playerLocation.X + 300.0f, GetActorLocation().Y, GetActorLocation().Z);
-	FVector teleportLocationOfLeft = FVector(playerLocation.X - 300.0f, GetActorLocation().Y, GetActorLocation().Z);
+	std::random_device rd;
+	std::mt19937 gen(rd());
+	std::uniform_int_distribution<int> dis(150, 400); // 150.0f ~ 400.0f
+	//FVector teleportLocationOfRight = FVector(playerLocation.X + dis(gen), GetActorLocation().Y, GetActorLocation().Z);
+	//FVector teleportLocationOfLeft = FVector(playerLocation.X - dis(gen), GetActorLocation().Y, GetActorLocation().Z);
 
 	AStarWitchTeleportEffects* teleportEffect = nullptr;
 	AStarWitchBall* ball = nullptr;
@@ -250,6 +253,7 @@ void AStarWitch::Teleport()
 		m_isTeleporting = false;
 		GetWorldTimerManager().ClearTimer(TeleportTimerHandle);
 		SetState(EActorState::StarWitchState_Idle);
+		teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
 		AStarWitch::ShootLazer();
 	}
 	else
@@ -257,6 +261,8 @@ void AStarWitch::Teleport()
 		PrintString(FString::Printf(TEXT("Calls Remaining: %d"), TeleportCounter));
 		if (!m_isRight) // player is left of starwitch
 		{
+			FVector teleportLocationOfRight = FVector(playerLocation.X + dis(gen), GetActorLocation().Y, GetActorLocation().Z);
+			FVector teleportLocationOfLeft = FVector(playerLocation.X - dis(gen), GetActorLocation().Y, GetActorLocation().Z);
 			teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
 			SetActorLocation(teleportLocationOfLeft);
 			teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
@@ -267,6 +273,8 @@ void AStarWitch::Teleport()
 		}
 		else // player is right of starwitch
 		{
+			FVector teleportLocationOfRight = FVector(playerLocation.X + dis(gen), GetActorLocation().Y, GetActorLocation().Z);
+			FVector teleportLocationOfLeft = FVector(playerLocation.X - dis(gen), GetActorLocation().Y, GetActorLocation().Z);
 			teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
 			SetActorLocation(teleportLocationOfRight);
 			teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
@@ -385,7 +393,9 @@ void AStarWitch::StateMagic02()
 	if (!m_isCastingMagic02)
 	{
 		m_isCastingMagic02 = true;
-		GetWorldTimerManager().SetTimer(MagicTimerHandle_2, this, &AStarWitch::Magic02, 0.7f, true, 0.5f);
+		AStarWitchTeleportEffects* teleportEffect = nullptr;
+		teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
+		GetWorldTimerManager().SetTimer(MagicTimerHandle_2, this, &AStarWitch::Magic02, 0.3f, true, 1.0f);
 	}
 }
 

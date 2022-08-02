@@ -1,18 +1,12 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\User\Documents\GitHub\ProjectW).
-  Parsing headers for ProjectWEditor
-    Running UnrealHeaderTool "C:\Users\User\Documents\GitHub\ProjectW\ProjectW\ProjectW.uproject" "C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\ProjectWEditor\Development\ProjectWEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\User\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  LogInit: Display: Loading text-based GConfig....
-  Reflection code generated for ProjectWEditor in 3.7110389 seconds
   Building ProjectWEditor...
   Using Visual Studio 2019 14.29.30141 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 6 actions with 12 processes...
-    [1/6] StarWitchMark.gen.cpp
-    [2/6] StarWitchMark.cpp
-    [3/6] StarWitch.cpp
-    [4/6] UE4Editor-ProjectW-0315.lib
-       C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0315.lib 라이브러리 및 C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0315.exp 개체를 생성하고 있습니다.
-    [5/6] UE4Editor-ProjectW-0315.dll
-       C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0315.suppressed.lib 라이브러리 및 C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0315.suppressed.exp 개체를 생성하고 있습니다.
-    [6/6] ProjectWEditor.target
-  Total time in Parallel executor: 2.55 seconds
-  Total execution time: 7.13 seconds
+  Building 4 actions with 12 processes...
+    [1/4] StarWitch.cpp
+    [2/4] UE4Editor-ProjectW-0324.lib
+       C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0324.lib 라이브러리 및 C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0324.exp 개체를 생성하고 있습니다.
+    [3/4] UE4Editor-ProjectW-0324.dll
+       C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0324.suppressed.lib 라이브러리 및 C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\UE4Editor-ProjectW-0324.suppressed.exp 개체를 생성하고 있습니다.
+    [4/4] ProjectWEditor.target
+  Total time in Parallel executor: 2.42 seconds
+  Total execution time: 3.21 seconds

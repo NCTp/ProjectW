@@ -16,7 +16,7 @@ void AStarWitchLaser::BeginPlay()
 {
 	Super::BeginPlay();
 	FTimerHandle timer;
-	GetWorldTimerManager().SetTimer(timer, this, &AStarWitchLaser::DestroyMyself, 0.5f, false);
+	GetWorldTimerManager().SetTimer(timer, this, &AStarWitchLaser::DestroyMyself, 0.1f, false);
 }
 
 // Called every frame
