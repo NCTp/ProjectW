@@ -8,6 +8,7 @@
 #include "StarWitchTeleportEffects.h"
 #include "StarWitchBall.h"
 #include "StarWitchLaser.h"
+#include "StarWitchMark.h"
 
 #include <random>
 
@@ -21,7 +22,7 @@ AStarWitch::AStarWitch()
 	FlipbookComponent->GetAbsoluteRotationPropertyName();
 	health = 100;
 	m_isRight = true;
-	m_startFighting = true;
+	m_startFighting = false;
 	m_isTeleporting = false;
 	m_isCastingMagic01 = false;
 	m_isCastingMagic02 = false;
@@ -29,6 +30,7 @@ AStarWitch::AStarWitch()
 	m_isPhaseTwo = false;
 	m_isPhaseThree = false;
 	m_isDead = false;
+	m_isMarked = false;
 }
 
 // Called when the game starts or when spawned
@@ -75,6 +77,11 @@ void AStarWitch::Tick(float DeltaTime)
 		m_isPhaseOne = false;
 		m_isPhaseTwo = true;
 		m_isPhaseThree = false;
+		if (!m_isMarked)
+		{
+			m_isMarked = true;
+			GetWorldTimerManager().SetTimer(MarkTimerHandle, this, &AStarWitch::PhaseTwoPattern, 6.0f, true, 0.5f);
+		}
 	}
 	else if (health > 0 && health < 30)
 	{
@@ -380,6 +387,12 @@ void AStarWitch::StateMagic02()
 		m_isCastingMagic02 = true;
 		GetWorldTimerManager().SetTimer(MagicTimerHandle_2, this, &AStarWitch::Magic02, 0.7f, true, 0.5f);
 	}
+}
+
+void AStarWitch::PhaseTwoPattern()
+{
+	AStarWitchMark* mark = nullptr;
+	mark = GetWorld()->SpawnActor<AStarWitchMark>(Mark, GetActorLocation(), FRotator(0, 0, 0), spawnInfo);
 }
 
 void AStarWitch::StateMachine(float DeltaTime)

@@ -30,14 +30,6 @@ void AStarWitchBall::Tick(float DeltaTime)
 	FVector playerLocation = Player->GetActorLocation();
 	float dotProduct = FVector::DotProduct(GetActorForwardVector(), playerDirection.GetSafeNormal());
 
-	if (dotProduct < 0) // player is left of starwitch
-	{
-		
-	}
-	else // player is right of starwitch
-	{
-
-	}
 
 }
 

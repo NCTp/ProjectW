@@ -24,6 +24,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 	PROJECTW_API UClass* Z_Construct_UClass_AStarWitchLaser_NoRegister();
 	PROJECTW_API UClass* Z_Construct_UClass_AStarWitchBall_NoRegister();
 	PROJECTW_API UClass* Z_Construct_UClass_AStarWitchTeleportEffects_NoRegister();
+	PROJECTW_API UClass* Z_Construct_UClass_AStarWitchMark_NoRegister();
 // End Cross Module References
 	static UEnum* EActorState_StaticEnum()
 	{
@@ -191,6 +192,11 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		static void NewProp_m_isTeleporting_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_m_isTeleporting;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_isMarked_MetaData[];
+#endif
+		static void NewProp_m_isMarked_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_m_isMarked;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_isCastingMagic01_MetaData[];
 #endif
 		static void NewProp_m_isCastingMagic01_SetBit(void* Obj);
@@ -212,6 +218,10 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Effects_Teleport_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Effects_Teleport;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Mark_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Mark;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -396,7 +406,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 	{
 		((AStarWitch*)Obj)->m_startFighting = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting = { "m_startFighting", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AStarWitch), &Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting_SetBit, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting = { "m_startFighting", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AStarWitch), &Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting_SetBit, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting_MetaData[] = {
 		{ "Category", "State" },
@@ -408,6 +418,17 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		((AStarWitch*)Obj)->m_isTeleporting = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting = { "m_isTeleporting", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AStarWitch), &Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting_SetBit, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isMarked_MetaData[] = {
+		{ "Category", "State" },
+		{ "ModuleRelativePath", "StarWitch.h" },
+	};
+#endif
+	void Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isMarked_SetBit(void* Obj)
+	{
+		((AStarWitch*)Obj)->m_isMarked = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isMarked = { "m_isMarked", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AStarWitch), &Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isMarked_SetBit, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isMarked_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isMarked_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic01_MetaData[] = {
 		{ "Category", "State" },
@@ -453,6 +474,13 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_Effects_Teleport = { "Effects_Teleport", nullptr, (EPropertyFlags)0x0014000000000015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStarWitch, Effects_Teleport), Z_Construct_UClass_AStarWitchTeleportEffects_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_Effects_Teleport_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_Effects_Teleport_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStarWitch_Statics::NewProp_Mark_MetaData[] = {
+		{ "Category", "Effects" },
+		{ "ModuleRelativePath", "StarWitch.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AStarWitch_Statics::NewProp_Mark = { "Mark", nullptr, (EPropertyFlags)0x0014000000000015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStarWitch, Mark), Z_Construct_UClass_AStarWitchMark_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AStarWitch_Statics::NewProp_Mark_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStarWitch_Statics::NewProp_Mark_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AStarWitch_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_FlipbookComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_StarWitchState_Underlying,
@@ -473,11 +501,13 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isRight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_startFighting,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isTeleporting,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isMarked,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic01,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_m_isCastingMagic02,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Laser,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_Projectile_Ball,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_Effects_Teleport,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStarWitch_Statics::NewProp_Mark,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AStarWitch_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AStarWitch>::IsAbstract,
@@ -506,7 +536,7 @@ void EmptyLinkFunctionForGeneratedCodeStarWitch() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AStarWitch, 446136166);
+	IMPLEMENT_CLASS(AStarWitch, 2112825934);
 	template<> PROJECTW_API UClass* StaticClass<AStarWitch>()
 	{
 		return AStarWitch::StaticClass();

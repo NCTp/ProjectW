@@ -65,6 +65,8 @@ C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Source\ProjectW\StarWitchBall.h
 C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\StarWitchBall.generated.h
 C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Source\ProjectW\StarWitchLaser.h
 C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\StarWitchLaser.generated.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Source\ProjectW\StarWitchMark.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\StarWitchMark.generated.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\random
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\algorithm
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xmemory

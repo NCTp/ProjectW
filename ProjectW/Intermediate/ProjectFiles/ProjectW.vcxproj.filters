@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ProjectW.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{A20E07BB-85FE-46BE-8726-563EA98A4F63}</UniqueIdentifier>
+      <UniqueIdentifier>{D9F80E17-A76E-4DE1-A67B-98E2CAFEF1B9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ProjectW.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\README.md" />
     <Filter Include="Config">
-      <UniqueIdentifier>{FA210DF0-20F5-4C5E-853A-E8AC4C99FCD7}</UniqueIdentifier>
+      <UniqueIdentifier>{EFEFDB2E-85E5-47E3-9C75-D5B519295C2E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ProjectW">
-      <UniqueIdentifier>{DFC4692B-250D-4122-A51E-D35B825D2BD5}</UniqueIdentifier>
+      <UniqueIdentifier>{C564E172-0E6F-400C-8DEF-FD254FAE9931}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ProjectW\ProjectW.Build.cs">
       <Filter>Source\ProjectW</Filter>
@@ -72,10 +72,22 @@
     <ClInclude Include="..\..\Source\ProjectW\StarWitchLaser.h">
       <Filter>Source\ProjectW</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectW\StarWitchMark.cpp">
+      <Filter>Source\ProjectW</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectW\StarWitchMark.h">
+      <Filter>Source\ProjectW</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectW\StarWitchTeleportEffects.cpp">
       <Filter>Source\ProjectW</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectW\StarWitchTeleportEffects.h">
+      <Filter>Source\ProjectW</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectW\StarWitchThunder.cpp">
+      <Filter>Source\ProjectW</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectW\StarWitchThunder.h">
       <Filter>Source\ProjectW</Filter>
     </ClInclude>
   </ItemGroup>

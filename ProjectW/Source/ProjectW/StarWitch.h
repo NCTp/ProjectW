@@ -10,6 +10,7 @@
 class AStarWitchBall;
 class AStarWitchLaser;
 class AStarWitchTeleportEffects;
+class AStarWitchMark;
 
 
 UENUM()
@@ -97,11 +98,14 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
 	bool m_isRight;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State)
 	bool m_startFighting;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
 	bool m_isTeleporting;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
+	bool m_isMarked;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
 	bool m_isCastingMagic01;
@@ -118,12 +122,14 @@ public:
 	TSubclassOf<AStarWitchBall> Projectile_Ball;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Effects)
 	TSubclassOf<AStarWitchTeleportEffects> Effects_Teleport;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Effects)
+	TSubclassOf<AStarWitchMark> Mark;
 
 	// Timer Practice
 	FTimerHandle TeleportTimerHandle;
 	FTimerHandle MagicTimerHandle_1;
 	FTimerHandle MagicTimerHandle_2;
-
+	FTimerHandle MarkTimerHandle;
 	////////// Private Functions ///////////
 	// Get Damage
 	void GetDamage();
@@ -145,7 +151,7 @@ private:
 	void ShootBall(float angle);
 	void Magic01();
 	void Magic02();
-
+	void PhaseTwoPattern();
 	////////// Functions called each states ///////////
 	void StateIdle();
 	void StateWalk(float DeltaTime);
