@@ -20,7 +20,7 @@ AStarWitch::AStarWitch()
 	PrimaryActorTick.bCanEverTick = true;
 	FlipbookComponent = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("FlipBook"));
 	FlipbookComponent->GetAbsoluteRotationPropertyName();
-	health = 100;
+	health = 60;
 	m_isRight = true;
 	m_startFighting = false;
 	m_isTeleporting = false;
