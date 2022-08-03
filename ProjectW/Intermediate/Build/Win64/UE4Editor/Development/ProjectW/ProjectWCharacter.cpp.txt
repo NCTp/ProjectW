@@ -1,5 +1,5 @@
-D:\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\Definitions.ProjectW.h
-D:\ProjectW\ProjectW\Source\ProjectW\ProjectWCharacter.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\Definitions.ProjectW.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Source\ProjectW\ProjectWCharacter.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Plugins\2D\Paper2D\Source\Paper2D\Classes\PaperCharacter.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
@@ -8,7 +8,7 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFra
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperCharacter.generated.h
-D:\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\ProjectWCharacter.generated.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\ProjectWCharacter.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Plugins\2D\Paper2D\Source\Paper2D\Classes\PaperFlipbookComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperFlipbookComponent.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/TextRenderComponent.h
@@ -39,11 +39,11 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementComponent.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
-D:\ProjectW\ProjectW\Source\ProjectW\Projectile.h
-D:\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\Projectile.generated.h
-D:\ProjectW\ProjectW\Source\ProjectW\ProjectWGameMode.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Source\ProjectW\Projectile.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\Projectile.generated.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Source\ProjectW\ProjectWGameMode.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-D:\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\ProjectWGameMode.generated.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\ProjectWGameMode.generated.h

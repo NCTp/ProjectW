@@ -1,6 +1,6 @@
-D:\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\Definitions.ProjectW.h
-D:\ProjectW\ProjectW\Source\ProjectW\NightWitch.h
-D:\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\NightWitch.generated.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\Definitions.ProjectW.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Source\ProjectW\NightWitch.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\NightWitch.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h

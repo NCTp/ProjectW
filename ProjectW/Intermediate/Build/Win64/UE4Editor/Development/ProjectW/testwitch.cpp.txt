@@ -1,5 +1,5 @@
-D:\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\Definitions.ProjectW.h
-D:\ProjectW\ProjectW\Source\ProjectW\testwitch.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Development\ProjectW\Definitions.ProjectW.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Source\ProjectW\testwitch.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Plugins\2D\Paper2D\Source\Paper2D\Classes\PaperCharacter.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
@@ -8,7 +8,7 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFra
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperCharacter.generated.h
-D:\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\testwitch.generated.h
+C:\Users\User\Documents\GitHub\ProjectW\ProjectW\Intermediate\Build\Win64\UE4Editor\Inc\ProjectW\testwitch.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h

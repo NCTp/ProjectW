@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"D:\\ProjectW\\ProjectW\\Source\\ProjectW\\ProjectW.Build.cs",
-		"D:\\ProjectW\\ProjectW\\Source\\ProjectW.Target.cs",
-		"D:\\ProjectW\\ProjectW\\Source\\ProjectWEditor.Target.cs"
+		"C:\\Users\\User\\Documents\\GitHub\\ProjectW\\ProjectW\\Source\\ProjectW\\ProjectW.Build.cs",
+		"C:\\Users\\User\\Documents\\GitHub\\ProjectW\\ProjectW\\Source\\ProjectW.Target.cs",
+		"C:\\Users\\User\\Documents\\GitHub\\ProjectW\\ProjectW\\Source\\ProjectWEditor.Target.cs"
 	],
 	"EngineVersion": "4.27.2"
 }
