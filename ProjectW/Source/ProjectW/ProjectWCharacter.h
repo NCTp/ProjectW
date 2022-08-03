@@ -34,7 +34,7 @@ class AProjectWCharacter : public APaperCharacter
 	GENERATED_BODY()
 
 	/** Side view camera */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera, meta=(AllowPrivateAccess="true"))
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* SideViewCameraComponent;
 
 	/** Camera boom positioning the camera beside the character */
@@ -42,7 +42,12 @@ class AProjectWCharacter : public APaperCharacter
 	class USpringArmComponent* CameraBoom;
 
 	UTextRenderComponent* TextComponent;
+
+	// Called every frame
 	virtual void Tick(float DeltaSeconds) override;
+
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 protected:
 	// The animation to play while idle (standing still)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
@@ -144,6 +149,22 @@ protected:
 
 public:
 	AProjectWCharacter();
+
+	UPROPERTY(EditDefaultsOnly, Category = Projectile)
+		TSubclassOf<class AProjectile> Projectile;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+		class USoundBase* FireSound;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = MuzzlePoint, meta = (AllowPrivateAccess = "true"))
+		class UArrowComponent* MuzzlePoint;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = MuzzlePoint)
+		class USceneComponent* MuzzleLocation;
+
+	class UWorld* World;
+
+	FTransform SpawnTransform;
 
 	/** Returns SideViewCameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetSideViewCameraComponent() const { return SideViewCameraComponent; }
