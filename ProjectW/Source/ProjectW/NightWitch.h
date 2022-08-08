@@ -3,24 +3,38 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Pawn.h"
+#include "PaperCharacter.h"
+#include "NightWitchTeleportPoint.h"
+#include "NightWitchChainPortal.h"
+
 #include "NightWitch.generated.h"
 
 UENUM(BlueprintType)
 enum class EState : uint8
 {
-	DEFAULT,		// Default
-	IDLE,			// Idle
-	CHASE,			// Chase(Close)
-	TELEPORT,		// Teleport(Far)
-	ATTACK,			// Attack
-	STUMBLE,		// Stumble
-	TAUNT,			// Taunt
-	DEAD			// Dead
+	DEFAULT		UMETA(DisplayName = "Default"),
+	IDLE		UMETA(DisplayName = "Idle"),
+	RUNAWAY		UMETA(DisplayName = "Runaway"),
+	TELEPORT	UMETA(DisplayName = "Teleport"),
+	ATTACK		UMETA(DisplayName = "Attack"),
+	STUMBLE		UMETA(DisplayName = "Stumble"),
+	TAUNT		UMETA(DisplayName = "Tarunt"),
+	DEAD		UMETA(DisplayName = "Dead")
+};
+
+UENUM(BlueprintType)
+enum class ESpell : uint8
+{
+	DEFAULT				UMETA(DisplayName = "Default"),
+	CHAIN				UMETA(DisplayName = "Chain"),
+	LASER				UMETA(DisplayName = "Laser"),
+	SUMMON_GHOUL		UMETA(DisplayName = "Summon"),
+	SUMMON_JORMUNGAND	UMETA(DisplayName = "Summon"),
+	HEXAGRAM			UMETA(DisplayName = "Hexagram")
 };
 
 UCLASS()
-class PROJECTW_API ANightWitch : public APawn
+class PROJECTW_API ANightWitch : public APaperCharacter
 {
 	GENERATED_BODY()
 
@@ -32,20 +46,14 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnywhere, Category = "Flipbook")
-	class UPaperFlipbookComponent* NightWitchFlipbook;
-
-	UPROPERTY(EditAnywhere, Category = "Capsule Collision")
-	class UCapsuleComponent* CapsuleCollision;
-
-	UPROPERTY(EditAnywhere, Category = "Direction Arrow")
-	class UArrowComponent* Arrow;
-
-	UPROPERTY(EditAnywhere, Category = "Movement")
-	class UCharacterMovementComponent* Movement;
 
 	UPROPERTY(VisibleAnywhere, Category = "State")
 	EState ActiveState;
+
+	UPROPERTY(VisibleAnywhere, Category = "Spell")
+	ESpell Spell;
+
+	void Flip();
 
 	void UpdateAnimation();
 
@@ -57,7 +65,7 @@ protected:
 
 	void StateIdle();
 
-	void StateChase();
+	void StateRunaway();
 
 	void StateTeleport();
 
@@ -69,9 +77,58 @@ protected:
 
 	void StateDead();
 
-	void Attack();
-	
+	void SelectSpell();
+
+	void RandomSelect();
+
+	void SetSpell(ESpell newSpell);
+
+	void SpellChain();
+
+	void SpellLaser();
+
+	void SpellSummonGhoul();
+
+	void SpellSummonJormungand();
+
+	void SpellHexagram();
+
+	bool CheckArriveAtTarget();
+
+	void SetNewTargetLocation();
+
+	void MoveTimer(float DeltaTime);
+
+	ANightWitchTeleportPoint* GetTeleportPoints();
+
 	AActor* Target;
+
+	UPROPERTY()
+	class AAIController* AIController;
+
+	class UWorld* World;
+
+	class AProjectWCharacter* Player;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Portal")
+	TSubclassOf<ANightWitchChainPortal> Portal;
+
+public:
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+	// Called to bind functionality to input
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+private:
+	int health;
+	int hitCount;
+	int phase;
+
+	int currentTeleportPoint;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI", meta = (AllowPrivateAccess = "true"))
+	ANightWitchTeleportPoint* TeleportPoint;
 
 	int lastStumbleIndex;
 
@@ -79,18 +136,19 @@ protected:
 
 	bool isAttacking;
 	bool isDamaging;
-	bool isMovingForward;
-	bool isMovingBackward;
+	bool isMoving;
 	bool isNextAttackReady;
+	bool isNextMoveReady;
 	bool isTeleporting;
 	bool isStumbling;
 	bool isTatunting;
+	bool isLookingRight;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	bool isMoveEnd;
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	float attackDelay;
+	float moveDelay;
 
+	UPROPERTY(VisibleAnywhere, Category = "Target Location")
+	FVector m_targetLocation;
 };
