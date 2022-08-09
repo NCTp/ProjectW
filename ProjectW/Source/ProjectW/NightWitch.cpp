@@ -14,6 +14,7 @@
 #include "Math/UnrealMathUtility.h"
 #include "DrawDebugHelpers.h"
 
+#include "NightWitchLaserPortal.h"
 #include "ProjectWCharacter.h"
 
 // Sets default values
@@ -55,6 +56,8 @@ ANightWitch::ANightWitch()
 
 	attackDelay = 0.0f;
 	moveDelay = 0.0f;
+
+	spawnLaserCounter = 3;
 
 	health = 100;
 	hitCount = 5;
@@ -326,16 +329,16 @@ void ANightWitch::RandomSelect()
 	if (spellNum == 1)
 	{
 		SetSpell(ESpell::CHAIN);
+		// SetSpell(ESpell::LASER);
 	}
 	else if (spellNum == 2)
 	{
-		// SetSpell(ESpell::LASER);
-		SetSpell(ESpell::CHAIN);
+		SetSpell(ESpell::LASER);
 	}
 	else if (spellNum == 3)
 	{
-		// SetSpell(ESpell::SUMMON_GHOUL);
-		SetSpell(ESpell::CHAIN);
+		SetSpell(ESpell::SUMMON_GHOUL);
+		// SetSpell(ESpell::LASER);
 	}
 	else if (spellNum == 4)
 	{
@@ -384,9 +387,54 @@ void ANightWitch::SpellLaser()
 	UE_LOG(LogTemp, Log, TEXT("SpellLaser"));
 
 	// Spell Laser
+	
+	/*
+	for (int i = 0; i < 5; ++i)
+	{
+		randomAngle = FMath::RandRange(0.0f, 359.0f);
+
+		randomLocation = FVector(origin.X + (FMath::Sin(randomAngle) * (FMath::Cos(360.0f - randomAngle)) * (radius + 300.0f)),
+			origin.Y + (FMath::Sin(randomAngle) * (FMath::Sin(360.0f - randomAngle)) * (radius + 300.0f)),
+			UKismetMathLibrary::Abs(origin.Z + (FMath::Cos(randomAngle) * (radius + 300.0f))));
+
+		World->SpawnActor<ANightWitchLaserPortal>(LaserPortal, randomLocation, FRotator(0.0f, 0.0f, 0.0f), spawnParams);
+
+	}
+	*/
+
+	float waitTime = 1.0f;
+	GetWorldTimerManager().SetTimer(spellLaserTimeHandle, this, &ANightWitch::SpawnLaser, waitTime, true);
+
 
 	isAttacking = false;
+}
 
+void ANightWitch::SpawnLaser()
+{
+	if(--spawnLaserCounter <= 0)
+	{
+		GetWorldTimerManager().ClearTimer(spellLaserTimeHandle);
+		spawnLaserCounter = 3;
+	}
+	
+	FVector origin = FVector::ZeroVector;
+	FVector boxExtent = FVector::ZeroVector;
+	FVector randomLocation = FVector::ZeroVector;
+	float radius = 0.0f;
+	float randomAngle = 0.0f;
+
+	FActorSpawnParameters spawnParams;
+	spawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::Undefined;
+
+	UKismetSystemLibrary::GetComponentBounds(GetCapsuleComponent(), origin, boxExtent, radius);
+	DrawDebugSphere(World, origin, radius, 12, FColor(0, 181, 0), false, 2.0f, 0U, 2.0f);
+	randomAngle = FMath::RandRange(0.0f, 359.0f);
+
+	randomLocation = FVector(origin.X + (FMath::Sin(randomAngle) * (FMath::Cos(360.0f - randomAngle)) * (radius + 300.0f)),
+							 origin.Y + (FMath::Sin(randomAngle) * (FMath::Sin(360.0f - randomAngle)) * (radius + 300.0f)),
+							 UKismetMathLibrary::Abs(origin.Z + (FMath::Cos(randomAngle) * (radius + 300.0f))));
+
+	World->SpawnActor<ANightWitchLaserPortal>(LaserPortal, randomLocation, FRotator(0.0f, 0.0f, 0.0f), spawnParams);
 }
 
 void ANightWitch::SpellSummonGhoul()

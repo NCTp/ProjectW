@@ -23,4 +23,16 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Root")
+	class USceneComponent* Root;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mesh")
+	class UStaticMeshComponent* Cylinder;
+
+	class UWorld* World;
+
+	class AProjectWCharacter* Player;
+
+private:
+	FVector m_targetLocation;
 };

@@ -11,7 +11,8 @@
 			"AdditionalDependencies": [
 				"UMGEditor",
 				"Engine",
-				"CableComponent"
+				"CableComponent",
+				"Paper2D"
 			]
 		}
 	],

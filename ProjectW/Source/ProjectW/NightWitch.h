@@ -87,6 +87,8 @@ protected:
 
 	void SpellLaser();
 
+	void SpawnLaser();
+
 	void SpellSummonGhoul();
 
 	void SpellSummonJormungand();
@@ -112,6 +114,9 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Portal")
 	TSubclassOf<ANightWitchChainPortal> Portal;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Portal")
+	TSubclassOf<AActor> LaserPortal;
 
 public:
 	// Called every frame
@@ -148,6 +153,9 @@ private:
 
 	float attackDelay;
 	float moveDelay;
+
+	FTimerHandle spellLaserTimeHandle;
+	int spawnLaserCounter;
 
 	UPROPERTY(VisibleAnywhere, Category = "Target Location")
 	FVector m_targetLocation;
