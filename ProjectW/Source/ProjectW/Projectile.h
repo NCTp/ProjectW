@@ -24,8 +24,8 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
-		class UPaperFlipbookComponent* PaperFlipbook;
+	class UPaperFlipbookComponent* PaperFlipbook;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Movement)
-		class UProjectileMovementComponent* ProjectileMovement;
+	class UProjectileMovementComponent* ProjectileMovement;
 };
