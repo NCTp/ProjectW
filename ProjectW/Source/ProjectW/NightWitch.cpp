@@ -14,6 +14,7 @@
 #include "Math/UnrealMathUtility.h"
 #include "DrawDebugHelpers.h"
 
+#include "NightWitchGhoul.h"
 #include "NightWitchLaserPortal.h"
 #include "ProjectWCharacter.h"
 
@@ -221,9 +222,9 @@ void ANightWitch::StateRunaway()
 	FVector currentLocation = GetActorLocation();
 	float speed = 500.0f;
 
-	if (dot < 0) // player is left of starwitch
+	if (dot < 0) // player is left of NightWitch
 		currentLocation.X -= speed * World->DeltaTimeSeconds;
-	else // player is right of starwitch
+	else // player is right of NightWitch
 		currentLocation.X += speed * World->DeltaTimeSeconds;
 
 	SetActorLocation(currentLocation);
@@ -443,8 +444,26 @@ void ANightWitch::SpellSummonGhoul()
 
 	// Spell Summon_Ghoul
 
-	isAttacking = false;
+	FVector myLocation = GetActorLocation();
+	FVector origin = FVector::ZeroVector;
+	FVector boxExtent = FVector::ZeroVector;
+	FVector randomLocation = FVector::ZeroVector;
+	float radius = 0.0f;
+	float randomAngle = 0.0f;
 
+	FActorSpawnParameters spawnParams;
+	spawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::Undefined;
+
+	UKismetSystemLibrary::GetComponentBounds(GetCapsuleComponent(), origin, boxExtent, radius);
+	DrawDebugSphere(World, origin, radius, 12, FColor(0, 0, 181), false, 2.0f, 0U, 2.0f);
+	randomAngle = FMath::RandRange(0.0f, 359.0f);
+
+	randomLocation = FVector(origin.X + (FMath::Sin(randomAngle) * (FMath::Cos(360.0f - randomAngle)) * (radius + 300.0f)),
+							 origin.Y + (FMath::Sin(randomAngle) * (FMath::Sin(360.0f - randomAngle)) * (radius + 300.0f)),
+							 myLocation.Z);
+
+	World->SpawnActor<ANightWitchGhoul>(Ghoul, randomLocation, FRotator(0.0f, 0.0f, 0.0f), spawnParams);
+	isAttacking = false;
 }
 
 void ANightWitch::SpellSummonJormungand()

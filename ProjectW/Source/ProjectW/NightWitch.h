@@ -118,6 +118,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Portal")
 	TSubclassOf<AActor> LaserPortal;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Ghoul")
+	TSubclassOf<AActor> Ghoul;
+
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
