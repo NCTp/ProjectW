@@ -21,7 +21,8 @@ enum class EActorState : uint8
 	StarWitchState_Magic_01     UMETA(DisplayName = "Magic01"),
 	StarWitchState_Magic_02     UMETA(DisplayName = "Magic02"),
 	StarWitchState_Teleport     UMETA(DIsplayName = "Teleport"),
-	StarWitchState_CounterReady UMETA(DisplayNmae = "CounterReady"),
+	StarWitchState_CounterReady UMETA(DisplayName = "CounterReady"),
+	StarWitchState_Delay        UMETA(DisplayName = "Delay"),
 	StarWitchState_Dead         UMETA(DisplayNmae = "Dead")
 };
 
@@ -113,6 +114,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
 	bool m_isCastingMagic02;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
+	bool m_isDelayed;
+
 	////////// Objects ///////////
 	APawn* Player; // Player
 
@@ -130,6 +134,7 @@ public:
 	FTimerHandle MagicTimerHandle_1;
 	FTimerHandle MagicTimerHandle_2;
 	FTimerHandle MarkTimerHandle;
+	FTimerHandle DelayHandle;
 	////////// Private Functions ///////////
 	// Get Damage
 	void GetDamage();
@@ -158,6 +163,7 @@ private:
 	void StateTeleport();
 	void StateMagic01();
 	void StateMagic02();
+	void Delay();
 	void StateMachine(float DeltaTime);
 
 	////////// Private Variables ///////////

@@ -20,7 +20,7 @@ AStarWitch::AStarWitch()
 	PrimaryActorTick.bCanEverTick = true;
 	FlipbookComponent = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("FlipBook"));
 	FlipbookComponent->GetAbsoluteRotationPropertyName();
-	health = 60;
+	health = 100;
 	m_isRight = true;
 	m_startFighting = false;
 	m_isTeleporting = false;
@@ -169,6 +169,7 @@ void AStarWitch::SetState(EActorState newState)
 
 void AStarWitch::StateIdle()
 {
+
 	float distance = FVector::Distance(GetActorLocation(), Player->GetActorLocation());
 	std::random_device rd;
 	std::mt19937 gen(rd());
@@ -395,7 +396,7 @@ void AStarWitch::StateMagic02()
 		m_isCastingMagic02 = true;
 		AStarWitchTeleportEffects* teleportEffect = nullptr;
 		teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
-		GetWorldTimerManager().SetTimer(MagicTimerHandle_2, this, &AStarWitch::Magic02, 0.3f, true, 1.0f);
+		GetWorldTimerManager().SetTimer(MagicTimerHandle_2, this, &AStarWitch::Magic02, 0.5f, true, 1.0f);
 	}
 }
 
@@ -404,6 +405,7 @@ void AStarWitch::PhaseTwoPattern()
 	AStarWitchMark* mark = nullptr;
 	mark = GetWorld()->SpawnActor<AStarWitchMark>(Mark, GetActorLocation(), FRotator(0, 0, 0), spawnInfo);
 }
+
 
 void AStarWitch::StateMachine(float DeltaTime)
 {
