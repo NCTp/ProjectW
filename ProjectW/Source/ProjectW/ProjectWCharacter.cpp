@@ -83,9 +83,12 @@ AProjectWCharacter::AProjectWCharacter()
 	GetSprite()->SetIsReplicated(true);
 	bReplicates = true;
 
-	m_bIsFiring = false;
-
+	m_bPlayAttackMotion = false;
+	m_bIsAttacking = false;
+	m_bCanComboAttack = false;
 	m_uCurrentWeapon = 0;
+	m_uCombo = 0;
+	m_fComboTimer = 0.0f;
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -96,7 +99,7 @@ void AProjectWCharacter::UpdateAnimation()
 	const FVector PlayerVelocity = GetVelocity();
 	const float PlayerSpeedSqr = PlayerVelocity.SizeSquared();
 
-	if (m_bIsFiring)
+	if (m_bPlayAttackMotion)
 	{
 		CharacterState = ECharacterState::Fire;
 	}
@@ -165,7 +168,22 @@ void AProjectWCharacter::UpdateAnimation()
 		}
 		else if (CharacterState == ECharacterState::Fire)
 		{
-			DesiredAnimation = RifleFiringAnimation;
+			if (m_uCombo == 0)
+			{
+				DesiredAnimation = AttackCombo01;
+			}
+			else if (m_uCombo == 1)
+			{
+				DesiredAnimation = AttackCombo02;
+			}
+			else if (m_uCombo == 2)
+			{
+				DesiredAnimation = AttackCombo03;
+			}
+			else if (m_uCombo == 3)
+			{
+				DesiredAnimation = AttackCombo04;
+			}
 		}
 	}
 	else if (m_uCurrentWeapon == 1)
@@ -192,7 +210,22 @@ void AProjectWCharacter::UpdateAnimation()
 		}
 		else if (CharacterState == ECharacterState::Fire)
 		{
-			DesiredAnimation = ShotgunFiringAnimation;
+			if (m_uCombo == 0)
+			{
+				DesiredAnimation = AttackCombo01;
+			}
+			else if (m_uCombo == 1)
+			{
+				DesiredAnimation = AttackCombo02;
+			}
+			else if (m_uCombo == 2)
+			{
+				DesiredAnimation = AttackCombo03;
+			}
+			else if (m_uCombo == 3)
+			{
+				DesiredAnimation = AttackCombo04;
+			}
 		}
 	}
 
@@ -221,6 +254,68 @@ void AProjectWCharacter::Tick(float DeltaSeconds)
 			m_fRollingCount = 0.0f;
 		}
 	}
+
+	if (m_bIsAttacking)
+	{
+		m_fComboTimer += DeltaSeconds;
+		
+		if (m_uCombo == 0)
+		{
+			if (m_fComboTimer > 1.0f)
+			{
+				m_bPlayAttackMotion = false;
+				m_bCanComboAttack = true;
+			}
+			if (m_fComboTimer > 1.5f)
+			{
+				m_bIsAttacking = false;
+				m_bCanComboAttack = false;
+				m_fComboTimer = 0.0f;
+			}
+		}
+		else if (m_uCombo == 1)
+		{
+			if (m_fComboTimer > 0.7f)
+			{
+				m_bPlayAttackMotion = false;
+				m_bCanComboAttack = true;
+			}
+			if (m_fComboTimer > 1.2f)
+			{
+				m_bIsAttacking = false;
+				m_bCanComboAttack = false;
+				m_fComboTimer = 0.0f;
+			}
+		}
+		else if (m_uCombo == 2)
+		{
+			if (m_fComboTimer > 1.3f)
+			{
+				m_bPlayAttackMotion = false;
+				m_bCanComboAttack = true;
+			}
+			if (m_fComboTimer > 1.8f)
+			{
+				m_bIsAttacking = false;
+				m_bCanComboAttack = false;
+				m_fComboTimer = 0.0f;
+			}
+		}
+		else if (m_uCombo == 3)
+		{
+			if (m_fComboTimer > 1.1f)
+			{
+				m_bPlayAttackMotion = false;
+				m_bCanComboAttack = true;
+			}
+			if (m_fComboTimer > 1.6f)
+			{
+				m_bIsAttacking = false;
+				m_bCanComboAttack = false;
+				m_fComboTimer = 0.0f;
+			}
+		}
+	}
 }
 
 
@@ -234,7 +329,6 @@ void AProjectWCharacter::SetupPlayerInputComponent(class UInputComponent* Player
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AProjectWCharacter::Fire);
-	PlayerInputComponent->BindAction("Fire", IE_Released, this, &AProjectWCharacter::StopFiring);
 
 	PlayerInputComponent->BindAction("Roll", IE_Pressed, this, &AProjectWCharacter::Roll);
 
@@ -274,23 +368,43 @@ void AProjectWCharacter::MoveUp(float Value)
 
 void AProjectWCharacter::Fire()
 {
-	if (!m_bIsRolling)
+	if (!m_bPlayAttackMotion)
 	{
-		m_bIsFiring = true;
+		if (!m_bIsRolling)
+		{
+			m_bIsAttacking = true;
+			m_fComboTimer = 0;
+			m_bPlayAttackMotion = true;
 
-		SpawnTransform = MuzzlePoint->GetComponentTransform();
-		
-		FActorSpawnParameters actorSpawnParams;
-		actorSpawnParams.SpawnCollisionHandlingOverride =
-			ESpawnActorCollisionHandlingMethod::Undefined;
+			if (m_bCanComboAttack)
+			{
+				m_uCombo++;
+				if (m_uCombo > 3)
+				{
+					m_uCombo = 0;
+				}
+			}
+			else
+			{
+				m_uCombo = 0;
+			}
 
-		World->SpawnActor<AProjectile>(Projectile, SpawnTransform, actorSpawnParams);
+			/*
+			SpawnTransform = MuzzlePoint->GetComponentTransform();
+
+			FActorSpawnParameters actorSpawnParams;
+			actorSpawnParams.SpawnCollisionHandlingOverride =
+				ESpawnActorCollisionHandlingMethod::Undefined;
+
+			World->SpawnActor<AProjectile>(Projectile, SpawnTransform, actorSpawnParams);
+			*/
+		}
 	}
 }
 
 void AProjectWCharacter::StopFiring()
 {
-	m_bIsFiring = false;
+	m_bIsAttacking = false;
 }
 
 void AProjectWCharacter::Roll()
@@ -300,6 +414,13 @@ void AProjectWCharacter::Roll()
 		if (!m_bIsRolling)
 		{
 			m_bIsRolling = true;
+
+			m_bPlayAttackMotion = false;
+			m_bIsAttacking = false;
+			m_bCanComboAttack = false;
+			m_uCombo = 0;
+			m_fComboTimer = 0.0f;
+
 
 			const FVector fvPlayerVelocity = GetVelocity();
 
@@ -316,6 +437,9 @@ void AProjectWCharacter::Roll()
 						{
 							if (PlayerController->IsInputKeyDown(EKeys::D))
 							{
+								fvLaunchVelocity.X *= 1000.0f;
+
+								/*
 								if (PlayerController->IsInputKeyDown(EKeys::W))
 								{
 
@@ -333,10 +457,13 @@ void AProjectWCharacter::Roll()
 									fvLaunchVelocity.X *= 1000.0f;
 
 								}
+								*/
 							}
 							else if (PlayerController->IsInputKeyDown(EKeys::A))
 							{
+								fvLaunchVelocity.X *= -1000.0f;
 
+								/*
 								if (PlayerController->IsInputKeyDown(EKeys::W))
 								{
 
@@ -353,7 +480,9 @@ void AProjectWCharacter::Roll()
 								{
 									fvLaunchVelocity.X *= -1000.0f;
 								}
+								*/
 							}
+							/*
 							else if (PlayerController->IsInputKeyDown(EKeys::W))
 							{
 								fvLaunchVelocity.Y *= -500.0f;
@@ -362,6 +491,7 @@ void AProjectWCharacter::Roll()
 							{
 								fvLaunchVelocity.Y *= 500.0f;
 							}
+							*/
 						}
 					}
 				}

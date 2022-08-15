@@ -97,24 +97,22 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
 	class UPaperFlipbook* ShotgunFiringAnimation;
 
-	
+
+	// Attack Combo
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* AttackCombo01;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* AttackCombo02;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* AttackCombo03;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* AttackCombo04;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ECharacterState CharacterState = ECharacterState::Default;
-
-	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Transient, Category = "IsFiring")
-	bool m_bIsFiring;
-
-	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Transient, Category = "IsRolling")
-	bool m_bIsRolling;
-
-	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Transient, Category = "IsRolling")
-	float m_fRollingCount;
-
-	// Current Weapon Type
-	// 0 : Rifle, 1 : Shotgun
-	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Transient, Category = "CurrentWeapon")
-	int m_uCurrentWeapon;
 
 	/** Called to choose the correct animation to play based on the character's movement state */
 	void UpdateAnimation();
@@ -170,4 +168,24 @@ public:
 	FORCEINLINE class UCameraComponent* GetSideViewCameraComponent() const { return SideViewCameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+
+private:
+	int m_uCombo;
+	
+	float m_fComboTimer;
+
+	bool m_bIsAttacking;
+
+	bool m_bIsRolling;
+
+	bool m_bCanComboAttack;
+
+	bool m_bPlayAttackMotion;
+
+	float m_fRollingCount;
+
+	// Current Weapon Type
+	// 0 : Rifle, 1 : Shotgun
+	int m_uCurrentWeapon;
+
 };
