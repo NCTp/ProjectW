@@ -31,6 +31,7 @@ AStarWitch::AStarWitch()
 	m_isPhaseThree = false;
 	m_isDead = false;
 	m_isMarked = false;
+	m_isLockedOn = false;
 }
 
 // Called when the game starts or when spawned
@@ -55,12 +56,12 @@ void AStarWitch::Tick(float DeltaTime)
 	// Flip 
 	if (dotProduct < 0)
 	{
-		if (m_isRight)
+		if (m_isRight && !m_isLockedOn)
 			Flip();
 	}
 	else
 	{
-		if (!m_isRight)
+		if (!m_isRight && !m_isLockedOn)
 			Flip();
 
 	}
@@ -321,6 +322,7 @@ void AStarWitch::Magic01()
 	{
 		MagicCounter01 = 4;
 		m_isCastingMagic01 = false;
+		m_isLockedOn = false;
 		GetWorldTimerManager().ClearTimer(MagicTimerHandle_1);
 		SetState(EActorState::StarWitchState_Idle);
 	}
@@ -368,6 +370,7 @@ void AStarWitch::StateMagic01()
 	if (!m_isCastingMagic01)
 	{
 		m_isCastingMagic01 = true;
+		m_isLockedOn = true;
 		GetWorldTimerManager().SetTimer(MagicTimerHandle_1, this, &AStarWitch::Magic01, 0.5f, true, 0.5f);
 	}
 
@@ -375,12 +378,15 @@ void AStarWitch::StateMagic01()
 
 void AStarWitch::Magic02()
 {
+	
 	if (MagicCounter02 == 0)
 	{
 		GetWorldTimerManager().ClearTimer(MagicTimerHandle_2);
 		MagicCounter02 = 3;
 		m_isCastingMagic02 = false;
+		m_isLockedOn = false;
 		SetState(EActorState::StarWitchState_Idle);
+		
 	}
 	else
 	{
@@ -393,6 +399,7 @@ void AStarWitch::StateMagic02()
 {
 	if (!m_isCastingMagic02)
 	{
+		m_isLockedOn = true;
 		m_isCastingMagic02 = true;
 		AStarWitchTeleportEffects* teleportEffect = nullptr;
 		teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);

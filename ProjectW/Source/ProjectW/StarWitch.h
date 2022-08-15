@@ -117,6 +117,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
 	bool m_isDelayed;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
+	bool m_isLockedOn;
+
 	////////// Objects ///////////
 	APawn* Player; // Player
 
