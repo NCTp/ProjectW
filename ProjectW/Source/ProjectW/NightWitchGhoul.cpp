@@ -134,6 +134,15 @@ void ANightWitchGhoul::StateChase()
 		currentLocation.X += speed * World->DeltaTimeSeconds;
 	}
 
+	if (Player->GetActorLocation().Y > GetActorLocation().Y)
+	{
+		currentLocation.Y += speed * World->DeltaTimeSeconds;
+	}
+	else
+	{
+		currentLocation.Y -= speed * World->DeltaTimeSeconds;
+	}
+
 	SetActorLocation(currentLocation);
 
 	SetState(EGhoulState::IDLE);
@@ -165,6 +174,8 @@ void ANightWitchGhoul::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	UpdateCharacter();
+
+	TickStateMachine();
 
 	if (isAttacking)
 	{

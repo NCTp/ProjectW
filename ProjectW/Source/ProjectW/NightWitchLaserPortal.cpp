@@ -37,7 +37,6 @@ void ANightWitchLaserPortal::BeginPlay()
 
 void ANightWitchLaserPortal::SpawnLaser()
 {
-
 	FActorSpawnParameters spawnParams;
 	spawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::Undefined;
 
