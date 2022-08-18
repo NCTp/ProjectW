@@ -248,7 +248,7 @@ void AProjectWCharacter::Tick(float DeltaSeconds)
 	if (m_bIsRolling)
 	{		
 		m_fRollingCount += DeltaSeconds;
-		if (m_fRollingCount > 0.7f)
+		if (m_fRollingCount > 0.5f)
 		{
 			m_bIsRolling = false;
 			m_fRollingCount = 0.0f;
@@ -261,7 +261,7 @@ void AProjectWCharacter::Tick(float DeltaSeconds)
 		
 		if (m_uCombo == 0)
 		{
-			if (m_fComboTimer > 1.0f)
+			if (m_fComboTimer > 0.5f)
 			{
 				m_bPlayAttackMotion = false;
 				m_bCanComboAttack = true;
@@ -275,7 +275,7 @@ void AProjectWCharacter::Tick(float DeltaSeconds)
 		}
 		else if (m_uCombo == 1)
 		{
-			if (m_fComboTimer > 0.7f)
+			if (m_fComboTimer > 0.5f)
 			{
 				m_bPlayAttackMotion = false;
 				m_bCanComboAttack = true;
@@ -289,7 +289,7 @@ void AProjectWCharacter::Tick(float DeltaSeconds)
 		}
 		else if (m_uCombo == 2)
 		{
-			if (m_fComboTimer > 1.3f)
+			if (m_fComboTimer > 0.5f)
 			{
 				m_bPlayAttackMotion = false;
 				m_bCanComboAttack = true;
@@ -303,7 +303,7 @@ void AProjectWCharacter::Tick(float DeltaSeconds)
 		}
 		else if (m_uCombo == 3)
 		{
-			if (m_fComboTimer > 1.1f)
+			if (m_fComboTimer > 0.5f)
 			{
 				m_bPlayAttackMotion = false;
 				m_bCanComboAttack = true;
@@ -426,7 +426,7 @@ void AProjectWCharacter::Roll()
 
 			if (!GetCharacterMovement()->IsFalling())
 			{
-				FVector fvLaunchVelocity = FVector(1.0f, 1.0f, 500.0f);
+				FVector fvLaunchVelocity = FVector(1.0f, 1.0f, 300.0f);
 				
 				if (Controller)
 				{
