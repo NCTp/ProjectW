@@ -171,6 +171,8 @@ public:
 
 private:
 	int m_uCombo;
+
+	int health;
 	
 	float m_fComboTimer;
 
