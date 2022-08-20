@@ -24,7 +24,7 @@ AStarWitch::AStarWitch()
 	FlipbookComponent->GetAbsoluteRotationPropertyName();
 	//FlipbookComponent->AttachTo(RootComponent);
 
-	health = 100;
+	health = 60.0f;
 	m_isRight = true;
 	m_startFighting = false;
 	m_isTeleporting = false;
@@ -420,7 +420,7 @@ void AStarWitch::StateMagic02()
 		m_isCastingMagic02 = true;
 		AStarWitchTeleportEffects* teleportEffect = nullptr;
 		teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
-		GetWorldTimerManager().SetTimer(MagicTimerHandle_2, this, &AStarWitch::Magic02, 0.5f, true, 1.0f);
+		GetWorldTimerManager().SetTimer(MagicTimerHandle_2, this, &AStarWitch::Magic02, 0.5f, true, 2.0f);
 	}
 }
 
