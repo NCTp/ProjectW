@@ -89,7 +89,7 @@ AProjectWCharacter::AProjectWCharacter()
 	m_uCurrentWeapon = 0;
 	m_uCombo = 0;
 	m_fComboTimer = 0.0f;
-	health = 100f;
+	health = 100.0f;
 }
 
 //////////////////////////////////////////////////////////////////////////

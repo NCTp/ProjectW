@@ -125,10 +125,19 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Projectile)
 	TSubclassOf<AStarWitchLaser> Projectile_Laser;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Projectile)
 	TSubclassOf<AStarWitchBall> Projectile_Ball;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Effects)
 	TSubclassOf<AStarWitchTeleportEffects> Effects_Teleport;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Effects)
+	TSubclassOf<AStarWitchTeleportEffects> Effects_Ball;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Effects)
+	TSubclassOf<AStarWitchTeleportEffects> Effects_Lazer;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Effects)
 	TSubclassOf<AStarWitchMark> Mark;
 

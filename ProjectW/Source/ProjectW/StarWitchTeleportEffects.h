@@ -14,7 +14,8 @@ class PROJECTW_API AStarWitchTeleportEffects : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AStarWitchTeleportEffects();
-
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Effects)
+	float delay;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

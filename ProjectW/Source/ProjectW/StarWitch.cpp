@@ -5,6 +5,7 @@
 #include "AIController.h"
 #include "Kismet/GameplayStatics.h"
 #include "PaperFlipbookComponent.h"
+#include "Components/CapsuleComponent.h"
 #include "StarWitchTeleportEffects.h"
 #include "StarWitchBall.h"
 #include "StarWitchLaser.h"
@@ -18,8 +19,11 @@ AStarWitch::AStarWitch()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
 	FlipbookComponent = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("FlipBook"));
 	FlipbookComponent->GetAbsoluteRotationPropertyName();
+	//FlipbookComponent->AttachTo(RootComponent);
+
 	health = 100;
 	m_isRight = true;
 	m_startFighting = false;
@@ -174,7 +178,7 @@ void AStarWitch::StateIdle()
 	float distance = FVector::Distance(GetActorLocation(), Player->GetActorLocation());
 	std::random_device rd;
 	std::mt19937 gen(rd());
-	std::uniform_int_distribution<int> dis(0, 3); // 0 ~ 3
+	std::uniform_int_distribution<int> dis(0, 3); // 0 ~ 4
 	
 	if (Player && distance <= 600.0f)
 	{
@@ -191,6 +195,10 @@ void AStarWitch::StateIdle()
 		{
 			SetState(EActorState::StarWitchState_Teleport);
 		}
+		else if (dis(gen) == 3 || dis(gen) == 0)
+		{
+			SetState(EActorState::StarWitchState_Walking);
+		}
 	}
 	else if (Player && distance > 700.0f)
 	{
@@ -201,12 +209,12 @@ void AStarWitch::StateIdle()
 void AStarWitch::StateWalk(float DeltaTime)
 {
 	float distance = FVector::Distance(GetActorLocation(), Player->GetActorLocation());
-	if (Player && distance <= 600.0f)
+	if (Player && distance <= 400.0f)
 	{
 		//Teleport();
 		SetState(EActorState::StarWitchState_Idle);
 	}
-	else if (Player && distance <= 1200.0f && distance > 600.0f)
+	else if (Player && distance <= 1200.0f && distance > 400.0f)
 	{
 		UE_LOG(LogTemp, Log, TEXT("Far, Chase the player"));
 
@@ -300,19 +308,28 @@ void AStarWitch::StateTeleport()
 }
 void AStarWitch::ShootLazer()
 {
-	AStarWitchLaser* laser = nullptr;
+	AStarWitchLaser* lazer = nullptr;
+	AStarWitchTeleportEffects* lazerEffect = nullptr;
 
 	if (!m_isRight)
-		laser = GetWorld()->SpawnActor<AStarWitchLaser>(Projectile_Laser, GetActorLocation(), FRotator(0, 180.0f, 0), spawnInfo);
+	{
+		lazerEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Lazer, GetActorLocation(), GetActorRotation(), spawnInfo);
+		lazer = GetWorld()->SpawnActor<AStarWitchLaser>(Projectile_Laser, GetActorLocation(), FRotator(0, 180.0f, 0), spawnInfo);
+	}
 	else
-		laser = GetWorld()->SpawnActor<AStarWitchLaser>(Projectile_Laser, GetActorLocation(), FRotator(0, 0, 0), spawnInfo);
+	{
+		lazerEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Lazer, GetActorLocation(), GetActorRotation(), spawnInfo);
+		lazer = GetWorld()->SpawnActor<AStarWitchLaser>(Projectile_Laser, GetActorLocation(), FRotator(0, 0, 0), spawnInfo);
+	}
 
 }
 void AStarWitch::ShootBall(float angle)
 {
 	AStarWitchBall* ball = nullptr;
-
+	AStarWitchTeleportEffects* ballEffect = nullptr;
 	ball = GetWorld()->SpawnActor<AStarWitchBall>(Projectile_Ball, GetActorLocation(), FRotator(angle, 0, 0), spawnInfo);
+	ballEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Ball, GetActorLocation(), GetActorRotation(), spawnInfo);
+
 
 
 }

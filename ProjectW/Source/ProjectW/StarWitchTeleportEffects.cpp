@@ -8,7 +8,8 @@ AStarWitchTeleportEffects::AStarWitchTeleportEffects()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	
+	delay = 0.2f;
 }
 
 // Called when the game starts or when spawned
@@ -16,7 +17,7 @@ void AStarWitchTeleportEffects::BeginPlay()
 {
 	Super::BeginPlay();
 	FTimerHandle timer;
-	GetWorldTimerManager().SetTimer(timer, this, &AStarWitchTeleportEffects::DestroyMyself, 0.2f, false);
+	GetWorldTimerManager().SetTimer(timer, this, &AStarWitchTeleportEffects::DestroyMyself, delay, false);
 	
 }
 
