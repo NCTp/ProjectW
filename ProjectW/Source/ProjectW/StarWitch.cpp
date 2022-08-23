@@ -263,7 +263,7 @@ void AStarWitch::Teleport()
 		m_isTeleporting = false;
 		GetWorldTimerManager().ClearTimer(TeleportTimerHandle);
 		SetState(EActorState::StarWitchState_Idle);
-		teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
+		//teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
 		AStarWitch::ShootLazer();
 	}
 	else
@@ -274,24 +274,43 @@ void AStarWitch::Teleport()
 			FVector teleportLocationOfRight = FVector(playerLocation.X + dis(gen), GetActorLocation().Y, GetActorLocation().Z);
 			FVector teleportLocationOfLeft = FVector(playerLocation.X - dis(gen), GetActorLocation().Y, GetActorLocation().Z);
 			teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
+			
 			SetActorLocation(teleportLocationOfLeft);
 			teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
+			
 			if (StarWitchState == EActorState::StarWitchState_Teleport)
 			{
 				AStarWitch::ShootBall(0.0f);
 			}
+			
 		}
 		else // player is right of starwitch
 		{
 			FVector teleportLocationOfRight = FVector(playerLocation.X + dis(gen), GetActorLocation().Y, GetActorLocation().Z);
 			FVector teleportLocationOfLeft = FVector(playerLocation.X - dis(gen), GetActorLocation().Y, GetActorLocation().Z);
 			teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
+			/*
+			FTimerHandle delayHandle;
+			float delayTime = 2.0f;
+			GetWorld()->GetTimerManager().SetTimer(delayHandle, FTimerDelegate::CreateLambda([&]()
+				{
+					SetActorLocation(teleportLocationOfRight);
+					teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
+					if (StarWitchState == EActorState::StarWitchState_Teleport)
+					{
+						AStarWitch::ShootBall(180.0f);
+					}
+					GetWorld()->GetTimerManager().ClearTimer(delayHandle);
+				}), delayTime, false);
+				*/
 			SetActorLocation(teleportLocationOfRight);
 			teleportEffect = GetWorld()->SpawnActor<AStarWitchTeleportEffects>(Effects_Teleport, GetActorLocation(), GetActorRotation(), spawnInfo);
+			
 			if (StarWitchState == EActorState::StarWitchState_Teleport)
 			{
 				AStarWitch::ShootBall(180.0f);
 			}
+			
 		}
 		TeleportCounter--;
 	}
