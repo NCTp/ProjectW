@@ -16,7 +16,7 @@ void AStarWitchThunder::BeginPlay()
 {
 	Super::BeginPlay();
 	FTimerHandle timer;
-	GetWorldTimerManager().SetTimer(timer, this, &AStarWitchThunder::DestroyMyself, 0.2f, false);
+	GetWorldTimerManager().SetTimer(timer, this, &AStarWitchThunder::DestroyMyself, 1.0f, false);
 }
 
 // Called every frame
