@@ -17,7 +17,7 @@ void AStarWitchBall::BeginPlay()
 {
 	Super::BeginPlay();
 	FTimerHandle timer;
-	GetWorldTimerManager().SetTimer(timer, this, &AStarWitchBall::DestroyMyself, 3.0f, false);
+	GetWorldTimerManager().SetTimer(timer, this, &AStarWitchBall::DestroyMyself, 10.0f, false);
 
 	Player = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 }
