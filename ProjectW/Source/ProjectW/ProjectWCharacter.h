@@ -17,7 +17,7 @@ enum class ECharacterState : uint8
 	Jump	UMETA(DisplayName = "Jump"),
 	Fall	UMETA(DisplayName = "Fall"),
 	Roll	UMETA(DisplayName = "Roll"),
-	Fire	UMETA(DisplayName = "Fire")
+	Attack	UMETA(DisplayName = "Attack")
 };
 
 /**
@@ -51,52 +51,23 @@ class AProjectWCharacter : public APaperCharacter
 protected:
 	// The animation to play while idle (standing still)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* RifleIdleAnimation;
+	class UPaperFlipbook* IdleAnimation;
 
 	// The animation to play while running around
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* RifleRunningAnimation;
+	class UPaperFlipbook* RunningAnimation;
 
 	// The animation to play while jumping
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* RifleJumpingAnimation;
+	class UPaperFlipbook* JumpingAnimation;
 
 	// The animation to play while Falling
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* RifleFallingAnimation;
+	class UPaperFlipbook* FallingAnimation;
 
 	// The animation to play while Rolling
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* RifleRollingAnimation;
-
-	// The animation to play while Firing
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* RifleFiringAnimation;
-
-	// The animation to play while idle (standing still)
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* ShotgunIdleAnimation;
-
-	// The animation to play while running around
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* ShotgunRunningAnimation;
-
-	// The animation to play while jumping
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* ShotgunJumpingAnimation;
-
-	// The animation to play while Falling
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* ShotgunFallingAnimation;
-
-	// The animation to play while Rolling
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* ShotgunRollingAnimation;
-
-	// The animation to play while Firing
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook* ShotgunFiringAnimation;
-
+	class UPaperFlipbook* RollingAnimation;
 
 	// Attack Combo
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
@@ -122,9 +93,7 @@ protected:
 
 	void MoveUp(float Value);
 
-	void Fire();
-
-	void StopFiring();
+	void Attack();
 
 	void Roll();
 
@@ -133,7 +102,6 @@ protected:
 	void ChangeWeapon();
 
 	void UpdateCharacter();
-
 
 	/** Handle touch inputs. */
 	void TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location);
@@ -149,7 +117,7 @@ public:
 	AProjectWCharacter();
 
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
-		TSubclassOf<class AProjectile> Projectile;
+	TSubclassOf<class AProjectile> Projectile;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 		class USoundBase* FireSound;
@@ -184,7 +152,7 @@ private:
 
 	bool m_bPlayAttackMotion;
 
-	float m_fRollingCount;
+	float m_fRollingTimer;
 
 	// Current Weapon Type
 	// 0 : Rifle, 1 : Shotgun
