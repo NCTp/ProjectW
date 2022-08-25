@@ -102,7 +102,7 @@ void AProjectWCharacter::UpdateAnimation()
 
 	if (m_bPlayAttackMotion)
 	{
-		CharacterState = ECharacterState::Fire;
+		CharacterState = ECharacterState::Attack;
 	}
 	else
 	{
@@ -145,29 +145,31 @@ void AProjectWCharacter::UpdateAnimation()
 	}
 
 	UPaperFlipbook* DesiredAnimation = nullptr;
+
+	// For First Weapon
 	if (m_uCurrentWeapon == 0)
 	{
 		if (CharacterState == ECharacterState::Idle)
 		{
-			DesiredAnimation = RifleIdleAnimation;
+			DesiredAnimation = IdleAnimation;
 		}
 		else if (CharacterState == ECharacterState::Run)
 		{
-			DesiredAnimation = RifleRunningAnimation;
+			DesiredAnimation = RunningAnimation;
 		}
 		else if (CharacterState == ECharacterState::Jump)
 		{
-			DesiredAnimation = RifleJumpingAnimation;
+			DesiredAnimation = JumpingAnimation;
 		}
 		else if (CharacterState == ECharacterState::Fall)
 		{
-			DesiredAnimation = RifleFallingAnimation;
+			DesiredAnimation = FallingAnimation;
 		}
 		else if (CharacterState == ECharacterState::Roll)
 		{
-			DesiredAnimation = RifleRollingAnimation;
+			DesiredAnimation = RollingAnimation;
 		}
-		else if (CharacterState == ECharacterState::Fire)
+		else if (CharacterState == ECharacterState::Attack)
 		{
 			if (m_uCombo == 0)
 			{
@@ -187,6 +189,9 @@ void AProjectWCharacter::UpdateAnimation()
 			}
 		}
 	}
+
+	// For Second Weapon
+	/*
 	else if (m_uCurrentWeapon == 1)
 	{
 		if (CharacterState == ECharacterState::Idle)
@@ -209,7 +214,7 @@ void AProjectWCharacter::UpdateAnimation()
 		{
 			DesiredAnimation = ShotgunRollingAnimation;
 		}
-		else if (CharacterState == ECharacterState::Fire)
+		else if (CharacterState == ECharacterState::Attack)
 		{
 			if (m_uCombo == 0)
 			{
@@ -229,6 +234,7 @@ void AProjectWCharacter::UpdateAnimation()
 			}
 		}
 	}
+	*/
 
 	GetSprite()->SetFlipbook(DesiredAnimation);
 }
@@ -243,78 +249,39 @@ void AProjectWCharacter::BeginPlay()
 void AProjectWCharacter::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	
+
+	// Update Character Animation, State, etc
 	UpdateCharacter();
 
+	// Roll
+	// m_fRollingTimer (0.5) : Play Rolling Motion
 	if (m_bIsRolling)
 	{		
-		m_fRollingCount += DeltaSeconds;
-		if (m_fRollingCount > 0.5f)
+		m_fRollingTimer += DeltaSeconds;
+		if (m_fRollingTimer > 0.5f)
 		{
 			m_bIsRolling = false;
-			m_fRollingCount = 0.0f;
+			m_fRollingTimer = 0.0f;
 		}
 	}
 
+	// Combo Attack
+	// m_fComboTimer1 (0.5) : Play Current Attack Motion
+	// m_fComboTimer2 (1.5) : Can Combo Attack
 	if (m_bIsAttacking)
 	{
 		m_fComboTimer += DeltaSeconds;
-		
-		if (m_uCombo == 0)
+
+		if (m_fComboTimer > 0.5f)
 		{
-			if (m_fComboTimer > 0.5f)
-			{
-				m_bPlayAttackMotion = false;
-				m_bCanComboAttack = true;
-			}
-			if (m_fComboTimer > 1.5f)
-			{
-				m_bIsAttacking = false;
-				m_bCanComboAttack = false;
-				m_fComboTimer = 0.0f;
-			}
+			m_bPlayAttackMotion = false;
+			m_bCanComboAttack = true;
 		}
-		else if (m_uCombo == 1)
+		if (m_fComboTimer > 1.5f)
 		{
-			if (m_fComboTimer > 0.5f)
-			{
-				m_bPlayAttackMotion = false;
-				m_bCanComboAttack = true;
-			}
-			if (m_fComboTimer > 1.2f)
-			{
-				m_bIsAttacking = false;
-				m_bCanComboAttack = false;
-				m_fComboTimer = 0.0f;
-			}
-		}
-		else if (m_uCombo == 2)
-		{
-			if (m_fComboTimer > 0.5f)
-			{
-				m_bPlayAttackMotion = false;
-				m_bCanComboAttack = true;
-			}
-			if (m_fComboTimer > 1.8f)
-			{
-				m_bIsAttacking = false;
-				m_bCanComboAttack = false;
-				m_fComboTimer = 0.0f;
-			}
-		}
-		else if (m_uCombo == 3)
-		{
-			if (m_fComboTimer > 0.5f)
-			{
-				m_bPlayAttackMotion = false;
-				m_bCanComboAttack = true;
-			}
-			if (m_fComboTimer > 1.6f)
-			{
-				m_bIsAttacking = false;
-				m_bCanComboAttack = false;
-				m_fComboTimer = 0.0f;
-			}
+			m_bIsAttacking = false;
+			m_bCanComboAttack = false;
+			m_fComboTimer = 0.0f;
 		}
 	}
 }
@@ -329,7 +296,7 @@ void AProjectWCharacter::SetupPlayerInputComponent(class UInputComponent* Player
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
-	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AProjectWCharacter::Fire);
+	PlayerInputComponent->BindAction("Attack", IE_Pressed, this, &AProjectWCharacter::Attack);
 
 	PlayerInputComponent->BindAction("Roll", IE_Pressed, this, &AProjectWCharacter::Roll);
 
@@ -342,14 +309,15 @@ void AProjectWCharacter::SetupPlayerInputComponent(class UInputComponent* Player
 	PlayerInputComponent->BindTouch(IE_Released, this, &AProjectWCharacter::TouchStopped);
 }
 
+// Character Move
+// Can't move while rolling or attacking 
+
 void AProjectWCharacter::MoveRight(float Value)
 {
-	/*UpdateChar();*/
-
 	// Apply the input to the character motion
 	if (Value != 0.0f)
 	{
-		if (CharacterState != ECharacterState::Roll)
+		if (CharacterState != ECharacterState::Roll && CharacterState != ECharacterState::Attack)
 		{
 			AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value);
 		}
@@ -360,18 +328,18 @@ void AProjectWCharacter::MoveUp(float Value)
 {
 	if (Value != 0.0f)
 	{
-		if (CharacterState != ECharacterState::Roll)
+		if (CharacterState != ECharacterState::Roll && CharacterState != ECharacterState::Attack)
 		{
 			AddMovementInput(FVector(0.0f, 1.0f, 0.0f), Value);
 		}
 	}
 }
 
-void AProjectWCharacter::Fire()
+void AProjectWCharacter::Attack()
 {
 	if (!m_bPlayAttackMotion)
 	{
-		if (!m_bIsRolling)
+		if (CharacterState != ECharacterState::Roll && CharacterState != ECharacterState::Jump && CharacterState != ECharacterState::Fall)
 		{
 			m_bIsAttacking = true;
 			m_fComboTimer = 0;
@@ -390,6 +358,37 @@ void AProjectWCharacter::Fire()
 				m_uCombo = 0;
 			}
 
+			// Move Location
+			FVector currentLocation = GetActorLocation();
+			FVector forward = GetActorForwardVector();
+
+			if (m_uCombo == 1)
+			{
+				if (forward.X < 0) 
+				{
+					currentLocation.X -= 50.0f;
+				}
+				else
+				{
+					currentLocation.X += 50.0f;
+				}
+
+				SetActorLocation(currentLocation);
+			}
+			else if (m_uCombo == 2)
+			{
+				if (forward.X < 0) 
+				{
+					currentLocation.X += 30.0f;
+				}
+				else 
+				{
+					currentLocation.X -= 30.0f;
+				}
+
+				SetActorLocation(currentLocation);
+			}
+
 			/*
 			SpawnTransform = MuzzlePoint->GetComponentTransform();
 
@@ -403,10 +402,9 @@ void AProjectWCharacter::Fire()
 	}
 }
 
-void AProjectWCharacter::StopFiring()
-{
-	m_bIsAttacking = false;
-}
+// Roll
+// Only can roll while moving
+// Comment part is for y axis rolling
 
 void AProjectWCharacter::Roll()
 {
@@ -427,7 +425,7 @@ void AProjectWCharacter::Roll()
 
 			if (!GetCharacterMovement()->IsFalling())
 			{
-				FVector fvLaunchVelocity = FVector(1.0f, 1.0f, 300.0f);
+				FVector fvLaunchVelocity = FVector(1.0f, 1.0f, 600.0f);
 				
 				if (Controller)
 				{
@@ -438,7 +436,7 @@ void AProjectWCharacter::Roll()
 						{
 							if (PlayerController->IsInputKeyDown(EKeys::D))
 							{
-								fvLaunchVelocity.X *= 1000.0f;
+								fvLaunchVelocity.X *= 1500.0f;
 
 								/*
 								if (PlayerController->IsInputKeyDown(EKeys::W))
@@ -462,7 +460,7 @@ void AProjectWCharacter::Roll()
 							}
 							else if (PlayerController->IsInputKeyDown(EKeys::A))
 							{
-								fvLaunchVelocity.X *= -1000.0f;
+								fvLaunchVelocity.X *= -1500.0f;
 
 								/*
 								if (PlayerController->IsInputKeyDown(EKeys::W))
@@ -505,7 +503,7 @@ void AProjectWCharacter::Roll()
 
 void AProjectWCharacter::Jump()
 {
-	if (!m_bIsRolling)
+	if (CharacterState != ECharacterState::Roll && CharacterState != ECharacterState::Attack)
 	{
 		ACharacter::Jump();
 	}
@@ -514,7 +512,7 @@ void AProjectWCharacter::Jump()
 void AProjectWCharacter::ChangeWeapon()
 {
 	m_uCurrentWeapon += 1;
-	if (m_uCurrentWeapon == 2)
+	if (m_uCurrentWeapon > 1)
 	{
 		m_uCurrentWeapon = 0;
 	}
