@@ -14,7 +14,7 @@ AStarWitchRotatingVolt::AStarWitchRotatingVolt()
 	m_isRotating = true;
 	m_isShooting = false;
 	m_isLockingOn = false;
-
+	Speed = 1000.0f;
 }
 
 // Called when the game starts or when spawned
@@ -27,7 +27,7 @@ void AStarWitchRotatingVolt::BeginPlay()
 
 	Dimensions = FVector(100, 0, 0);
 	AxisVector = FVector(0,1,0);
-	multiplier = 150.0f;
+	multiplier = 500.0f;
 }
 
 // Called every frame
@@ -57,10 +57,6 @@ void AStarWitchRotatingVolt::DestroyMyself()
 void AStarWitchRotatingVolt::Rotate(float DeltaTime)
 {
 
-	if (starWitch[0])
-	{
-		PrintString(TEXT("Rotating"));
-	}
 	//PrintString(TEXT("Rotating"));
 	FVector NewLocation = starWitch[0]->GetActorLocation();
 	AngleAxis += DeltaTime * multiplier;
@@ -82,13 +78,14 @@ void AStarWitchRotatingVolt::Shoot(float DeltaTime)
 	{
 		PlayerLocation = Player->GetActorLocation();
 		PlayerDirection = (PlayerLocation - GetActorLocation());
+		PlayerDirection.Normalize();
 		m_isLockingOn = true;
 	}
 
 	FVector NewLocation = GetActorLocation();
-	NewLocation.X += PlayerDirection.X * 5.0f * DeltaTime;
-	NewLocation.Y += PlayerDirection.Y * 5.0f * DeltaTime;
-	NewLocation.Z += PlayerDirection.Z * 5.0f * DeltaTime;
+	NewLocation.X += PlayerDirection.X * Speed * DeltaTime;
+	NewLocation.Y += PlayerDirection.Y * Speed * DeltaTime;
+	NewLocation.Z += PlayerDirection.Z * Speed * DeltaTime;
 
 	SetActorLocation(NewLocation);
 

@@ -35,7 +35,13 @@ public:
 	UPROPERTY(EditAnywhere, Category = Movement)
 		float AngleAxis;
 
+	UPROPERTY(EditAnywhere, Category = Movement)
+		float Speed;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	    bool m_isRotating;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	    bool m_isShooting;
 
 private:
 	void DestroyMyself();
@@ -48,7 +54,5 @@ private:
 	FVector PlayerLocation;
 	FVector PlayerDirection;
 
-	bool m_isRotating;
-	bool m_isShooting;
 	bool m_isLockingOn;
 };

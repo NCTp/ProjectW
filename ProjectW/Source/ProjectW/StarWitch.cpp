@@ -10,6 +10,7 @@
 #include "StarWitchBall.h"
 #include "StarWitchLaser.h"
 #include "StarWitchMark.h"
+#include "StarWitchRotatingVolt.h"
 
 #include <random>
 
@@ -356,49 +357,22 @@ void AStarWitch::Magic01()
 {
 	if (MagicCounter01 == 0)
 	{
-		MagicCounter01 = 4;
+		MagicCounter01 = 2;
 		m_isCastingMagic01 = false;
 		m_isLockedOn = false;
 		GetWorldTimerManager().ClearTimer(MagicTimerHandle_1);
 		SetState(EActorState::StarWitchState_Idle);
 	}
-	else if (MagicCounter01 % 2 == 0) // Â¦¼ö
+	else if (MagicCounter01 != 0) 
 	{
-		if (m_isRight)
-		{
-			AStarWitch::ShootBall(0.0f);
-			AStarWitch::ShootBall(15.0f);
-			AStarWitch::ShootBall(30.0f);
-			AStarWitch::ShootBall(45.0f);
-		}
-		else
-		{
-			AStarWitch::ShootBall(180.0f);
-			AStarWitch::ShootBall(165.0f);
-			AStarWitch::ShootBall(150.0f);
-			AStarWitch::ShootBall(135.0f);
-		}
-		MagicCounter01--;
+		AStarWitchRotatingVolt* volt_1 = nullptr;
+		volt_1 = GetWorld()->SpawnActor<AStarWitchRotatingVolt>(Projectile_Volt,
+			FVector(GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z), FRotator(0, 0, 0), spawnInfo);
 
-	}
-	else if (MagicCounter01 % 2 == 1) // È¦¼ö
-	{
-		if (m_isRight)
-		{
-			AStarWitch::ShootBall(15.0f);
-			AStarWitch::ShootBall(30.0f);
-			AStarWitch::ShootBall(45.0f);
-			AStarWitch::ShootBall(60.0f);
-		}
-		else
-		{
-			AStarWitch::ShootBall(165.0f);
-			AStarWitch::ShootBall(150.0f);
-			AStarWitch::ShootBall(135.0f);
-			AStarWitch::ShootBall(120.0f);
-		}
 		MagicCounter01--;
+		PrintString(TEXT("M1"));
 	}
+
 }
 
 void AStarWitch::StateMagic01() 
@@ -407,7 +381,7 @@ void AStarWitch::StateMagic01()
 	{
 		m_isCastingMagic01 = true;
 		m_isLockedOn = true;
-		GetWorldTimerManager().SetTimer(MagicTimerHandle_1, this, &AStarWitch::Magic01, 0.5f, true, 0.5f);
+		GetWorldTimerManager().SetTimer(MagicTimerHandle_1, this, &AStarWitch::Magic01, 0.4f, true, 0.5f);
 	}
 
 }

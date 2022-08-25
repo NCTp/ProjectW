@@ -11,6 +11,7 @@ class AStarWitchBall;
 class AStarWitchLaser;
 class AStarWitchTeleportEffects;
 class AStarWitchMark;
+class AStarWitchRotatingVolt;
 
 
 UENUM()
@@ -43,7 +44,7 @@ protected:
 	virtual void BeginPlay() override;
 
 	int32 TeleportCounter = 3;
-	int32 MagicCounter01 = 4;
+	int32 MagicCounter01 = 2;
 	int32 MagicCounter02 = 3;
 	
 public:	
@@ -123,11 +124,15 @@ public:
 	////////// Objects ///////////
 	APawn* Player; // Player
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Projectile)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Projectiles)
 	TSubclassOf<AStarWitchLaser> Projectile_Laser;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Projectile)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Projectiles)
 	TSubclassOf<AStarWitchBall> Projectile_Ball;
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Projectiles)
+	TSubclassOf<AStarWitchRotatingVolt> Projectile_Volt;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Effects)
 	TSubclassOf<AStarWitchTeleportEffects> Effects_Teleport;
@@ -140,6 +145,8 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Effects)
 	TSubclassOf<AStarWitchMark> Mark;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Projectiles)
 
 	// Timer Practice
 	FTimerHandle TeleportTimerHandle;
