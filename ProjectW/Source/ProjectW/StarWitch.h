@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "PaperCharacter.h"
+#include "Components/CapsuleComponent.h"
 #include "StarWitch.generated.h"
 
 class AStarWitchBall;
@@ -34,6 +35,9 @@ class PROJECTW_API AStarWitch : public APawn
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animation, meta = (AllowPrivateAccess = "true"))
 	class UPaperFlipbookComponent* FlipbookComponent;
+
+	UPROPERTY(EditAnywhere)
+	class UCapsuleComponent* Capsule;
 	
 public:	
 	// Sets default values for this actor's properties

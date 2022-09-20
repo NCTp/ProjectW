@@ -5,7 +5,6 @@
 #include "AIController.h"
 #include "Kismet/GameplayStatics.h"
 #include "PaperFlipbookComponent.h"
-#include "Components/CapsuleComponent.h"
 #include "StarWitchTeleportEffects.h"
 #include "StarWitchBall.h"
 #include "StarWitchLaser.h"
@@ -20,10 +19,14 @@ AStarWitch::AStarWitch()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	
+	Capsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CapsuleCollider"));
+	RootComponent = Capsule;
+	Capsule->SetCapsuleHalfHeight(96.0f);
+	Capsule->SetCapsuleRadius(40.0f);
 	FlipbookComponent = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("FlipBook"));
 	FlipbookComponent->GetAbsoluteRotationPropertyName();
-	//FlipbookComponent->AttachTo(RootComponent);
+	FlipbookComponent->AttachTo(RootComponent);
 
 	health = 60.0f;
 	m_isRight = true;
@@ -72,13 +75,13 @@ void AStarWitch::Tick(float DeltaTime)
 	}
 
 	// Phase 
-	if (health >= 70 && health <= 100)
+	if (health >= 70 && health <= 100 && m_startFighting)
 	{
 		m_isPhaseOne = true;
 		m_isPhaseTwo = false;
 		m_isPhaseThree = false;
 	}
-	else if (health >= 30 && health < 70)
+	else if (health >= 30 && health < 70 && m_startFighting)
 	{
 		m_isPhaseOne = false;
 		m_isPhaseTwo = true;
@@ -89,7 +92,7 @@ void AStarWitch::Tick(float DeltaTime)
 			GetWorldTimerManager().SetTimer(MarkTimerHandle, this, &AStarWitch::PhaseTwoPattern, 6.0f, true, 0.5f);
 		}
 	}
-	else if (health > 0 && health < 30)
+	else if (health > 0 && health < 30 && m_startFighting)
 	{
 		m_isPhaseOne = false;
 		m_isPhaseTwo = false;
