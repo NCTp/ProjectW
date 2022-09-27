@@ -20,7 +20,6 @@ private:
 	UPROPERTY(EditAnywhere)
 	bool m_bisFireActivated;
 
-
 public:	
 	// Sets default values for this actor's properties
 	AFiretrap();
