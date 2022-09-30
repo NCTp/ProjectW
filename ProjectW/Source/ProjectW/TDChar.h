@@ -12,7 +12,8 @@ enum class ETDCharStates : uint8
 	TDCharState_Default UMETA(DisplayName = "TDCharState_Default"),
 	TDCharState_Idle    UMETA(DisplayName = "TDCharState_Idle"),
 	TDCharState_Run     UMETA(DisplayName = "TDCharState_Run"),
-	TDCharState_Dash    UMETA(DisplayNeme = "TDCharState_Dash"),
+	TDCharState_Dash    UMETA(DisplayName = "TDCharState_Dash"),
+	TDCharState_MeleeAttack UMETA(DisplayName = "TDCharState_MeleeAttack"),
 	TDCharState_Dead    UMETA(DisplayName = "TDCharState_Dead")
 };
 
@@ -52,14 +53,26 @@ class PROJECTW_API ATDChar : public APaperCharacter
 	class UPaperFlipbook* Back_TDRunAnim;
 
 	UPROPERTY(EditAnywhere)
-	class UPaperFlipbook* TDDashAnim;
+	class UPaperFlipbook* TDDashStartAnim;
+
+	UPROPERTY(EditAnywhere)
+	class UPaperFlipbook* TDDashEndAnim;
 
 	UPROPERTY(EditAnywhere)
 	class UPaperFlipbook* TDMeleeAttackAnim;
 
 	UPROPERTY(EditAnywhere)
 	class UPaperFlipbook* TDRangeAttackAnim;
+
+	UPROPERTY(EditAnywherE)
+	int m_Health;
+
+	UPROPERTY(EditAnywhere)
+	float m_Walkspeed;
 	
+
+	UFUNCTION(BlueprintCallable)
+	void GetDamage();
 
 protected:
 	// Overrided basic functions
@@ -73,6 +86,9 @@ protected:
 
 	void Dash();
 
+	void MeleeAttack();
+
+
 private:
 
 	UPROPERTY(VisibleAnywhere)
@@ -84,13 +100,21 @@ private:
 	// Flip Sprites
 	void Flip();
 
+	// Saving Movement Value (Direction -> Left or Right)
+	float RightValue;
+
+
 	// boolean values for checking status
+	bool m_bisCanMove;
 	bool m_bisDefault;
 	bool m_bisFront;
 	bool m_bisSide;
 	bool m_bisBack;
 	bool m_bisRight;
-
+	bool m_bisDashStart;
+	bool m_bisDashEnd;
+	bool m_bisFirstAttack;
+	bool m_bisLastAttack;
 
 	
 
