@@ -36,6 +36,9 @@ void ATDChar::BeginPlay()
 	m_bisRight = true;
 	m_bisDashStart = false;
 	m_bisDashEnd = false;
+	m_bisAttacking = false;
+	m_bisFirstAttack = false;
+	m_bisLastAttack = false;
 
 	
 }
@@ -47,12 +50,12 @@ void ATDChar::Tick(float DeltaTime)
 	UpdateAnimation();
 
 	// Flip sprites
-	if (RightValue > 0 && !m_bisRight)
+	if (RightValue > 0 && !m_bisRight && !m_bisAttacking)
 		Flip();
-	else if (RightValue < 0 && m_bisRight)
+	else if (RightValue < 0 && m_bisRight && !m_bisAttacking)
 		Flip();
 
-	if (m_bisDashStart && !m_bisDashEnd)
+	if (m_bisDashStart && !m_bisDashEnd && !m_bisAttacking)
 	{
 		//PrintString(TEXT("Dashing"));
 		FVector myVelocity = this->GetVelocity() * m_Walkspeed;
@@ -68,6 +71,7 @@ void ATDChar::SetupPlayerInputComponent(class UInputComponent* PlayerInputCompon
 	PlayerInputComponent->BindAxis("MoveRight", this, &ATDChar::MoveRight);
 	PlayerInputComponent->BindAxis("MoveUp", this, &ATDChar::MoveUp);
 	PlayerInputComponent->BindAction("Roll", IE_Pressed, this, &ATDChar::Dash);
+	PlayerInputComponent->BindAction("Attack", IE_Pressed, this, &ATDChar::MeleeAttack);
 
 }
 /*
@@ -77,7 +81,8 @@ void ATDChar::SetupPlayerInputComponent(class UInputComponent* PlayerInputCompon
 void ATDChar::MoveRight(float Value)
 {
 	RightValue = Value;
-	if (m_bisCanMove)
+	
+	if (m_bisCanMove && !m_bisAttacking)
 	{
 		FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::X);
 		AddMovementInput(Direction, Value);
@@ -92,7 +97,7 @@ void ATDChar::MoveRight(float Value)
 			m_bisSide = true;
 
 		}
-		if (Value < 0 && m_bisDefault)
+		else if (Value < 0 && m_bisDefault)
 		{
 			SetState(ETDCharStates::TDCharState_Run);
 			m_bisDefault = false;
@@ -116,7 +121,7 @@ void ATDChar::MoveRight(float Value)
 */
 void ATDChar::MoveUp(float Value)
 {
-	if (m_bisCanMove)
+	if (m_bisCanMove && !m_bisAttacking)
 	{
 		if (Value > 0 && m_bisDefault && !m_bisFront)
 		{
@@ -163,13 +168,11 @@ void ATDChar::MoveUp(float Value)
 */
 void ATDChar::Dash()
 {
-
-	if (!m_bisDashStart && !m_bisDashEnd)
+	if (!m_bisDashStart && !m_bisDashEnd && !m_bisAttacking)
 	{
 		
 		m_bisDashStart = true;
 		SetState(ETDCharStates::TDCharState_Dash);
-
 		FTimerHandle DashWaitHandle;
 		float WaitTime = 0.3f;
 		GetWorld()->GetTimerManager().SetTimer(DashWaitHandle, FTimerDelegate::CreateLambda([&]()
@@ -177,7 +180,7 @@ void ATDChar::Dash()
 				m_bisCanMove = false;
 				m_bisDashStart = false;
 				m_bisDashEnd = true;
-				PrintString(TEXT("First Waiting"));
+				//PrintString(TEXT("First Waiting"));
 				FTimerHandle IdleWaitHandle;
 				float WaitTime_2 = 0.2f;
 				GetWorld()->GetTimerManager().SetTimer(IdleWaitHandle, FTimerDelegate::CreateLambda([&]()
@@ -186,7 +189,7 @@ void ATDChar::Dash()
 						m_bisCanMove = true;
 						m_bisDashStart = false;
 						m_bisDashEnd = false;
-						PrintString("Second Waiting");
+						//PrintString("Second Waiting");
 
 					}), WaitTime_2, false);
 			}), WaitTime, false); 
@@ -200,7 +203,31 @@ void ATDChar::Dash()
 */
 void ATDChar::MeleeAttack()
 {
+	SetState(ETDCharStates::TDCharState_MeleeAttack);
+	m_bisAttacking = true;
+	if (!m_bisFirstAttack && !m_bisLastAttack)
+	{
+		m_bisFirstAttack = true;
+		m_bisLastAttack = false;
+		// 0.7초 후에 공격 초기화
+		FTimerHandle AttackWaitHandle;
+		float AttackWaitTime = 0.7f;
+		GetWorld()->GetTimerManager().SetTimer(AttackWaitHandle, FTimerDelegate::CreateLambda([&]()
+			{
+				m_bisFirstAttack = false;
+				m_bisLastAttack = false;
+				m_bisAttacking = false;
+				SetState(ETDCharStates::TDCharState_Run);
+				PrintString(TEXT("Attack End1"));
 
+			}), AttackWaitTime, false);
+	}
+	else if (m_bisFirstAttack && !m_bisLastAttack)
+	{
+		m_bisFirstAttack = false;
+		m_bisLastAttack = true;
+
+	}
 }
 /*
 *  Get Damage Function
@@ -216,7 +243,7 @@ void ATDChar::GetDamage()
 void ATDChar::UpdateAnimation()
 {
 	UPaperFlipbook* anim = nullptr;
-
+	
 	switch (TDCharState)
 	{
 
@@ -241,6 +268,12 @@ void ATDChar::UpdateAnimation()
 			anim = TDDashStartAnim;
 		else if (!m_bisDashStart && m_bisDashEnd)
 			anim = TDDashEndAnim;
+		break;
+	case (ETDCharStates::TDCharState_MeleeAttack):
+		if (m_bisFirstAttack && !m_bisLastAttack)
+			anim = Front_TDMeleeAttackAnim_1;
+		else if (!m_bisFirstAttack && m_bisLastAttack)
+			anim = Front_TDMeleeAttackAnim_2;
 		break;
 
 	}

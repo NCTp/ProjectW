@@ -59,10 +59,13 @@ class PROJECTW_API ATDChar : public APaperCharacter
 	class UPaperFlipbook* TDDashEndAnim;
 
 	UPROPERTY(EditAnywhere)
-	class UPaperFlipbook* TDMeleeAttackAnim;
+	class UPaperFlipbook* Front_TDMeleeAttackAnim_1;
 
 	UPROPERTY(EditAnywhere)
-	class UPaperFlipbook* TDRangeAttackAnim;
+	class UPaperFlipbook* Front_TDMeleeAttackAnim_2;
+
+	UPROPERTY(EditAnywhere)
+	class UPaperFlipbook* Front_TDRangeAttackAnim;
 
 	UPROPERTY(EditAnywherE)
 	int m_Health;
@@ -113,6 +116,7 @@ private:
 	bool m_bisRight;
 	bool m_bisDashStart;
 	bool m_bisDashEnd;
+	bool m_bisAttacking;
 	bool m_bisFirstAttack;
 	bool m_bisLastAttack;
 
