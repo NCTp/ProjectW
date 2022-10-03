@@ -14,6 +14,7 @@ enum class ETDCharStates : uint8
 	TDCharState_Run     UMETA(DisplayName = "TDCharState_Run"),
 	TDCharState_Dash    UMETA(DisplayName = "TDCharState_Dash"),
 	TDCharState_MeleeAttack UMETA(DisplayName = "TDCharState_MeleeAttack"),
+	TDCharState_RangeAttack UMETA(DisplayName = "TDCharState_RangeAttack"),
 	TDCharState_Dead    UMETA(DisplayName = "TDCharState_Dead")
 };
 
@@ -33,6 +34,7 @@ class PROJECTW_API ATDChar : public APaperCharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* CameraBoom;
 
+	/////////////////////Animations////////////////////
 
 	UPROPERTY(EditAnywhere)
 	class UPaperFlipbook* Front_TDIdleAnim;
@@ -65,10 +67,23 @@ class PROJECTW_API ATDChar : public APaperCharacter
 	class UPaperFlipbook* Front_TDMeleeAttackAnim_2;
 
 	UPROPERTY(EditAnywhere)
+	class UPaperFlipbook* Back_TDMeleeAttackAnim_1;
+
+	UPROPERTY(EditAnywhere)
+	class UPaperFlipbook* Back_TDMeleeAttackAnim_2;
+
+	UPROPERTY(EditAnywhere)
 	class UPaperFlipbook* Front_TDRangeAttackAnim;
 
-	UPROPERTY(EditAnywherE)
-	int m_Health;
+	UPROPERTY(EditAnywhere)
+	class UPaperFlipbook* Back_TDRangeAttackAnim;
+
+	UPROPERTY(EditAnywhere)
+	int m_HP;
+
+	UPROPERTY(EditAnywhere)
+	int m_MP;
+	
 
 	UPROPERTY(EditAnywhere)
 	float m_Walkspeed;
@@ -91,6 +106,8 @@ protected:
 
 	void MeleeAttack();
 
+	void RangeAttack();
+
 
 private:
 
@@ -105,7 +122,7 @@ private:
 
 	// Saving Movement Value (Direction -> Left or Right)
 	float RightValue;
-
+	float UpValue;
 
 	// boolean values for checking status
 	bool m_bisCanMove;

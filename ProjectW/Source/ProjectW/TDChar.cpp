@@ -28,6 +28,7 @@ void ATDChar::BeginPlay()
 
 	// Privates Member variables
 	RightValue = 0.0f;
+	UpValue = 0.0f;
 	m_bisCanMove = true;
 	m_bisDefault = true;
 	m_bisFront = false;
@@ -54,6 +55,7 @@ void ATDChar::Tick(float DeltaTime)
 		Flip();
 	else if (RightValue < 0 && m_bisRight && !m_bisAttacking)
 		Flip();
+
 
 	if (m_bisDashStart && !m_bisDashEnd && !m_bisAttacking)
 	{
@@ -121,8 +123,11 @@ void ATDChar::MoveRight(float Value)
 */
 void ATDChar::MoveUp(float Value)
 {
+	UpValue = Value;
 	if (m_bisCanMove && !m_bisAttacking)
 	{
+		SetState(ETDCharStates::TDCharState_Run);
+		
 		if (Value > 0 && m_bisDefault && !m_bisFront)
 		{
 			SetState(ETDCharStates::TDCharState_Run);
@@ -131,7 +136,7 @@ void ATDChar::MoveUp(float Value)
 			m_bisFront = true;
 			m_bisBack = false;
 			//m_bisSide = false;
-			//PrintString(TEXT("Front"));
+			PrintString(TEXT("Front"));
 		}
 		else if (Value < 0 && m_bisDefault && !m_bisBack)
 		{
@@ -141,9 +146,10 @@ void ATDChar::MoveUp(float Value)
 			m_bisFront = false;
 			m_bisBack = true;
 			//m_bisSide = false;
-			//PrintString(TEXT("Back"));
+			PrintString(TEXT("Back"));
 		}
-		else if (Value == 0 && !m_bisSide)
+		
+		if (Value == 0 && !m_bisSide)
 		{
 			SetState(ETDCharStates::TDCharState_Idle);
 
@@ -154,7 +160,7 @@ void ATDChar::MoveUp(float Value)
 			//PrintString(TEXT("No Movement"));
 		}
 		// Find out which way is "right" and record that the player wants to move that way.
-
+		
 		FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::Y);
 		AddMovementInput(Direction, Value);
 	}
@@ -168,9 +174,9 @@ void ATDChar::MoveUp(float Value)
 */
 void ATDChar::Dash()
 {
-	if (!m_bisDashStart && !m_bisDashEnd && !m_bisAttacking)
+	if (!m_bisDashStart && !m_bisDashEnd && !m_bisAttacking && m_MP >= 30)
 	{
-		
+		m_MP -= 30;
 		m_bisDashStart = true;
 		SetState(ETDCharStates::TDCharState_Dash);
 		FTimerHandle DashWaitHandle;
@@ -207,6 +213,7 @@ void ATDChar::MeleeAttack()
 	m_bisAttacking = true;
 	if (!m_bisFirstAttack && !m_bisLastAttack)
 	{
+		
 		m_bisFirstAttack = true;
 		m_bisLastAttack = false;
 		// 0.7초 후에 공격 초기화
@@ -229,6 +236,10 @@ void ATDChar::MeleeAttack()
 
 	}
 }
+void ATDChar::RangeAttack()
+{
+
+}
 /*
 *  Get Damage Function
 *  Decrease Health when get attacked
@@ -236,7 +247,7 @@ void ATDChar::MeleeAttack()
 */
 void ATDChar::GetDamage()
 {
-	m_Health--;
+	m_HP--;
 	PrintString(TEXT("health down"));
 }
 
@@ -270,12 +281,30 @@ void ATDChar::UpdateAnimation()
 			anim = TDDashEndAnim;
 		break;
 	case (ETDCharStates::TDCharState_MeleeAttack):
-		if (m_bisFirstAttack && !m_bisLastAttack)
-			anim = Front_TDMeleeAttackAnim_1;
-		else if (!m_bisFirstAttack && m_bisLastAttack)
-			anim = Front_TDMeleeAttackAnim_2;
-		break;
-
+		if (m_bisFront || m_bisDefault)
+		{
+			if (m_bisFirstAttack && !m_bisLastAttack)
+				anim = Front_TDMeleeAttackAnim_1;
+			else if (!m_bisFirstAttack && m_bisLastAttack)
+				anim = Front_TDMeleeAttackAnim_2;
+			break;
+		}
+		else if (m_bisBack)
+		{
+			if (m_bisFirstAttack && !m_bisLastAttack)
+				anim = Back_TDMeleeAttackAnim_1;
+			else if (!m_bisFirstAttack && m_bisLastAttack)
+				anim = Back_TDMeleeAttackAnim_2;
+			break;
+		}
+		else if (m_bisSide)
+		{
+			if (m_bisFirstAttack && !m_bisLastAttack)
+				anim = Back_TDMeleeAttackAnim_1;
+			else if (!m_bisFirstAttack && m_bisLastAttack)
+				anim = Back_TDMeleeAttackAnim_2;
+			break;
+		}
 	}
 
 	GetSprite()->SetFlipbook(anim);
