@@ -14,7 +14,7 @@
 
 ATDChar::ATDChar()
 {
-	PlayerController = CreateDefaultSubobject<APlayerController>(TEXT("Player Movement"));
+	//PlayerController = CreateDefaultSubobject<APlayerController>(TEXT("Player Movement"));
 
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = true;
@@ -41,6 +41,18 @@ void ATDChar::BeginPlay()
 	m_bisAttacking = false;
 	m_bisFirstAttack = false;
 	m_bisLastAttack = false;
+	m_bisAttackFront = true;
+	m_bisAttackBack = false;
+	m_bisAttackSide = false;
+
+	PlayerController = Cast<APlayerController>(GetController());
+
+	if (PlayerController)
+	{
+		PlayerController->bShowMouseCursor = true;
+		PlayerController->bEnableClickEvents = true;
+		PlayerController->bEnableMouseOverEvents = true;
+	}
 
 	
 }
@@ -211,6 +223,41 @@ void ATDChar::Dash()
 */
 void ATDChar::MeleeAttack()
 {
+	// Check Mouse Position at Game World
+	FHitResult TraceHitResult;
+
+	PlayerController->GetHitResultUnderCursor(ECC_Visibility, true, TraceHitResult);
+	FVector MouseWorldLocation = TraceHitResult.Location;
+
+
+	FVector AttackDirection = MouseWorldLocation - GetActorLocation();
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%f, %f"), AttackDirection.X, AttackDirection.Y));
+
+
+
+	// Check Mouse Position at Viewport (not in Game World)
+	PlayerController->GetMousePosition(m_MouseXValue, m_MouseYValue);
+	// Check Viewport Size and Center
+	FVector2D ViewportSize = FVector2D(GEngine->GameViewport->Viewport->GetSizeXY());
+	const FVector2D  ViewportCenter = FVector2D(ViewportSize.X / 2, ViewportSize.Y / 2);
+
+	// Check Up/Down due to Mouse Position
+	if (AttackDirection.Y > 0)
+	{
+		//PrintString("Down");
+		m_bisAttackFront = true;
+		m_bisAttackBack = false;
+	}
+	else
+	{
+		m_bisAttackFront = false;
+		m_bisAttackBack = true;
+		//PrintString("Up");
+	}
+
+	//PlayerController->GetMouseCursor();
+	
+	
 	SetState(ETDCharStates::TDCharState_MeleeAttack);
 	m_bisAttacking = true;
 	if (!m_bisFirstAttack && !m_bisLastAttack)
@@ -227,7 +274,7 @@ void ATDChar::MeleeAttack()
 				m_bisLastAttack = false;
 				m_bisAttacking = false;
 				SetState(ETDCharStates::TDCharState_Run);
-				PrintString(TEXT("Attack End1"));
+				//PrintString(TEXT("Attack End1"));
 
 			}), AttackWaitTime, false);
 	}
@@ -252,7 +299,46 @@ void ATDChar::GetDamage()
 	m_HP--;
 	PrintString(TEXT("health down"));
 }
+/*
+*  Get HP Function
+*  Return HP
+*  We will call this function in blueprint editor.
+*/
+float ATDChar::GetHP()
+{
+	return m_HP;
+}
+/*
+*  Get MP Function
+*  Return MP
+*  We will call this function in blueprint editor.
+*/
+float ATDChar::GetMP()
+{
+	return m_MP;
+}
+/*
+*  Set HP Function
+*  Set HP
+*  We will call this function in blueprint editor.
+*/
+void ATDChar::SetHP(float HP)
+{
+}
+/*
+*  Set Mp Function
+*  Set MP
+*  We will call this function in blueprint editor.
+*/
+void ATDChar::SetMP(float MP)
+{
+}
 
+/*
+*  UpdateAnimation
+*  Update Animation Every frame
+*  
+*/
 void ATDChar::UpdateAnimation()
 {
 	UPaperFlipbook* anim = nullptr;
@@ -283,7 +369,7 @@ void ATDChar::UpdateAnimation()
 			anim = TDDashEndAnim;
 		break;
 	case (ETDCharStates::TDCharState_MeleeAttack):
-		if (m_bisFront || m_bisDefault)
+		if (m_bisAttackFront)
 		{
 			if (m_bisFirstAttack && !m_bisLastAttack)
 				anim = Front_TDMeleeAttackAnim_1;
@@ -291,7 +377,7 @@ void ATDChar::UpdateAnimation()
 				anim = Front_TDMeleeAttackAnim_2;
 			break;
 		}
-		else if (m_bisBack)
+		else if (m_bisAttackBack)
 		{
 			if (m_bisFirstAttack && !m_bisLastAttack)
 				anim = Back_TDMeleeAttackAnim_1;
@@ -299,7 +385,7 @@ void ATDChar::UpdateAnimation()
 				anim = Back_TDMeleeAttackAnim_2;
 			break;
 		}
-		else if (m_bisSide)
+		else if (m_bisAttackSide)
 		{
 			if (m_bisFirstAttack && !m_bisLastAttack)
 				anim = Back_TDMeleeAttackAnim_1;

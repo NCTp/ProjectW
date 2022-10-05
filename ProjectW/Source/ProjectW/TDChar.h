@@ -82,10 +82,10 @@ class PROJECTW_API ATDChar : public APaperCharacter
 	class UPaperFlipbook* Back_TDRangeAttackAnim;
 
 	UPROPERTY(EditAnywhere)
-	int m_HP;
+	float m_HP;
 
 	UPROPERTY(EditAnywhere)
-	int m_MP;
+	float m_MP;
 	
 
 	UPROPERTY(EditAnywhere)
@@ -94,6 +94,18 @@ class PROJECTW_API ATDChar : public APaperCharacter
 
 	UFUNCTION(BlueprintCallable)
 	void GetDamage();
+
+	UFUNCTION(BlueprintCallable)
+	float GetHP();
+
+	UFUNCTION(BlueprintCallable)
+	float GetMP();
+
+	UFUNCTION(BlueprintCallable)
+	void SetHP(float HP);
+
+	UFUNCTION(BlueprintCallable)
+	void SetMP(float MP);
 
 protected:
 	// Overrided basic functions
@@ -142,6 +154,9 @@ private:
 	bool m_bisAttacking;
 	bool m_bisFirstAttack;
 	bool m_bisLastAttack;
+	bool m_bisAttackFront;
+	bool m_bisAttackBack;
+	bool m_bisAttackSide;
 
 	
 
