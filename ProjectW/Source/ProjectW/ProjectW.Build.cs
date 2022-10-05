@@ -9,7 +9,7 @@ public class ProjectW : ModuleRules
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore",
-			"HeadMountedDisplay", "AIModule", "NavigationSystem",  "GameplayCameras", "CableComponent", "Paper2D" });
+			"HeadMountedDisplay", "AIModule", "NavigationSystem",  "GameplayCameras", "CableComponent", "Paper2D", "UMG" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] { "CableComponent" });
 	}

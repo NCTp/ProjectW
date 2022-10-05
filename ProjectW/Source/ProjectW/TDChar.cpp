@@ -14,17 +14,18 @@
 
 ATDChar::ATDChar()
 {
+	PlayerController = CreateDefaultSubobject<APlayerController>(TEXT("Player Movement"));
+
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = true;
 	bUseControllerRotationRoll = false;
+
 }
 
 void ATDChar::BeginPlay()
 {
 	Super::BeginPlay();
 	TDCharState = ETDCharStates::TDCharState_Idle;
-
-
 
 	// Privates Member variables
 	RightValue = 0.0f;
@@ -206,6 +207,7 @@ void ATDChar::Dash()
 }
 /*
 *  Melee Attack Function
+*  현재 문제 = 마우스 방향으로 나가도록 구현을 안했음. 수정 필요
 */
 void ATDChar::MeleeAttack()
 {
@@ -308,6 +310,8 @@ void ATDChar::UpdateAnimation()
 	}
 
 	GetSprite()->SetFlipbook(anim);
+	GetSprite()->SetRelativeRotation(FRotator(0.0f, 0.0f, -90.0f));
+	
 }
 
 

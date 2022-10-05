@@ -34,6 +34,9 @@ class PROJECTW_API ATDChar : public APaperCharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* CameraBoom;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	class APlayerController* PlayerController;
+
 	/////////////////////Animations////////////////////
 
 	UPROPERTY(EditAnywhere)
@@ -123,6 +126,9 @@ private:
 	// Saving Movement Value (Direction -> Left or Right)
 	float RightValue;
 	float UpValue;
+	
+	float m_MouseXValue;
+	float m_MouseYValue;
 
 	// boolean values for checking status
 	bool m_bisCanMove;
