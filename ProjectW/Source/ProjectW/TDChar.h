@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "PaperCharacter.h"
+#include "PlayerMeleeProjectile.h"
 #include "TDChar.generated.h"
 
 UENUM()
@@ -80,6 +81,11 @@ class PROJECTW_API ATDChar : public APaperCharacter
 
 	UPROPERTY(EditAnywhere)
 	class UPaperFlipbook* Back_TDRangeAttackAnim;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<APlayerMeleeProjectile> MeleeProjectile;
+
+	FActorSpawnParameters TDCharSpawnInfo = FActorSpawnParameters();
 
 	UPROPERTY(EditAnywhere)
 	float m_HP;

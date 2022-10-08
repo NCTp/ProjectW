@@ -3,11 +3,13 @@
 
 #include "TDChar.h"
 #include "PaperFlipbookComponent.h"
+#include "Kismet/GameplayStatics.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/PlayerController.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Engine/World.h"
 #include "ProjectWGameMode.h"
 
 #define PrintString(String) GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::White, String)
@@ -229,11 +231,8 @@ void ATDChar::MeleeAttack()
 	PlayerController->GetHitResultUnderCursor(ECC_Visibility, true, TraceHitResult);
 	FVector MouseWorldLocation = TraceHitResult.Location;
 
-
 	FVector AttackDirection = MouseWorldLocation - GetActorLocation();
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%f, %f"), AttackDirection.X, AttackDirection.Y));
-
-
 
 	// Check Mouse Position at Viewport (not in Game World)
 	PlayerController->GetMousePosition(m_MouseXValue, m_MouseYValue);
@@ -244,7 +243,6 @@ void ATDChar::MeleeAttack()
 	// Check Up/Down due to Mouse Position
 	if (AttackDirection.Y > 0)
 	{
-		//PrintString("Down");
 		m_bisAttackFront = true;
 		m_bisAttackBack = false;
 	}
@@ -252,10 +250,13 @@ void ATDChar::MeleeAttack()
 	{
 		m_bisAttackFront = false;
 		m_bisAttackBack = true;
-		//PrintString("Up");
 	}
-
-	//PlayerController->GetMouseCursor();
+	// Player Attack Implements. 10/08
+	FVector SpawnLocation;
+	
+	APlayerMeleeProjectile* projectile = nullptr;
+	TDCharSpawnInfo.Owner = this;
+	projectile = GetWorld()->SpawnActor<APlayerMeleeProjectile>(MeleeProjectile, GetActorLocation(), GetActorRotation(), TDCharSpawnInfo);
 	
 	
 	SetState(ETDCharStates::TDCharState_MeleeAttack);
