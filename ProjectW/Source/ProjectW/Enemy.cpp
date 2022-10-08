@@ -3,6 +3,7 @@
 
 #include "Enemy.h"
 
+#define PrintString(String) GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::White, String)
 // Sets default values
 AEnemy::AEnemy()
 {
@@ -21,12 +22,20 @@ void AEnemy::BeginPlay()
 // Called every frame
 void AEnemy::Tick(float DeltaTime)
 {
+	
 	Super::Tick(DeltaTime);
+	if (m_health <= 0)
+	{
+		PrintString("Dead");
+		Destroy();
+	}
 
 }
 
 void AEnemy::GetDamage(int Damage)
 {
 	m_health -= Damage;
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%i"), m_health));
+	//PrintString("GetDma");
 }
 

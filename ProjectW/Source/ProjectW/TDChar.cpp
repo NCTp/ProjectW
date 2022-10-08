@@ -10,6 +10,7 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Engine/World.h"
+#include "Math/UnrealMathUtility.h"
 #include "ProjectWGameMode.h"
 
 #define PrintString(String) GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::White, String)
@@ -221,7 +222,7 @@ void ATDChar::Dash()
 }
 /*
 *  Melee Attack Function
-*  현재 문제 = 마우스 방향으로 나가도록 구현을 안했음. 수정 필요
+*  현재 문제 = 마우스 방향으로 나가도록 구현을 안했음. 수정 필요 -> 수정 완료
 */
 void ATDChar::MeleeAttack()
 {
@@ -232,35 +233,67 @@ void ATDChar::MeleeAttack()
 	FVector MouseWorldLocation = TraceHitResult.Location;
 
 	FVector AttackDirection = MouseWorldLocation - GetActorLocation();
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%f, %f"), AttackDirection.X, AttackDirection.Y));
-
+	FVector nAttackDirection = AttackDirection;
+	nAttackDirection.Normalize();
+	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%f, %f"), MouseWorldLocation.X, MouseWorldLocation.Y));
+	FVector SpawnLocation;
+	FRotator SpawnRotator;
 	// Check Mouse Position at Viewport (not in Game World)
 	PlayerController->GetMousePosition(m_MouseXValue, m_MouseYValue);
 	// Check Viewport Size and Center
 	FVector2D ViewportSize = FVector2D(GEngine->GameViewport->Viewport->GetSizeXY());
 	const FVector2D  ViewportCenter = FVector2D(ViewportSize.X / 2, ViewportSize.Y / 2);
 
-	// Check Up/Down due to Mouse Position
-	if (AttackDirection.Y > 0)
+	// Check Up/Down due to Mouse Position and Setup SpawnRotator
+	if (AttackDirection.Y > 0 && AttackDirection.X < 125 && AttackDirection.X > -125)
 	{
+		PrintString("Attack Front");
 		m_bisAttackFront = true;
 		m_bisAttackBack = false;
+		m_bisAttackSide = false;
+		SpawnRotator = FRotator(0.0f, 90.0f, 0.0f);
 	}
-	else
+	else if (AttackDirection.Y <= 0 && AttackDirection.X < 125 && AttackDirection.X > -125)
 	{
+		PrintString("Attack Back");
 		m_bisAttackFront = false;
 		m_bisAttackBack = true;
+		m_bisAttackSide = false;
+		SpawnRotator = FRotator(0.0f, -90.0f, 0.0f);
 	}
-	// Player Attack Implements. 10/08
-	FVector SpawnLocation;
-	
+	else if (AttackDirection.X >= 125 || AttackDirection.X <= -125)
+	{
+		PrintString("Attack Side");
+		m_bisAttackFront = false;
+		m_bisAttackBack = false;
+		m_bisAttackSide = true;
+		if (AttackDirection.X >= 125)
+			SpawnRotator = FRotator(0.0f, 0.0f, 0.0f);
+		else if (AttackDirection.X <= -125)
+			SpawnRotator = FRotator(0.0f, 180.0f, 0.0f);
+	}
+
+	// Player Attack Implements
 	APlayerMeleeProjectile* projectile = nullptr;
 	TDCharSpawnInfo.Owner = this;
-	projectile = GetWorld()->SpawnActor<APlayerMeleeProjectile>(MeleeProjectile, GetActorLocation(), GetActorRotation(), TDCharSpawnInfo);
-	
-	
+	if (!m_bisFirstAttack&& !m_bisLastAttack)
+	{
+		projectile = GetWorld()->SpawnActor<APlayerMeleeProjectile>(MeleeProjectile,
+			GetActorLocation() - nAttackDirection * 10, SpawnRotator,
+			TDCharSpawnInfo);
+	}
+	else if (m_bisFirstAttack && !m_bisLastAttack)
+	{
+		projectile = GetWorld()->SpawnActor<APlayerMeleeProjectile>(MeleeProjectile,
+			GetActorLocation() - nAttackDirection * 10, SpawnRotator,
+			TDCharSpawnInfo);
+	}
+	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%f"), SpawnRotator.Yaw));
+	FMath::DegreesToRadians(MouseWorldLocation.X/MouseWorldLocation.Y);
 	SetState(ETDCharStates::TDCharState_MeleeAttack);
+
 	m_bisAttacking = true;
+
 	if (!m_bisFirstAttack && !m_bisLastAttack)
 	{
 		
