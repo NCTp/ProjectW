@@ -17,6 +17,7 @@
 #include "NightWitchGhoul.h"
 #include "NightWitchLaserPortal.h"
 #include "ProjectWCharacter.h"
+#include "TDChar.h"
 
 // Sets default values
 ANightWitch::ANightWitch()
@@ -80,7 +81,7 @@ void ANightWitch::BeginPlay()
 
 	Target = UGameplayStatics::GetPlayerPawn(World, 0);
 
-	Player = Cast<AProjectWCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+	Player = Cast<ATDChar>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 
 	AIController = Cast<AAIController>(GetController());
 }
