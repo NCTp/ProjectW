@@ -110,7 +110,7 @@ protected:
 
 	class UWorld* World;
 
-	class AProjectWCharacter* Player;
+	class ATDChar* Player;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Portal")
 	TSubclassOf<ANightWitchChainPortal> Portal;
