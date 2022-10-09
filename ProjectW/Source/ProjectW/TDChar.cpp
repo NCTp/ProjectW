@@ -79,10 +79,12 @@ void ATDChar::Tick(float DeltaTime)
 		FVector myVelocity = this->GetVelocity() * m_Walkspeed;
 		FVector myPosition = this->GetActorLocation();
 		this->SetActorLocation(myPosition + myVelocity * DeltaTime);
+		/*
 		AActor* dashEffect = nullptr;
 		dashEffect = GetWorld()->SpawnActor<AActor>(DashEffect,
 			GetActorLocation(), GetActorRotation(),
 			TDCharSpawnInfo);
+			*/
 
 	}
 	
@@ -197,6 +199,11 @@ void ATDChar::Dash()
 {
 	if (!m_bisDashStart && !m_bisDashEnd && !m_bisAttacking && m_MP >= 0.0f)
 	{
+		AActor* dashEffect = nullptr;
+		dashEffect = GetWorld()->SpawnActor<AActor>(DashEffect,
+			GetActorLocation(), GetActorRotation(),
+			TDCharSpawnInfo);
+		
 		if (m_MP >= 30.0f)
 			m_MP -= 30.0f;
 		else if (m_MP < 30.0f)

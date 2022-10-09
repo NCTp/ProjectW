@@ -139,7 +139,7 @@ protected:
 
 	void RangeAttack();
 
-
+	
 private:
 
 	UPROPERTY(VisibleAnywhere)
