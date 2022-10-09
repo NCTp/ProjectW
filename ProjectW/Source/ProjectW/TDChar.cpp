@@ -79,6 +79,11 @@ void ATDChar::Tick(float DeltaTime)
 		FVector myVelocity = this->GetVelocity() * m_Walkspeed;
 		FVector myPosition = this->GetActorLocation();
 		this->SetActorLocation(myPosition + myVelocity * DeltaTime);
+		AActor* dashEffect = nullptr;
+		dashEffect = GetWorld()->SpawnActor<AActor>(DashEffect,
+			GetActorLocation(), GetActorRotation(),
+			TDCharSpawnInfo);
+
 	}
 	
 
@@ -142,7 +147,7 @@ void ATDChar::MoveUp(float Value)
 	UpValue = Value;
 	if (m_bisCanMove && !m_bisAttacking)
 	{
-		SetState(ETDCharStates::TDCharState_Run);
+		//SetState(ETDCharStates::TDCharState_Run);
 		
 		if (Value > 0 && m_bisDefault && !m_bisFront)
 		{
@@ -190,13 +195,17 @@ void ATDChar::MoveUp(float Value)
 */
 void ATDChar::Dash()
 {
-	if (!m_bisDashStart && !m_bisDashEnd && !m_bisAttacking && m_MP >= 30)
+	if (!m_bisDashStart && !m_bisDashEnd && !m_bisAttacking && m_MP >= 0.0f)
 	{
-		m_MP -= 30;
+		if (m_MP >= 30.0f)
+			m_MP -= 30.0f;
+		else if (m_MP < 30.0f)
+			m_MP = 0.0f;
+
 		m_bisDashStart = true;
 		SetState(ETDCharStates::TDCharState_Dash);
 		FTimerHandle DashWaitHandle;
-		float WaitTime = 0.3f;
+		float WaitTime = 0.2f;
 		GetWorld()->GetTimerManager().SetTimer(DashWaitHandle, FTimerDelegate::CreateLambda([&]()
 			{
 				m_bisCanMove = false;
@@ -204,7 +213,7 @@ void ATDChar::Dash()
 				m_bisDashEnd = true;
 				//PrintString(TEXT("First Waiting"));
 				FTimerHandle IdleWaitHandle;
-				float WaitTime_2 = 0.2f;
+				float WaitTime_2 = 0.4f;
 				GetWorld()->GetTimerManager().SetTimer(IdleWaitHandle, FTimerDelegate::CreateLambda([&]()
 					{
 						SetState(ETDCharStates::TDCharState_Run);
@@ -263,10 +272,15 @@ void ATDChar::MeleeAttack()
 	}
 	else if (AttackDirection.X >= 125 || AttackDirection.X <= -125)
 	{
+		if (AttackDirection.X >= 125 && !m_bisRight)
+			Flip();
+		else if (AttackDirection.X <= -125 && m_bisRight)
+			Flip();
 		PrintString("Attack Side");
 		m_bisAttackFront = false;
 		m_bisAttackBack = false;
 		m_bisAttackSide = true;
+		
 		if (AttackDirection.X >= 125)
 			SpawnRotator = FRotator(0.0f, 0.0f, 0.0f);
 		else if (AttackDirection.X <= -125)
@@ -358,6 +372,11 @@ float ATDChar::GetMP()
 */
 void ATDChar::SetHP(float HP)
 {
+	if (m_HP < 100)
+		m_HP += HP;
+	else if (m_HP >= 100)
+		m_HP = 100.0f;
+
 }
 /*
 *  Set Mp Function
@@ -366,6 +385,10 @@ void ATDChar::SetHP(float HP)
 */
 void ATDChar::SetMP(float MP)
 {
+	if (m_MP < 100)
+		m_MP += MP;
+	else if (m_MP >= 100)
+		m_MP = 100.0f;
 }
 
 /*
@@ -397,6 +420,7 @@ void ATDChar::UpdateAnimation()
 			anim = Back_TDRunAnim;
 		break;
 	case (ETDCharStates::TDCharState_Dash):
+		/**/
 		if (m_bisDashStart && !m_bisDashEnd)
 			anim = TDDashStartAnim;
 		else if (!m_bisDashStart && m_bisDashEnd)
@@ -422,9 +446,9 @@ void ATDChar::UpdateAnimation()
 		else if (m_bisAttackSide)
 		{
 			if (m_bisFirstAttack && !m_bisLastAttack)
-				anim = Back_TDMeleeAttackAnim_1;
+				anim = Side_TDMeleeAttackAnim_1;
 			else if (!m_bisFirstAttack && m_bisLastAttack)
-				anim = Back_TDMeleeAttackAnim_2;
+				anim = Side_TDMeleeAttackAnim_2;
 			break;
 		}
 	}

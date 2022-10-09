@@ -7,6 +7,7 @@
 #include "PlayerMeleeProjectile.h"
 #include "TDChar.generated.h"
 
+
 UENUM()
 enum class ETDCharStates : uint8
 {
@@ -77,6 +78,12 @@ class PROJECTW_API ATDChar : public APaperCharacter
 	class UPaperFlipbook* Back_TDMeleeAttackAnim_2;
 
 	UPROPERTY(EditAnywhere)
+	class UPaperFlipbook* Side_TDMeleeAttackAnim_1;
+
+	UPROPERTY(EditAnywhere)
+	class UPaperFlipbook* Side_TDMeleeAttackAnim_2;
+
+	UPROPERTY(EditAnywhere)
 	class UPaperFlipbook* Front_TDRangeAttackAnim;
 
 	UPROPERTY(EditAnywhere)
@@ -84,6 +91,9 @@ class PROJECTW_API ATDChar : public APaperCharacter
 
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<APlayerMeleeProjectile> MeleeProjectile;
+
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<AActor> DashEffect;
 
 	FActorSpawnParameters TDCharSpawnInfo = FActorSpawnParameters();
 
