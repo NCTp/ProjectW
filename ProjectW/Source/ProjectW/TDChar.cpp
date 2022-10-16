@@ -41,6 +41,7 @@ void ATDChar::BeginPlay()
 	m_bisRight = true;
 	m_bisDashStart = false;
 	m_bisDashEnd = false;
+	m_LockDirection = false;
 	m_bisAttacking = false;
 	m_bisFirstAttack = false;
 	m_bisLastAttack = false;
@@ -76,9 +77,15 @@ void ATDChar::Tick(float DeltaTime)
 	if (m_bisDashStart && !m_bisDashEnd && !m_bisAttacking)
 	{
 		//PrintString(TEXT("Dashing"));
-		FVector myVelocity = this->GetVelocity() * m_Walkspeed;
-		FVector myPosition = this->GetActorLocation();
+		FVector myVelocity;
+		FVector myPosition;
+		if (!m_LockDirection)
+		{
+			myVelocity = this->GetVelocity() * m_Walkspeed * 15.0f;
+		}
+		myPosition = this->GetActorLocation();
 		this->SetActorLocation(myPosition + myVelocity * DeltaTime);
+
 		/*
 		AActor* dashEffect = nullptr;
 		dashEffect = GetWorld()->SpawnActor<AActor>(DashEffect,
@@ -210,6 +217,7 @@ void ATDChar::Dash()
 			m_MP = 0.0f;
 
 		m_bisDashStart = true;
+		m_LockDirection = true;
 		SetState(ETDCharStates::TDCharState_Dash);
 		FTimerHandle DashWaitHandle;
 		float WaitTime = 0.2f;
@@ -218,6 +226,7 @@ void ATDChar::Dash()
 				m_bisCanMove = false;
 				m_bisDashStart = false;
 				m_bisDashEnd = true;
+				m_LockDirection = false;
 				//PrintString(TEXT("First Waiting"));
 				FTimerHandle IdleWaitHandle;
 				float WaitTime_2 = 0.4f;

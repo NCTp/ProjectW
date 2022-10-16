@@ -167,6 +167,7 @@ private:
 	bool m_bisRight;
 	bool m_bisDashStart;
 	bool m_bisDashEnd;
+	bool m_LockDirection;
 	bool m_bisAttacking;
 	bool m_bisFirstAttack;
 	bool m_bisLastAttack;
