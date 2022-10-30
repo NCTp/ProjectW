@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "PaperCharacter.h"
+#include "PlayerMeleeProjectile.h"
 #include "TDChar.generated.h"
+
 
 UENUM()
 enum class ETDCharStates : uint8
@@ -76,16 +78,30 @@ class PROJECTW_API ATDChar : public APaperCharacter
 	class UPaperFlipbook* Back_TDMeleeAttackAnim_2;
 
 	UPROPERTY(EditAnywhere)
+	class UPaperFlipbook* Side_TDMeleeAttackAnim_1;
+
+	UPROPERTY(EditAnywhere)
+	class UPaperFlipbook* Side_TDMeleeAttackAnim_2;
+
+	UPROPERTY(EditAnywhere)
 	class UPaperFlipbook* Front_TDRangeAttackAnim;
 
 	UPROPERTY(EditAnywhere)
 	class UPaperFlipbook* Back_TDRangeAttackAnim;
 
 	UPROPERTY(EditAnywhere)
-	int m_HP;
+	TSubclassOf<APlayerMeleeProjectile> MeleeProjectile;
 
 	UPROPERTY(EditAnywhere)
-	int m_MP;
+		TSubclassOf<AActor> DashEffect;
+
+	FActorSpawnParameters TDCharSpawnInfo = FActorSpawnParameters();
+
+	UPROPERTY(EditAnywhere)
+	float m_HP;
+
+	UPROPERTY(EditAnywhere)
+	float m_MP;
 	
 
 	UPROPERTY(EditAnywhere)
@@ -94,6 +110,18 @@ class PROJECTW_API ATDChar : public APaperCharacter
 
 	UFUNCTION(BlueprintCallable)
 	void GetDamage();
+
+	UFUNCTION(BlueprintCallable)
+	float GetHP();
+
+	UFUNCTION(BlueprintCallable)
+	float GetMP();
+
+	UFUNCTION(BlueprintCallable)
+	void SetHP(float HP);
+
+	UFUNCTION(BlueprintCallable)
+	void SetMP(float MP);
 
 protected:
 	// Overrided basic functions
@@ -111,7 +139,7 @@ protected:
 
 	void RangeAttack();
 
-
+	
 private:
 
 	UPROPERTY(VisibleAnywhere)
@@ -139,9 +167,13 @@ private:
 	bool m_bisRight;
 	bool m_bisDashStart;
 	bool m_bisDashEnd;
+	bool m_LockDirection;
 	bool m_bisAttacking;
 	bool m_bisFirstAttack;
 	bool m_bisLastAttack;
+	bool m_bisAttackFront;
+	bool m_bisAttackBack;
+	bool m_bisAttackSide;
 
 	
 

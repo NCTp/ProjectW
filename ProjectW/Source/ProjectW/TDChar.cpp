@@ -3,18 +3,21 @@
 
 #include "TDChar.h"
 #include "PaperFlipbookComponent.h"
+#include "Kismet/GameplayStatics.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/PlayerController.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Engine/World.h"
+#include "Math/UnrealMathUtility.h"
 #include "ProjectWGameMode.h"
 
 #define PrintString(String) GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::White, String)
 
 ATDChar::ATDChar()
 {
-	PlayerController = CreateDefaultSubobject<APlayerController>(TEXT("Player Movement"));
+	//PlayerController = CreateDefaultSubobject<APlayerController>(TEXT("Player Movement"));
 
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = true;
@@ -38,9 +41,22 @@ void ATDChar::BeginPlay()
 	m_bisRight = true;
 	m_bisDashStart = false;
 	m_bisDashEnd = false;
+	m_LockDirection = false;
 	m_bisAttacking = false;
 	m_bisFirstAttack = false;
 	m_bisLastAttack = false;
+	m_bisAttackFront = true;
+	m_bisAttackBack = false;
+	m_bisAttackSide = false;
+
+	PlayerController = Cast<APlayerController>(GetController());
+
+	if (PlayerController)
+	{
+		PlayerController->bShowMouseCursor = true;
+		PlayerController->bEnableClickEvents = true;
+		PlayerController->bEnableMouseOverEvents = true;
+	}
 
 	
 }
@@ -61,9 +77,22 @@ void ATDChar::Tick(float DeltaTime)
 	if (m_bisDashStart && !m_bisDashEnd && !m_bisAttacking)
 	{
 		//PrintString(TEXT("Dashing"));
-		FVector myVelocity = this->GetVelocity() * m_Walkspeed;
-		FVector myPosition = this->GetActorLocation();
+		FVector myVelocity;
+		FVector myPosition;
+		if (!m_LockDirection)
+		{
+			myVelocity = this->GetVelocity() * m_Walkspeed * 15.0f;
+		}
+		myPosition = this->GetActorLocation();
 		this->SetActorLocation(myPosition + myVelocity * DeltaTime);
+
+		/*
+		AActor* dashEffect = nullptr;
+		dashEffect = GetWorld()->SpawnActor<AActor>(DashEffect,
+			GetActorLocation(), GetActorRotation(),
+			TDCharSpawnInfo);
+			*/
+
 	}
 	
 
@@ -127,7 +156,7 @@ void ATDChar::MoveUp(float Value)
 	UpValue = Value;
 	if (m_bisCanMove && !m_bisAttacking)
 	{
-		SetState(ETDCharStates::TDCharState_Run);
+		//SetState(ETDCharStates::TDCharState_Run);
 		
 		if (Value > 0 && m_bisDefault && !m_bisFront)
 		{
@@ -175,21 +204,32 @@ void ATDChar::MoveUp(float Value)
 */
 void ATDChar::Dash()
 {
-	if (!m_bisDashStart && !m_bisDashEnd && !m_bisAttacking && m_MP >= 30)
+	if (!m_bisDashStart && !m_bisDashEnd && !m_bisAttacking && m_MP >= 0.0f)
 	{
-		m_MP -= 30;
+		AActor* dashEffect = nullptr;
+		dashEffect = GetWorld()->SpawnActor<AActor>(DashEffect,
+			GetActorLocation(), GetActorRotation(),
+			TDCharSpawnInfo);
+		
+		if (m_MP >= 30.0f)
+			m_MP -= 30.0f;
+		else if (m_MP < 30.0f)
+			m_MP = 0.0f;
+
 		m_bisDashStart = true;
+		m_LockDirection = true;
 		SetState(ETDCharStates::TDCharState_Dash);
 		FTimerHandle DashWaitHandle;
-		float WaitTime = 0.3f;
+		float WaitTime = 0.2f;
 		GetWorld()->GetTimerManager().SetTimer(DashWaitHandle, FTimerDelegate::CreateLambda([&]()
 			{
 				m_bisCanMove = false;
 				m_bisDashStart = false;
 				m_bisDashEnd = true;
+				m_LockDirection = false;
 				//PrintString(TEXT("First Waiting"));
 				FTimerHandle IdleWaitHandle;
-				float WaitTime_2 = 0.2f;
+				float WaitTime_2 = 0.4f;
 				GetWorld()->GetTimerManager().SetTimer(IdleWaitHandle, FTimerDelegate::CreateLambda([&]()
 					{
 						SetState(ETDCharStates::TDCharState_Run);
@@ -207,12 +247,83 @@ void ATDChar::Dash()
 }
 /*
 *  Melee Attack Function
-*  현재 문제 = 마우스 방향으로 나가도록 구현을 안했음. 수정 필요
+*  현재 문제 = 마우스 방향으로 나가도록 구현을 안했음. 수정 필요 -> 수정 완료
 */
 void ATDChar::MeleeAttack()
 {
+	// Check Mouse Position at Game World
+	FHitResult TraceHitResult;
+
+	PlayerController->GetHitResultUnderCursor(ECC_Visibility, true, TraceHitResult);
+	FVector MouseWorldLocation = TraceHitResult.Location;
+
+	FVector AttackDirection = MouseWorldLocation - GetActorLocation();
+	FVector nAttackDirection = AttackDirection;
+	nAttackDirection.Normalize();
+	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%f, %f"), MouseWorldLocation.X, MouseWorldLocation.Y));
+	FVector SpawnLocation;
+	FRotator SpawnRotator;
+	// Check Mouse Position at Viewport (not in Game World)
+	PlayerController->GetMousePosition(m_MouseXValue, m_MouseYValue);
+	// Check Viewport Size and Center
+	FVector2D ViewportSize = FVector2D(GEngine->GameViewport->Viewport->GetSizeXY());
+	const FVector2D  ViewportCenter = FVector2D(ViewportSize.X / 2, ViewportSize.Y / 2);
+
+	// Check Up/Down due to Mouse Position and Setup SpawnRotator
+	if (AttackDirection.Y > 0 && AttackDirection.X < 125 && AttackDirection.X > -125)
+	{
+		PrintString("Attack Front");
+		m_bisAttackFront = true;
+		m_bisAttackBack = false;
+		m_bisAttackSide = false;
+		SpawnRotator = FRotator(0.0f, 90.0f, 0.0f);
+	}
+	else if (AttackDirection.Y <= 0 && AttackDirection.X < 125 && AttackDirection.X > -125)
+	{
+		PrintString("Attack Back");
+		m_bisAttackFront = false;
+		m_bisAttackBack = true;
+		m_bisAttackSide = false;
+		SpawnRotator = FRotator(0.0f, -90.0f, 0.0f);
+	}
+	else if (AttackDirection.X >= 125 || AttackDirection.X <= -125)
+	{
+		if (AttackDirection.X >= 125 && !m_bisRight)
+			Flip();
+		else if (AttackDirection.X <= -125 && m_bisRight)
+			Flip();
+		PrintString("Attack Side");
+		m_bisAttackFront = false;
+		m_bisAttackBack = false;
+		m_bisAttackSide = true;
+		
+		if (AttackDirection.X >= 125)
+			SpawnRotator = FRotator(0.0f, 0.0f, 0.0f);
+		else if (AttackDirection.X <= -125)
+			SpawnRotator = FRotator(0.0f, 180.0f, 0.0f);
+	}
+
+	// Player Attack Implements
+	APlayerMeleeProjectile* projectile = nullptr;
+	TDCharSpawnInfo.Owner = this;
+	if (!m_bisFirstAttack&& !m_bisLastAttack)
+	{
+		projectile = GetWorld()->SpawnActor<APlayerMeleeProjectile>(MeleeProjectile,
+			GetActorLocation() - nAttackDirection * 10, SpawnRotator,
+			TDCharSpawnInfo);
+	}
+	else if (m_bisFirstAttack && !m_bisLastAttack)
+	{
+		projectile = GetWorld()->SpawnActor<APlayerMeleeProjectile>(MeleeProjectile,
+			GetActorLocation() - nAttackDirection * 10, SpawnRotator,
+			TDCharSpawnInfo);
+	}
+	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%f"), SpawnRotator.Yaw));
+	FMath::DegreesToRadians(MouseWorldLocation.X/MouseWorldLocation.Y);
 	SetState(ETDCharStates::TDCharState_MeleeAttack);
+
 	m_bisAttacking = true;
+
 	if (!m_bisFirstAttack && !m_bisLastAttack)
 	{
 		
@@ -227,7 +338,7 @@ void ATDChar::MeleeAttack()
 				m_bisLastAttack = false;
 				m_bisAttacking = false;
 				SetState(ETDCharStates::TDCharState_Run);
-				PrintString(TEXT("Attack End1"));
+				//PrintString(TEXT("Attack End1"));
 
 			}), AttackWaitTime, false);
 	}
@@ -252,7 +363,55 @@ void ATDChar::GetDamage()
 	m_HP--;
 	PrintString(TEXT("health down"));
 }
+/*
+*  Get HP Function
+*  Return HP
+*  We will call this function in blueprint editor.
+*/
+float ATDChar::GetHP()
+{
+	return m_HP;
+}
+/*
+*  Get MP Function
+*  Return MP
+*  We will call this function in blueprint editor.
+*/
+float ATDChar::GetMP()
+{
+	return m_MP;
+}
+/*
+*  Set HP Function
+*  Set HP
+*  We will call this function in blueprint editor.
+*/
+void ATDChar::SetHP(float HP)
+{
+	if (m_HP < 100)
+		m_HP += HP;
+	else if (m_HP >= 100)
+		m_HP = 100.0f;
 
+}
+/*
+*  Set Mp Function
+*  Set MP
+*  We will call this function in blueprint editor.
+*/
+void ATDChar::SetMP(float MP)
+{
+	if (m_MP < 100)
+		m_MP += MP;
+	else if (m_MP >= 100)
+		m_MP = 100.0f;
+}
+
+/*
+*  UpdateAnimation
+*  Update Animation Every frame
+*  
+*/
 void ATDChar::UpdateAnimation()
 {
 	UPaperFlipbook* anim = nullptr;
@@ -277,13 +436,14 @@ void ATDChar::UpdateAnimation()
 			anim = Back_TDRunAnim;
 		break;
 	case (ETDCharStates::TDCharState_Dash):
+		/**/
 		if (m_bisDashStart && !m_bisDashEnd)
 			anim = TDDashStartAnim;
 		else if (!m_bisDashStart && m_bisDashEnd)
 			anim = TDDashEndAnim;
 		break;
 	case (ETDCharStates::TDCharState_MeleeAttack):
-		if (m_bisFront || m_bisDefault)
+		if (m_bisAttackFront)
 		{
 			if (m_bisFirstAttack && !m_bisLastAttack)
 				anim = Front_TDMeleeAttackAnim_1;
@@ -291,7 +451,7 @@ void ATDChar::UpdateAnimation()
 				anim = Front_TDMeleeAttackAnim_2;
 			break;
 		}
-		else if (m_bisBack)
+		else if (m_bisAttackBack)
 		{
 			if (m_bisFirstAttack && !m_bisLastAttack)
 				anim = Back_TDMeleeAttackAnim_1;
@@ -299,12 +459,12 @@ void ATDChar::UpdateAnimation()
 				anim = Back_TDMeleeAttackAnim_2;
 			break;
 		}
-		else if (m_bisSide)
+		else if (m_bisAttackSide)
 		{
 			if (m_bisFirstAttack && !m_bisLastAttack)
-				anim = Back_TDMeleeAttackAnim_1;
+				anim = Side_TDMeleeAttackAnim_1;
 			else if (!m_bisFirstAttack && m_bisLastAttack)
-				anim = Back_TDMeleeAttackAnim_2;
+				anim = Side_TDMeleeAttackAnim_2;
 			break;
 		}
 	}
