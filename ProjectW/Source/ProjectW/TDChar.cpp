@@ -48,7 +48,7 @@ void ATDChar::BeginPlay()
 	m_bisAttackFront = true;
 	m_bisAttackBack = false;
 	m_bisAttackSide = false;
-
+	m_attackCounts = 0;
 	PlayerController = Cast<APlayerController>(GetController());
 
 	if (PlayerController)
@@ -306,6 +306,7 @@ void ATDChar::MeleeAttack()
 	// Player Attack Implements
 	APlayerMeleeProjectile* projectile = nullptr;
 	TDCharSpawnInfo.Owner = this;
+	/*
 	if (!m_bisFirstAttack&& !m_bisLastAttack)
 	{
 		projectile = GetWorld()->SpawnActor<APlayerMeleeProjectile>(MeleeProjectile,
@@ -318,11 +319,41 @@ void ATDChar::MeleeAttack()
 			GetActorLocation() - nAttackDirection * 10, SpawnRotator,
 			TDCharSpawnInfo);
 	}
+	*/
 	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%f"), SpawnRotator.Yaw));
 	FMath::DegreesToRadians(MouseWorldLocation.X/MouseWorldLocation.Y);
 	SetState(ETDCharStates::TDCharState_MeleeAttack);
 
 	m_bisAttacking = true;
+	/*
+	if (m_attackCounts == 0)
+	{
+		m_attackCounts++;
+		// 0.7초 후에 공격 초기화
+		projectile = GetWorld()->SpawnActor<APlayerMeleeProjectile>(MeleeProjectile,
+			GetActorLocation() - nAttackDirection * 10, SpawnRotator,
+			TDCharSpawnInfo);
+		FTimerHandle AttackWaitHandle;
+		float AttackWaitTime = 0.7f;
+		GetWorld()->GetTimerManager().SetTimer(AttackWaitHandle, FTimerDelegate::CreateLambda([&]()
+			{
+				m_bisFirstAttack = false;
+				m_bisLastAttack = false;
+				m_bisAttacking = false;
+				SetState(ETDCharStates::TDCharState_Run);
+				//PrintString(TEXT("Attack End1"));
+
+			}), AttackWaitTime, false);
+	}
+	else if (m_attackCounts == 1)
+	{
+		m_attackCounts++;
+		projectile = GetWorld()->SpawnActor<APlayerMeleeProjectile>(MeleeProjectile,
+			GetActorLocation() - nAttackDirection * 10, SpawnRotator,
+			TDCharSpawnInfo);
+		
+	}
+	*/
 
 	if (!m_bisFirstAttack && !m_bisLastAttack)
 	{
@@ -330,6 +361,9 @@ void ATDChar::MeleeAttack()
 		m_bisFirstAttack = true;
 		m_bisLastAttack = false;
 		// 0.7초 후에 공격 초기화
+		projectile = GetWorld()->SpawnActor<APlayerMeleeProjectile>(MeleeProjectile,
+			GetActorLocation() - nAttackDirection * 10, SpawnRotator,
+			TDCharSpawnInfo);
 		FTimerHandle AttackWaitHandle;
 		float AttackWaitTime = 0.7f;
 		GetWorld()->GetTimerManager().SetTimer(AttackWaitHandle, FTimerDelegate::CreateLambda([&]()
@@ -344,6 +378,9 @@ void ATDChar::MeleeAttack()
 	}
 	else if (m_bisFirstAttack && !m_bisLastAttack)
 	{
+		projectile = GetWorld()->SpawnActor<APlayerMeleeProjectile>(MeleeProjectile,
+			GetActorLocation() - nAttackDirection * 10, SpawnRotator,
+			TDCharSpawnInfo);
 		m_bisFirstAttack = false;
 		m_bisLastAttack = true;
 
@@ -358,9 +395,9 @@ void ATDChar::RangeAttack()
 *  Decrease Health when get attacked
 *  We will call this function in blueprint editor.
 */
-void ATDChar::GetDamage()
+void ATDChar::GetDamage(float damage)
 {
-	m_HP--;
+	m_HP -= damage;
 	PrintString(TEXT("health down"));
 }
 /*
@@ -447,8 +484,10 @@ void ATDChar::UpdateAnimation()
 		{
 			if (m_bisFirstAttack && !m_bisLastAttack)
 				anim = Front_TDMeleeAttackAnim_1;
-			else if (!m_bisFirstAttack && m_bisLastAttack)
+			else if (!m_bisFirstAttack && m_bisLastAttack) {
 				anim = Front_TDMeleeAttackAnim_2;
+				
+			}
 			break;
 		}
 		else if (m_bisAttackBack)
@@ -470,7 +509,7 @@ void ATDChar::UpdateAnimation()
 	}
 
 	GetSprite()->SetFlipbook(anim);
-	GetSprite()->SetRelativeRotation(FRotator(0.0f, 0.0f, -90.0f));
+	GetSprite()->SetRelativeRotation(FRotator(0.0f, 0.0f, -60.0f));
 	
 }
 

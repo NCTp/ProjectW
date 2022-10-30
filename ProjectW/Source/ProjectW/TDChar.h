@@ -109,7 +109,7 @@ class PROJECTW_API ATDChar : public APaperCharacter
 	
 
 	UFUNCTION(BlueprintCallable)
-	void GetDamage();
+	void GetDamage(float damage);
 
 	UFUNCTION(BlueprintCallable)
 	float GetHP();
@@ -158,6 +158,7 @@ private:
 	float m_MouseXValue;
 	float m_MouseYValue;
 
+	int m_attackCounts;
 	// boolean values for checking status
 	bool m_bisCanMove;
 	bool m_bisDefault;

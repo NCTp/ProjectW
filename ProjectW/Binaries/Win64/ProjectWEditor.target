@@ -124,6 +124,22 @@
 			"Type": "DynamicLibrary"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/PaperZD/Binaries/Win64/UE4Editor-PaperZD.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/PaperZD/Binaries/Win64/UE4Editor-PaperZD.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/PaperZD/Binaries/Win64/UE4Editor-PaperZDEditor.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/PaperZD/Binaries/Win64/UE4Editor-PaperZDEditor.pdb",
+			"Type": "SymbolFile"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/AI/AISupport/Binaries/Win64/UE4Editor-AISupportModule.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -2420,6 +2436,10 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/PaperZD/Binaries/Win64/UE4Editor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/AI/AISupport/Binaries/Win64/UE4Editor.modules",
 			"Type": "RequiredResource"
 		},
@@ -2915,6 +2935,10 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Editor/BlueprintMaterialTextureNodes/BlueprintMaterialTextureNodes.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/PaperZD/PaperZD.uplugin",
 			"Type": "UFS"
 		},
 		{
