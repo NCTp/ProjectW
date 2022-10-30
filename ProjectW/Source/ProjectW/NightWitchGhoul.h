@@ -34,6 +34,8 @@ protected:
 
 	void UpdateCharacter();
 
+	void UpdateAnimation();
+
 	void TickStateMachine();
 
 	void SetState(EGhoulState newState);
@@ -53,7 +55,23 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = "State")
 	EGhoulState ActiveState;
 
-	class AProjectWCharacter* Player;
+	// The animation to play while idle (standing still)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* IdleAnimation;
+
+	// The animation to play while chase(move)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* ChaseAnimation;
+
+	// The animation to play while attack
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* AttackAnimation;
+
+	// The animation to play while die
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* DeadAnimation;
+
+	class ATDChar* Player;
 
 	class UWorld* World;
 

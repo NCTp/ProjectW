@@ -2,10 +2,11 @@
 
 
 #include "NightWitchGhoul.h"
+#include "PaperFlipbookComponent.h"
 #include "Engine/World.h"
 #include "Kismet/GameplayStatics.h"
 
-#include "ProjectWCharacter.h"
+#include "TDChar.h"
 
 
 ANightWitchGhoul::ANightWitchGhoul()
@@ -30,7 +31,7 @@ void ANightWitchGhoul::BeginPlay()
 
 	World = GetWorld();
 
-	Player = Cast<AProjectWCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+	Player = Cast<ATDChar>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 }
 
 void ANightWitchGhoul::Flip()
@@ -43,6 +44,8 @@ void ANightWitchGhoul::Flip()
 
 void ANightWitchGhoul::UpdateCharacter()
 {
+	UpdateAnimation();
+
 	FVector targetDirection = Player->GetActorLocation() - GetActorLocation();
 
 	float dot = FVector::DotProduct(GetActorForwardVector(), targetDirection.GetSafeNormal());
@@ -64,6 +67,30 @@ void ANightWitchGhoul::UpdateCharacter()
 
 }
 
+void ANightWitchGhoul::UpdateAnimation()
+{
+	const FVector velocity = GetVelocity();
+	const float speedSqr = velocity.SizeSquared();
+
+	UPaperFlipbook* DesiredAnimation = nullptr;
+
+
+	if (ActiveState == EGhoulState::IDLE)
+	{
+		DesiredAnimation = IdleAnimation;
+	}
+	else if (ActiveState == EGhoulState::CHASE)
+	{
+		DesiredAnimation = ChaseAnimation;
+	}
+	else if (ActiveState == EGhoulState::ATTACK)
+	{
+		DesiredAnimation = AttackAnimation;
+	}
+
+	GetSprite()->SetFlipbook(DesiredAnimation);
+
+}
 
 void ANightWitchGhoul::TickStateMachine()
 {
@@ -144,8 +171,6 @@ void ANightWitchGhoul::StateChase()
 	}
 
 	SetActorLocation(currentLocation);
-
-	SetState(EGhoulState::IDLE);
 }
 
 void ANightWitchGhoul::StateAttack()
@@ -158,10 +183,14 @@ void ANightWitchGhoul::StateAttack()
 		UE_LOG(LogTemp, Log, TEXT("ATTACK"));
 
 		// Attack
+		SetState(EGhoulState::ATTACK);
 	}
 	else
 	{
-		SetState(EGhoulState::IDLE);
+		if (!isAttacking)
+		{
+			SetState(EGhoulState::IDLE);
+		}
 	}
 }
 
@@ -190,7 +219,7 @@ void ANightWitchGhoul::Tick(float DeltaTime)
 	if (!isNextAttackReady)
 	{
 		attackDelay += DeltaTime;
-		if (attackDelay >= 1.0f)
+		if (attackDelay >= 2.0f)
 		{
 			isNextAttackReady = true;
 			attackDelay = 0.0f;

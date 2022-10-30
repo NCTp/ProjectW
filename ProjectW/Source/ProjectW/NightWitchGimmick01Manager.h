@@ -19,6 +19,9 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	void SpawnEnemy_Imp();
+
+	void SpawnEnemy();
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -34,6 +37,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Portal")
 	TSubclassOf<AActor> ChainSpawnPortal;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Enemy")
+	TSubclassOf<AActor> Ghoul;
+
+	class UWorld* World;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI", meta = (AllowPrivateAccess = "true"))
 	class ANWGimmick01EnemySpawnPoint* EnemySpawnPoint;
 	
@@ -45,4 +53,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AI")
 	bool isActive;
+
+	FTimerHandle spellLaserTimeHandle;
+	int spawnLaserCounter;
+
+	float spawnDelay;
 };
