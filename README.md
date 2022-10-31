@@ -1,3 +1,6 @@
-# ProjectW
-ProjectW(witch)
-문철호와 정윤환의 소융 대상 프로젝트
+# ProjectW(Witch)   
+# Top-Down Action Game   
+# Members   
+ + 문철호
+ + 정윤환
+ 
