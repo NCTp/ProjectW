@@ -509,7 +509,7 @@ void ATDChar::UpdateAnimation()
 	}
 
 	GetSprite()->SetFlipbook(anim);
-	GetSprite()->SetRelativeRotation(FRotator(0.0f, 0.0f, -60.0f));
+	GetSprite()->SetRelativeRotation(FRotator(0.0f, 0.0f, 0.0f));
 	
 }
 
