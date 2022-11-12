@@ -43,7 +43,6 @@ void ANightWitchLaserPortal::SpawnLaser()
 	LaserRef = World->SpawnActor<ANightWitchLaser>(Laser, GetActorTransform(), spawnParams);
 }
 
-
 // Called every frame
 void ANightWitchLaserPortal::Tick(float DeltaTime)
 {
