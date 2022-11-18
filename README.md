@@ -6,7 +6,8 @@
 Witch Hunt는 한 때 세계를 멸망시키려 했던 마녀들과 싸우는 2.5D 보스러쉬 게임입니다.
 전문적인 마녀사냥꾼이 되어 도망친 마녀들을 사냥하세요.   
 
-<img width="80%" src="https://github.com/NCTp/ProjectW/files/10041369/TEAM_MJ.WITCHHUNT.pdf"/>
+![teamMJ](https://user-images.githubusercontent.com/45461452/202709988-8cfb28eb-e90c-4d3e-95ee-de7a7d2f72fe.JPG)
+
 빠른 템포의 액션과 서로 다른 테마의 보스전을 목표로 개발했습니다.   
 
 # 데모 영상   
