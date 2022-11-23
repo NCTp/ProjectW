@@ -15,7 +15,7 @@ Witch Hunt는 한 때 세계를 멸망시키려 했던 마녀들과 싸우는 2.
 https://www.youtube.com/watch?v=ypBc2DWG7TA   
 
 # 데모 플레이 링크   
-https://drive.google.com/file/d/1PccYY0-h8tEkUGR--MC37nMpn5zGG88T/view?usp=sharing   
+https://drive.google.com/file/d/1Q2zCOD6Y8HhOcHiMftjKiDsPMOlEJaHb/view?usp=share_link   
 
 # 튜토리얼   
 WASD : 이동   
