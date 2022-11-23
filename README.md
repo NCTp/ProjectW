@@ -21,7 +21,7 @@ https://drive.google.com/file/d/1PccYY0-h8tEkUGR--MC37nMpn5zGG88T/view?usp=shari
 WASD : 이동   
 Left Shift : 대쉬   
 Left Mouse Click : 공격   
-E : 대화   
+E / Left Mouse Click : 대화   
 
 # Members   
  + 문철호
