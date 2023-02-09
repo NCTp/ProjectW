@@ -29,3 +29,8 @@ E / Left Mouse Click : 대화
  + 문철호
  + 정윤환
  
+ # What I Do
+ + All about playable character
+ + Starwitch AI, Starwitch Map Design
+ + UI system
+ + Pixel Art
